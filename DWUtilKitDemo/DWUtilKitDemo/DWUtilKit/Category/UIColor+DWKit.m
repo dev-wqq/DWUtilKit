@@ -15,9 +15,9 @@
 }
 
 + (UIColor *)dw_colorWithRed:(int)red green:(int)green blue:(int)blue alpha:(CGFloat)alpha {
-    return [UIColor colorWithRed:red/(double)INT_MAX
-                           green:green/(double)INT_MAX
-                            blue:blue/(double)INT_MAX
+    return [UIColor colorWithRed:red / 255.0f
+                           green:green / 255.0f
+                            blue:blue / 255.0f
                            alpha:alpha];
 }
 
@@ -59,10 +59,43 @@
     [[NSScanner scannerWithString:gString] scanHexInt:&g];
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
     
-    return [UIColor colorWithRed:((float)r / (double)INT_MAX)
-                           green:((float)g / (double)INT_MAX)
-                            blue:((float)b / (double)INT_MAX)
+    return [UIColor colorWithRed:(r / 255.0f)
+                           green:(g / 255.0f)
+                            blue:(b / 255.0f)
                            alpha:alpha];
+}
+
+- (NSString *)dw_hexString {
+    return [self _dw_hexStringWithAlpha:NO];
+}
+
+- (NSString *)dw_hexStringWithAlpha {
+    return [self _dw_hexStringWithAlpha:YES];
+}
+
+- (NSString *)_dw_hexStringWithAlpha:(BOOL)withAlpha {
+    CGColorRef color = self.CGColor;
+    size_t count = CGColorGetNumberOfComponents(color);
+    const CGFloat *components = CGColorGetComponents(color);
+    static NSString *stringFormat = @"%02x%02x%02x";
+    NSString *hex = nil;
+    if (count == 2) {
+        NSUInteger white = (NSUInteger)(components[0] * 255.0f);
+        hex = [NSString stringWithFormat:stringFormat, white, white, white];
+    } else if (count == 4) {
+        hex = [NSString stringWithFormat:stringFormat,
+               (NSUInteger)(components[0] * 255.0f),
+               (NSUInteger)(components[1] * 255.0f),
+               (NSUInteger)(components[2] * 255.0f)];
+    }
+    
+    if (hex && withAlpha) {
+        CGFloat alpha = CGColorGetAlpha(color);
+        
+        hex = [hex stringByAppendingFormat:@"%02lx",
+               (unsigned long)(alpha * 255.0 + 0.5)];
+    }
+    return hex;
 }
 
 @end

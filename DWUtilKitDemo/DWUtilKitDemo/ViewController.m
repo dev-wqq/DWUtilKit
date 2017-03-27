@@ -13,7 +13,7 @@
 #import "UITextView+DWKit.h"
 #import "UIView+DWKit.h"
 #import "UIImage+DWKit.h"
-
+#import "UIColor+DWKit.h"
 
 @interface ViewController ()
 
@@ -24,6 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    UIColor *color = [UIColor dw_opaqueColorWithHexString:@"#00abf3"];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [self.view addSubview:view];
+    view.backgroundColor = color;
+    view.center = self.view.center;
+    
+    NSString *str = [color dw_hexString];
+    NSLog(@"%@",str);
+
+    str = [color dw_hexStringWithAlpha];
+    NSLog(@"%@",str);
 }
 
 

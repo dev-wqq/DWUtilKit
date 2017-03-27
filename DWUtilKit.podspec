@@ -17,14 +17,14 @@ Pod::Spec.new do |s|
 
   s.name         = "DWUtilKit"
   s.version      = "0.0.1"
-  s.summary      = "The public library"
+  s.summary      = "DWUtilKit is public library"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "The public tool methods"
+  s.description  = "DWUtilKit public tool methods"
                    
 
   s.homepage     = "https://github.com/dev-wqq/DWUtilKit.git"
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dev-wqq/DWUtilKit.git", :tag => "v0.0.1" }
+  s.source       = { :git => "https://github.com/dev-wqq/DWUtilKit.git", :tag => "v0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "DWUtilKit", "DWUtilKit/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.exclude_files = "Classes/DWUtilKit"
 
   # s.public_header_files = "Classes/**/*.h"
 
