@@ -1,5 +1,8 @@
 platform :ios, ‘8.0’
 
 target “DWUtilKitDemo” do
-pod 'AFNetworking'
+   pod 'AFNetworking'
+   pod 'DTFoundation'
+   pod 'JSONModel'
+   pod 'SDWebImage'
 end

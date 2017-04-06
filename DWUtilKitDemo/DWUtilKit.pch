@@ -1,0 +1,18 @@
+//
+//  DWUtilKit.pch
+//  DWUtilKitDemo
+//
+//  Created by wangqiqi on 2017/4/4.
+//  Copyright © 2017年 duxing. All rights reserved.
+//
+
+#ifndef DWUtilKit_pch
+#define DWUtilKit_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+DWKit.h"
+#import "DWUtilities.h"
+
+#endif /* DWUtilKit_pch */

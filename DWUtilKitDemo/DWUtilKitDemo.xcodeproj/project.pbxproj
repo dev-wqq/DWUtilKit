@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		42CDCB6A504633675499D193 /* libPods-DWUtilKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F392C529386AABF292FD909C /* libPods-DWUtilKitDemo.a */; };
+		742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */; };
+		742B3DDC1E93D7AA00EA891F /* DWRichTextEditToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */; };
 		742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F07AF1E8369E500ABEDA8 /* DWUtilities.m */; };
 		7435779C1E7544EA004BC1E1 /* UIButton+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7435779B1E7544EA004BC1E1 /* UIButton+DWKit.m */; };
 		7435779F1E754641004BC1E1 /* UIView+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7435779E1E754641004BC1E1 /* UIView+DWKit.m */; };
@@ -25,6 +27,11 @@
 		747FAB3E1E7920CB00AD3CFE /* NSString+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB3D1E7920CB00AD3CFE /* NSString+DWKit.m */; };
 		747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB401E7926C900AD3CFE /* NSNumber+DWKit.m */; };
 		74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B616501E7FCCD4004D350B /* UITextView+DWKit.m */; };
+		74BC7A381E95371500DAD94E /* DWPermissionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A371E95371500DAD94E /* DWPermissionUtil.m */; };
+		74BC7A3D1E95D1CB00DAD94E /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A3C1E95D1CB00DAD94E /* ModelClass.m */; };
+		74BC7A401E95D22F00DAD94E /* NSObject+DWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A3F1E95D22F00DAD94E /* NSObject+DWModel.m */; };
+		74BC7A431E95DA1A00DAD94E /* UIDevice+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A421E95DA1A00DAD94E /* UIDevice+DWKit.m */; };
+		74BC7A461E95F89300DAD94E /* DWSettingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A451E95F89300DAD94E /* DWSettingUtil.m */; };
 		74E359F81E7189C600AEDE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E359F71E7189C600AEDE10 /* main.m */; };
 		74E359FB1E7189C600AEDE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E359FA1E7189C600AEDE10 /* AppDelegate.m */; };
 		74E359FE1E7189C600AEDE10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E359FD1E7189C600AEDE10 /* ViewController.m */; };
@@ -40,6 +47,11 @@
 /* Begin PBXFileReference section */
 		43DFB081E7D85AD9BD3D052D /* Pods-DWUtilKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4E5082B3BFFD185D39C9A663 /* Pods-DWUtilKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		742B3DD61E93CD5100EA891F /* DWRichTextEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditViewController.h; sourceTree = "<group>"; };
+		742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditViewController.m; sourceTree = "<group>"; };
+		742B3DD91E93CF4600EA891F /* DWUtilKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWUtilKit.pch; sourceTree = SOURCE_ROOT; };
+		742B3DDA1E93D7AA00EA891F /* DWRichTextEditToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditToolBar.h; sourceTree = "<group>"; };
+		742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditToolBar.m; sourceTree = "<group>"; };
 		742F07AE1E8369E500ABEDA8 /* DWUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUtilities.h; sourceTree = "<group>"; };
 		742F07AF1E8369E500ABEDA8 /* DWUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWUtilities.m; sourceTree = "<group>"; };
 		7435779A1E7544EA004BC1E1 /* UIButton+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DWKit.h"; sourceTree = "<group>"; };
@@ -73,6 +85,18 @@
 		747FAB401E7926C900AD3CFE /* NSNumber+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+DWKit.m"; sourceTree = "<group>"; };
 		74B6164F1E7FCCD4004D350B /* UITextView+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+DWKit.h"; sourceTree = "<group>"; };
 		74B616501E7FCCD4004D350B /* UITextView+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DWKit.m"; sourceTree = "<group>"; };
+		74BC7A361E95371500DAD94E /* DWPermissionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPermissionUtil.h; sourceTree = "<group>"; };
+		74BC7A371E95371500DAD94E /* DWPermissionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPermissionUtil.m; sourceTree = "<group>"; };
+		74BC7A3A1E95D15900DAD94E /* DWModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWModel.h; sourceTree = "<group>"; };
+		74BC7A3B1E95D1CB00DAD94E /* ModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelClass.h; sourceTree = "<group>"; };
+		74BC7A3C1E95D1CB00DAD94E /* ModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelClass.m; sourceTree = "<group>"; };
+		74BC7A3E1E95D22F00DAD94E /* NSObject+DWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWModel.h"; sourceTree = "<group>"; };
+		74BC7A3F1E95D22F00DAD94E /* NSObject+DWModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWModel.m"; sourceTree = "<group>"; };
+		74BC7A411E95DA1A00DAD94E /* UIDevice+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DWKit.h"; sourceTree = "<group>"; };
+		74BC7A421E95DA1A00DAD94E /* UIDevice+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DWKit.m"; sourceTree = "<group>"; };
+		74BC7A441E95F89300DAD94E /* DWSettingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSettingUtil.h; sourceTree = "<group>"; };
+		74BC7A451E95F89300DAD94E /* DWSettingUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSettingUtil.m; sourceTree = "<group>"; };
+		74BC7A471E960C7B00DAD94E /* DWUtilKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DWUtilKitDemo.entitlements; sourceTree = "<group>"; };
 		74E359F31E7189C600AEDE10 /* DWUtilKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWUtilKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E359F71E7189C600AEDE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74E359F91E7189C600AEDE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +140,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		742B3DD21E93CCD900EA891F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				742B3DD31E93CD2B00EA891F /* RichTextEdit */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		742B3DD31E93CD2B00EA891F /* RichTextEdit */ = {
+			isa = PBXGroup;
+			children = (
+				742B3DD41E93CD2B00EA891F /* Model */,
+				742B3DD51E93CD2B00EA891F /* ViewController */,
+			);
+			path = RichTextEdit;
+			sourceTree = "<group>";
+		};
+		742B3DD41E93CD2B00EA891F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		742B3DD51E93CD2B00EA891F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				742B3DD61E93CD5100EA891F /* DWRichTextEditViewController.h */,
+				742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */,
+				742B3DDA1E93D7AA00EA891F /* DWRichTextEditToolBar.h */,
+				742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		7455A4931E80C9EE002CA176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +182,18 @@
 				F392C529386AABF292FD909C /* libPods-DWUtilKitDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74BC7A391E95D0E300DAD94E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74BC7A3A1E95D15900DAD94E /* DWModel.h */,
+				74BC7A3B1E95D1CB00DAD94E /* ModelClass.h */,
+				74BC7A3C1E95D1CB00DAD94E /* ModelClass.m */,
+				74BC7A3E1E95D22F00DAD94E /* NSObject+DWModel.h */,
+				74BC7A3F1E95D22F00DAD94E /* NSObject+DWModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		74E359EA1E7189C600AEDE10 = {
@@ -146,11 +217,14 @@
 		74E359F51E7189C600AEDE10 /* DWUtilKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				74BC7A471E960C7B00DAD94E /* DWUtilKitDemo.entitlements */,
 				74E35A0D1E7189FA00AEDE10 /* DWUtilKit */,
+				742B3DD21E93CCD900EA891F /* Classes */,
 				74E359F91E7189C600AEDE10 /* AppDelegate.h */,
 				74E359FA1E7189C600AEDE10 /* AppDelegate.m */,
 				74E359FC1E7189C600AEDE10 /* ViewController.h */,
 				74E359FD1E7189C600AEDE10 /* ViewController.m */,
+				742B3DD91E93CF4600EA891F /* DWUtilKit.pch */,
 				74E359FF1E7189C600AEDE10 /* Main.storyboard */,
 				74E35A021E7189C600AEDE10 /* Assets.xcassets */,
 				74E35A041E7189C600AEDE10 /* LaunchScreen.storyboard */,
@@ -171,6 +245,7 @@
 		74E35A0D1E7189FA00AEDE10 /* DWUtilKit */ = {
 			isa = PBXGroup;
 			children = (
+				74BC7A391E95D0E300DAD94E /* Model */,
 				74E35A0E1E7189FA00AEDE10 /* Category */,
 				74E35A0F1E7189FA00AEDE10 /* Util */,
 				74E35A101E7189FA00AEDE10 /* View */,
@@ -193,6 +268,8 @@
 				7455A4971E80D027002CA176 /* UIImage+DWKit.m */,
 				7435779A1E7544EA004BC1E1 /* UIButton+DWKit.h */,
 				7435779B1E7544EA004BC1E1 /* UIButton+DWKit.m */,
+				74BC7A411E95DA1A00DAD94E /* UIDevice+DWKit.h */,
+				74BC7A421E95DA1A00DAD94E /* UIDevice+DWKit.m */,
 				743577A91E755FD8004BC1E1 /* UITextField+DWKit.h */,
 				743577AA1E755FD8004BC1E1 /* UITextField+DWKit.m */,
 				74B6164F1E7FCCD4004D350B /* UITextView+DWKit.h */,
@@ -224,6 +301,10 @@
 				74E35A121E718A5400AEDE10 /* DWWeakProxy.m */,
 				742F07AE1E8369E500ABEDA8 /* DWUtilities.h */,
 				742F07AF1E8369E500ABEDA8 /* DWUtilities.m */,
+				74BC7A361E95371500DAD94E /* DWPermissionUtil.h */,
+				74BC7A371E95371500DAD94E /* DWPermissionUtil.m */,
+				74BC7A441E95F89300DAD94E /* DWSettingUtil.h */,
+				74BC7A451E95F89300DAD94E /* DWSettingUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -275,6 +356,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = VM764RFM6S;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -367,11 +453,15 @@
 				742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */,
 				7435779F1E754641004BC1E1 /* UIView+DWKit.m in Sources */,
 				743577A81E755B95004BC1E1 /* UIColor+DWKit.m in Sources */,
+				74BC7A381E95371500DAD94E /* DWPermissionUtil.m in Sources */,
 				747FAB381E78EC9A00AD3CFE /* UILabel+DWKit.m in Sources */,
+				742B3DDC1E93D7AA00EA891F /* DWRichTextEditToolBar.m in Sources */,
+				74BC7A431E95DA1A00DAD94E /* UIDevice+DWKit.m in Sources */,
 				74E35A1A1E718E0E00AEDE10 /* DWLinearGradientView.m in Sources */,
 				743577AB1E755FD8004BC1E1 /* UITextField+DWKit.m in Sources */,
 				74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */,
 				743577B11E757C41004BC1E1 /* NSDictionary+DWKit.m in Sources */,
+				74BC7A3D1E95D1CB00DAD94E /* ModelClass.m in Sources */,
 				74E359FE1E7189C600AEDE10 /* ViewController.m in Sources */,
 				747FAB3E1E7920CB00AD3CFE /* NSString+DWKit.m in Sources */,
 				74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */,
@@ -382,6 +472,9 @@
 				747FAB3B1E791AB100AD3CFE /* CALayer+DWKit.m in Sources */,
 				743577A51E755B10004BC1E1 /* NSAttributedString+DWKit.m in Sources */,
 				74E359FB1E7189C600AEDE10 /* AppDelegate.m in Sources */,
+				742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */,
+				74BC7A461E95F89300DAD94E /* DWSettingUtil.m in Sources */,
+				74BC7A401E95D22F00DAD94E /* NSObject+DWModel.m in Sources */,
 				7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */,
 				743577A21E755940004BC1E1 /* UIFont+DWKit.m in Sources */,
 				74E359F81E7189C600AEDE10 /* main.m in Sources */,
@@ -503,7 +596,10 @@
 			baseConfigurationReference = 4E5082B3BFFD185D39C9A663 /* Pods-DWUtilKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DWUtilKitDemo/DWUtilKitDemo.entitlements;
 				DEVELOPMENT_TEAM = VM764RFM6S;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DWUtilKit.pch";
 				INFOPLIST_FILE = DWUtilKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -517,7 +613,10 @@
 			baseConfigurationReference = 43DFB081E7D85AD9BD3D052D /* Pods-DWUtilKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DWUtilKitDemo/DWUtilKitDemo.entitlements;
 				DEVELOPMENT_TEAM = VM764RFM6S;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DWUtilKit.pch";
 				INFOPLIST_FILE = DWUtilKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

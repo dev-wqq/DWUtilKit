@@ -7,42 +7,81 @@
 //
 
 #import "ViewController.h"
-#import "NSDate+DWKit.h"
-#import "UILabel+DWKit.h"
-#import "NSString+DWKit.h"
-#import "UITextView+DWKit.h"
-#import "UIView+DWKit.h"
-#import "UIImage+DWKit.h"
-#import "UIColor+DWKit.h"
+#import "DWUtilities.h"
+#import "DWRichTextEditViewController.h"
 
-@interface ViewController ()
+@interface DWItemModel : NSObject
+
+@property (nonatomic, copy) NSString *classDes;
+@property (nonatomic, copy) NSString *className;
+
+@end
+
+@interface ViewController () <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *mDataSource;
 
 @end
 
 @implementation ViewController
 
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _mDataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
+    
+    DWItemModel *itemModel = _mDataSource[indexPath.row];
+    cell.textLabel.text = itemModel.className;
+    cell.detailTextLabel.text = itemModel.classDes;
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DWItemModel *model = _mDataSource[indexPath.row];
+    
+    UIViewController *vc = [[NSClassFromString(model.className) alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - Construct UI
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    UIColor *color = [UIColor dw_opaqueColorWithHexString:@"#00abf3"];
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    [self.view addSubview:view];
-    view.backgroundColor = color;
-    view.center = self.view.center;
-    
-    NSString *str = [color dw_hexString];
-    NSLog(@"%@",str);
-
-    str = [color dw_hexStringWithAlpha];
-    NSLog(@"%@",str);
+    [self initView];
 }
 
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)initView {
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationController.navigationBar.translucent = NO;
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth,   kScreenHeight)];
+    [self.view addSubview:_tableView];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.rowHeight = 60;
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
+    [self addClass:NSStringFromClass([DWRichTextEditViewController class]) des:@"富文本编辑器"];
 }
 
+- (void)addClass:(NSString *)className des:(NSString *)des {
+    if (!_mDataSource) {
+        _mDataSource = [NSMutableArray array];
+    }
+    DWItemModel *itemModel = [[DWItemModel alloc] init];
+    itemModel.className = className;
+    itemModel.classDes = des;
+    [_mDataSource addObject:itemModel];
+}
+
+@end
+
+@implementation DWItemModel
 
 @end

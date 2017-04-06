@@ -10,7 +10,7 @@
 
 @interface UIColor (DWKit)
 
-/**
+/** 
  from 0 ~ INT_MAX, alpha default is 1.0
  */
 + (UIColor *)dw_colorWithRed:(int)red green:(int)green blue:(int)blue;
@@ -25,7 +25,7 @@
 - (NSString *)dw_hexString;
 
 /**
- @return the color's RGBA value as hex string (lowercase). such as @"00aaffcc"
+ @return the color's RGBA value as hex string (lowercase). such as @"00aaffff"
  */
 - (NSString *)dw_hexStringWithAlpha;
 

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DWUtilKit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.5"
   s.summary      = "DWUtilKit is public library"
 
   # This description is used to generate tags and improve search results.
@@ -63,11 +63,10 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  # s.platform     = :ios, "7.0"
+  s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+  s.ios.deployment_target = "7.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -79,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dev-wqq/DWUtilKit.git", :tag => "v0.0.2" }
+  s.source       = { :git => "https://github.com/dev-wqq/DWUtilKit.git", :tag => "v0.0.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "DWUtilKit", "DWUtilKit/**/*.{h,m}"
-  s.exclude_files = "Classes/DWUtilKit"
-
-  # s.public_header_files = "Classes/**/*.h"
+  s.source_files  = "DWUtilKit/**/*.{h,m}"
+  s.public_header_files = "DWUtilKit/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -117,9 +114,9 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "UIKit", "Foundation"
+  s.frameworks = "UIKit","Foundation","Accelerate","AVFoundation","Photos","AssetsLibrary","UserNotifications"
 
-  # s.library   = "iconv"
+  s.library   = "UserNotifications"
   # s.libraries = "iconv", "xml2"
 
 
@@ -129,7 +126,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency ""
