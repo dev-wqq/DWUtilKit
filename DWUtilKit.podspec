@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   s.frameworks = "UIKit","Foundation","Accelerate","AVFoundation","Photos","AssetsLibrary","UserNotifications"
 
-  s.library   = "UserNotifications"
+  # s.library   = "UserNotifications"
   # s.libraries = "iconv", "xml2"
 
 
