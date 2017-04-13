@@ -9,6 +9,7 @@
 #import "DWRichTextEditViewController.h"
 #import "DWRichTextEditToolBar.h"
 #import "DWPermissionUtil.h"
+#import "UITextView+DWKit.h"
 
 @interface DWRichTextEditViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -68,6 +69,7 @@
     
     _textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 300)];
     [self.view addSubview:_textView];
+    _textView.placeholder = @"text";
     
     DWRichTextEditToolBarConfig *fontBoldConfig = [[DWRichTextEditToolBarConfig alloc] initWithNormalImage:[UIImage imageNamed:@"font_bold_normal"] selectedImage:[UIImage imageNamed:@"font_bold_selected"]];
     DWRichTextEditToolBarConfig *fontColorConfig = [[DWRichTextEditToolBarConfig alloc] initWithNormalImage:[UIImage imageNamed:@"font_color_normal"] selectedImage:[UIImage imageNamed:@"font_color_normal"]];

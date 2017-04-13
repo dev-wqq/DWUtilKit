@@ -45,6 +45,10 @@
 - (UILabel *)placeholderLabel {
     UILabel *label = objc_getAssociatedObject(self, @selector(placeholderLabel));
     if (!label) {
+        NSAttributedString *originalText = self.attributedText;
+        self.text = @" "; // lazily set font of `UITextView`.
+        self.attributedText = originalText;
+        
         label = [[UILabel alloc] init];
         label.textColor = [self.class dw_defaultPlaceholderColor];
         label.numberOfLines = 0;
