@@ -16,6 +16,9 @@
 + (UIColor *)dw_colorWithRed:(int)red green:(int)green blue:(int)blue;
 + (UIColor *)dw_colorWithRed:(int)red green:(int)green blue:(int)blue alpha:(CGFloat)alpha;
 
+/**
+ String should be 6 or 8 characters
+ */
 + (UIColor *)dw_opaqueColorWithHexString:(NSString *)stringToConvert;
 + (UIColor *)dw_colorWithHexString:(NSString *)stringToConvert AndAlpha:(CGFloat)alpha;
 

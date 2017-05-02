@@ -19,6 +19,7 @@
 		743577AB1E755FD8004BC1E1 /* UITextField+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577AA1E755FD8004BC1E1 /* UITextField+DWKit.m */; };
 		743577AE1E756DBD004BC1E1 /* UIViewController+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577AD1E756DBD004BC1E1 /* UIViewController+DWKit.m */; };
 		743577B11E757C41004BC1E1 /* NSDictionary+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */; };
+		743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */; };
 		7455A4951E80C9EE002CA176 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7455A4941E80C9EE002CA176 /* CoreGraphics.framework */; };
 		7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455A4971E80D027002CA176 /* UIImage+DWKit.m */; };
 		747FAB351E78D41E00AD3CFE /* NSObject+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB341E78D41E00AD3CFE /* NSObject+DWKit.m */; };
@@ -49,7 +50,7 @@
 		4E5082B3BFFD185D39C9A663 /* Pods-DWUtilKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		742B3DD61E93CD5100EA891F /* DWRichTextEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditViewController.h; sourceTree = "<group>"; };
 		742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditViewController.m; sourceTree = "<group>"; };
-		742B3DD91E93CF4600EA891F /* DWUtilKit.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWUtilKit.pch; sourceTree = SOURCE_ROOT; };
+		742B3DD91E93CF4600EA891F /* DWUtilKitPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWUtilKitPch.pch; sourceTree = SOURCE_ROOT; };
 		742B3DDA1E93D7AA00EA891F /* DWRichTextEditToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditToolBar.h; sourceTree = "<group>"; };
 		742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditToolBar.m; sourceTree = "<group>"; };
 		742F07AE1E8369E500ABEDA8 /* DWUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUtilities.h; sourceTree = "<group>"; };
@@ -70,6 +71,9 @@
 		743577AD1E756DBD004BC1E1 /* UIViewController+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DWKit.m"; sourceTree = "<group>"; };
 		743577AF1E757C41004BC1E1 /* NSDictionary+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DWKit.h"; sourceTree = "<group>"; };
 		743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DWKit.m"; sourceTree = "<group>"; };
+		743DBAE81EB613DF002009A9 /* DWRichTextEditSelectColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditSelectColorView.h; sourceTree = "<group>"; };
+		743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditSelectColorView.m; sourceTree = "<group>"; };
+		7454F4DB1EB8336700470525 /* DWUtilKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUtilKit.h; sourceTree = "<group>"; };
 		7455A4941E80C9EE002CA176 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7455A4961E80D027002CA176 /* UIImage+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DWKit.h"; sourceTree = "<group>"; };
 		7455A4971E80D027002CA176 /* UIImage+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DWKit.m"; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 				742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */,
 				742B3DDA1E93D7AA00EA891F /* DWRichTextEditToolBar.h */,
 				742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */,
+				743DBAE81EB613DF002009A9 /* DWRichTextEditSelectColorView.h */,
+				743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -224,7 +230,7 @@
 				74E359FA1E7189C600AEDE10 /* AppDelegate.m */,
 				74E359FC1E7189C600AEDE10 /* ViewController.h */,
 				74E359FD1E7189C600AEDE10 /* ViewController.m */,
-				742B3DD91E93CF4600EA891F /* DWUtilKit.pch */,
+				742B3DD91E93CF4600EA891F /* DWUtilKitPch.pch */,
 				74E359FF1E7189C600AEDE10 /* Main.storyboard */,
 				74E35A021E7189C600AEDE10 /* Assets.xcassets */,
 				74E35A041E7189C600AEDE10 /* LaunchScreen.storyboard */,
@@ -249,6 +255,7 @@
 				74E35A0E1E7189FA00AEDE10 /* Category */,
 				74E35A0F1E7189FA00AEDE10 /* Util */,
 				74E35A101E7189FA00AEDE10 /* View */,
+				7454F4DB1EB8336700470525 /* DWUtilKit.h */,
 			);
 			path = DWUtilKit;
 			sourceTree = "<group>";
@@ -355,6 +362,7 @@
 					74E359F21E7189C600AEDE10 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = VM764RFM6S;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -465,6 +473,7 @@
 				74E359FE1E7189C600AEDE10 /* ViewController.m in Sources */,
 				747FAB3E1E7920CB00AD3CFE /* NSString+DWKit.m in Sources */,
 				74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */,
+				743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */,
 				747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */,
 				7435779C1E7544EA004BC1E1 /* UIButton+DWKit.m in Sources */,
 				74E35A131E718A5400AEDE10 /* DWWeakProxy.m in Sources */,
@@ -595,16 +604,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E5082B3BFFD185D39C9A663 /* Pods-DWUtilKitDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DWUtilKitDemo/DWUtilKitDemo.entitlements;
 				DEVELOPMENT_TEAM = VM764RFM6S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/DWUtilKit.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DWUtilKitPch.pch";
 				INFOPLIST_FILE = DWUtilKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duxing.DWUtilKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DWUtilKitDemo/Classes/Swift/DWUtilKitDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -612,16 +626,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43DFB081E7D85AD9BD3D052D /* Pods-DWUtilKitDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DWUtilKitDemo/DWUtilKitDemo.entitlements;
 				DEVELOPMENT_TEAM = VM764RFM6S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/DWUtilKit.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DWUtilKitPch.pch";
 				INFOPLIST_FILE = DWUtilKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duxing.DWUtilKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DWUtilKitDemo/Classes/Swift/DWUtilKitDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

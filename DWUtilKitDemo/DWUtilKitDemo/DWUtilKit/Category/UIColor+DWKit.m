@@ -29,15 +29,15 @@
     NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     
     // String should be 6 or 8 characters
-    // if ([cString length] < 6) return DEFAULT_VOID_COLOR;
+    if ([cString length] < 6) {
+        return nil;
+    }
     
     // strip 0X if it appears
-    if ([cString hasPrefix:@"0X"])
-    {
+    if ([cString hasPrefix:@"0X"]) {
         cString = [cString substringFromIndex:2];
     }
-    if ([cString hasPrefix:@"#"])
-    {
+    if ([cString hasPrefix:@"#"]) {
         cString = [cString substringFromIndex:1];
     }
     // if ([cString length] != 6) return DEFAULT_VOID_COLOR;

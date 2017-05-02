@@ -5,4 +5,6 @@ target “DWUtilKitDemo” do
    pod 'DTFoundation'
    pod 'JSONModel'
    pod 'SDWebImage'
+   pod 'KVOController'
+   pod 'Masonry'
 end
