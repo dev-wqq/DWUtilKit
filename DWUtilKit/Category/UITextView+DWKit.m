@@ -103,7 +103,7 @@
 
 #pragma mark - KVO
 
-- (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     [self _dw_updatePlaceholderLabelFrame];
 }
 

@@ -49,6 +49,11 @@
 #endif
 
 /**
+ *  marco define __weak
+ */
+#define kWeakSelf(weakSelf) __weak typeof(&*self) weakSelf = self;
+
+/**
  *  Get main screen's scale.
  */
 CGFloat DWScreenScale();
