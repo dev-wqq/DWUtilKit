@@ -9,6 +9,7 @@
 #import "DWRichTextEditToolBar.h"
 #import "UIButton+DWKit.h"
 #import "UIView+DWKit.h"
+#import "DWUtilities.h"
 
 @implementation DWRichTextEditToolBar {
     UIScrollView *_scrollView;

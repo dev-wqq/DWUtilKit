@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "DWUtilities.h"
 #import "DWRichTextEditViewController.h"
+#import "DWProgressViewController.h"
+#import "DWSendSMSViewController.h"
+#import "DWGCDViewController.h"
 
 @interface DWItemModel : NSObject
 
@@ -48,6 +51,7 @@
     DWItemModel *model = _mDataSource[indexPath.row];
     
     UIViewController *vc = [[NSClassFromString(model.className) alloc] init];
+    vc.title = model.classDes;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -59,7 +63,7 @@
 }
 
 - (void)initView {
-    
+    self.title = @"Demo";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.translucent = NO;
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth,   kScreenHeight)];
@@ -69,6 +73,10 @@
     _tableView.rowHeight = 60;
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
     [self addClass:NSStringFromClass([DWRichTextEditViewController class]) des:@"富文本编辑器"];
+    [self addClass:NSStringFromClass([DWProgressViewController class]) des:@"NSProgress"];
+    [self addClass:NSStringFromClass([DWSendSMSViewController class]) des:@"短信发送"];
+    [self addClass:NSStringFromClass([DWGCDViewController class]) des:@"GCD并发"];
+
 }
 
 - (void)addClass:(NSString *)className des:(NSString *)des {

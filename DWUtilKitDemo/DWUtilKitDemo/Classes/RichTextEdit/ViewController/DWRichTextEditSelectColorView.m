@@ -163,6 +163,10 @@
     self.layer.anchorPoint = CGPointMake((arrowPoint.x-frame.origin.x)/frame.size.width, 1.0);
     self.frame = frame;
     [self layoutIfNeeded];
+    
+    if (self.startBlock) {
+        self.startBlock();
+    }
     if (animated) {
         self.alpha = 0.0;
         self.transform = CGAffineTransformMakeScale(0.1, 0.1);
@@ -176,20 +180,35 @@
                     self.transform = CGAffineTransformIdentity;
                 } completion:^(BOOL finished) {
                     _viewBackground.enabled = YES;
+                    if (self.completionBlock) {
+                        self.completionBlock();
+                    }
                 }];
             }
         }];
     } else {
         [superView addSubview:self];
         _viewBackground.enabled = YES;
+        if (self.completionBlock) {
+            self.completionBlock();
+        }
     }
 }
 
 - (void)dw_dismiss:(BOOL)animated {
+    if (!_viewBackground.superview && !self.superview) {
+        return;
+    }
+    if (self.startBlock) {
+        self.startBlock();
+    }
     if (!animated) {
         self.transform = CGAffineTransformIdentity;
         [_viewBackground removeFromSuperview];
         [self removeFromSuperview];
+        if (self.completionBlock) {
+            self.completionBlock();
+        }
     } else {
         [UIView animateWithDuration:0.3 animations:^{
             self.transform = CGAffineTransformMakeScale(0.1, 0.1);
@@ -198,7 +217,29 @@
             self.transform = CGAffineTransformIdentity;
             [_viewBackground removeFromSuperview];
             [self removeFromSuperview];
+            if (self.completionBlock) {
+                self.completionBlock();
+            }
         }];
+    }
+}
+
+- (void)dw_setCurrentSelectedColor:(UIColor *)color {
+    if ([_colors containsObject:color]) {
+        NSInteger index = [_colors indexOfObject:color];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+        
+        DWRichTextEditSelectColorConfig *currentModel = _dataSource[index];
+        NSMutableArray *array = [NSMutableArray array];
+        if (_selectIndexPath && _selectIndexPath.row != indexPath.row) {
+            DWRichTextEditSelectColorConfig *model = _dataSource[_selectIndexPath.row];
+            model.selected = NO;
+            [array addObject:_selectIndexPath];
+        }
+        currentModel.selected = YES;
+        [array addObject:indexPath];
+        [_collectionView reloadData];
+        _selectIndexPath = [indexPath copy];
     }
 }
 

@@ -11,7 +11,14 @@
 @class DWRichTextEditSelectColorView;
 typedef void (^DWSelectBlock)(DWRichTextEditSelectColorView *selectColorView, UIColor *selectColor);
 
+typedef void (^DWSelectAnimatedStartBlock)();
+
+typedef void (^DWSelectAnimatedCompletionBlock)();
+
 @interface DWRichTextEditSelectColorView : UIView 
+
+@property (nonatomic, copy) DWSelectAnimatedStartBlock startBlock;
+@property (nonatomic, copy) DWSelectAnimatedCompletionBlock completionBlock;
 
 /**
  定制微小店当前需要的六种颜色分别为：
@@ -25,5 +32,6 @@ typedef void (^DWSelectBlock)(DWRichTextEditSelectColorView *selectColorView, UI
 
 - (void)dw_dismiss:(BOOL)animated;
 
+- (void)dw_setCurrentSelectedColor:(UIColor *)color;
 
 @end

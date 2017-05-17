@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AutoCoding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DTFoundation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FLAnimatedImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -39,10 +49,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>libwebp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2FFD29372D23512A784223DCC876F87E</key>
+		<key>336E8C06814B6C05FF1F327A8DE1FC17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33948DCF72F8C9956084D167F8A76F0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53F8571E2D572C4069860E38654A566A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,6 +78,11 @@
 			<true/>
 		</dict>
 		<key>63AE8F3894A18F3FEF226C8A64A370BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B79ACF002EDBC3062BBBF2EFE601A77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B883DC8506B234B89CC05B6D5DED2671</key>
+		<key>FB6F7635FB13EEAE9014EE007FE8B0B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

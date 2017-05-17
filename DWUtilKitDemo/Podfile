@@ -5,6 +5,10 @@ target “DWUtilKitDemo” do
    pod 'DTFoundation'
    pod 'JSONModel'
    pod 'SDWebImage'
+   pod 'SDWebImage/MapKit'
+   pod 'SDWebImage/GIF'
+   pod 'SDWebImage/WebP'
    pod 'KVOController'
    pod 'Masonry'
+   pod 'AutoCoding'
 end

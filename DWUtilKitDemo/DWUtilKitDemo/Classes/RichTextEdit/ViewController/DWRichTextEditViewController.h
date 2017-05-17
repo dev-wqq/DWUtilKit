@@ -10,4 +10,6 @@
 
 @interface DWRichTextEditViewController : UIViewController
 
+@property (nonatomic, copy) NSString *htmlString;
+
 @end

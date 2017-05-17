@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42CDCB6A504633675499D193 /* libPods-DWUtilKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F392C529386AABF292FD909C /* libPods-DWUtilKitDemo.a */; };
+		740285DE1ECB374100CEBF8C /* DWSendSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 740285DD1ECB374100CEBF8C /* DWSendSMSViewController.m */; };
 		742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */; };
 		742B3DDC1E93D7AA00EA891F /* DWRichTextEditToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */; };
 		742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F07AF1E8369E500ABEDA8 /* DWUtilities.m */; };
@@ -43,11 +44,17 @@
 		74E35A171E718C6E00AEDE10 /* DWFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E35A161E718C6E00AEDE10 /* DWFPSLabel.m */; };
 		74E35A1A1E718E0E00AEDE10 /* DWLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E35A191E718E0E00AEDE10 /* DWLinearGradientView.m */; };
 		74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E35A1D1E726F1000AEDE10 /* NSDate+DWKit.m */; };
+		74EA7FEA1ECA99F2002C63E5 /* DWProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EA7FE91ECA99F2002C63E5 /* DWProgressViewController.m */; };
+		74FB42CC1ECC144600195312 /* DWGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FB42CB1ECC144600195312 /* DWGCDViewController.m */; };
+		74FB42D21ECC3E6F00195312 /* NSTextAttachment+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FB42CF1ECC3E6F00195312 /* NSTextAttachment+DWUtil.m */; };
+		74FB42D31ECC3E6F00195312 /* NSAttributedString+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FB42D11ECC3E6F00195312 /* NSAttributedString+DWUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		43DFB081E7D85AD9BD3D052D /* Pods-DWUtilKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4E5082B3BFFD185D39C9A663 /* Pods-DWUtilKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		740285DC1ECB374100CEBF8C /* DWSendSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSendSMSViewController.h; sourceTree = "<group>"; };
+		740285DD1ECB374100CEBF8C /* DWSendSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSendSMSViewController.m; sourceTree = "<group>"; };
 		742B3DD61E93CD5100EA891F /* DWRichTextEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditViewController.h; sourceTree = "<group>"; };
 		742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditViewController.m; sourceTree = "<group>"; };
 		742B3DD91E93CF4600EA891F /* DWUtilKitPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWUtilKitPch.pch; sourceTree = SOURCE_ROOT; };
@@ -119,6 +126,14 @@
 		74E35A191E718E0E00AEDE10 /* DWLinearGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWLinearGradientView.m; sourceTree = "<group>"; };
 		74E35A1C1E726F1000AEDE10 /* NSDate+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DWKit.h"; sourceTree = "<group>"; };
 		74E35A1D1E726F1000AEDE10 /* NSDate+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DWKit.m"; sourceTree = "<group>"; };
+		74EA7FE81ECA99F2002C63E5 /* DWProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWProgressViewController.h; sourceTree = "<group>"; };
+		74EA7FE91ECA99F2002C63E5 /* DWProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWProgressViewController.m; sourceTree = "<group>"; };
+		74FB42CA1ECC144600195312 /* DWGCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWGCDViewController.h; sourceTree = "<group>"; };
+		74FB42CB1ECC144600195312 /* DWGCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWGCDViewController.m; sourceTree = "<group>"; };
+		74FB42CE1ECC3E6F00195312 /* NSTextAttachment+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextAttachment+DWUtil.h"; sourceTree = "<group>"; };
+		74FB42CF1ECC3E6F00195312 /* NSTextAttachment+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextAttachment+DWUtil.m"; sourceTree = "<group>"; };
+		74FB42D01ECC3E6F00195312 /* NSAttributedString+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DWUtil.h"; sourceTree = "<group>"; };
+		74FB42D11ECC3E6F00195312 /* NSAttributedString+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DWUtil.m"; sourceTree = "<group>"; };
 		F392C529386AABF292FD909C /* libPods-DWUtilKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWUtilKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +162,7 @@
 		742B3DD21E93CCD900EA891F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				74EA7FE61ECA99CE002C63E5 /* Other */,
 				742B3DD31E93CD2B00EA891F /* RichTextEdit */,
 			);
 			path = Classes;
@@ -155,17 +171,9 @@
 		742B3DD31E93CD2B00EA891F /* RichTextEdit */ = {
 			isa = PBXGroup;
 			children = (
-				742B3DD41E93CD2B00EA891F /* Model */,
 				742B3DD51E93CD2B00EA891F /* ViewController */,
 			);
 			path = RichTextEdit;
-			sourceTree = "<group>";
-		};
-		742B3DD41E93CD2B00EA891F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		742B3DD51E93CD2B00EA891F /* ViewController */ = {
@@ -225,6 +233,7 @@
 			children = (
 				74BC7A471E960C7B00DAD94E /* DWUtilKitDemo.entitlements */,
 				74E35A0D1E7189FA00AEDE10 /* DWUtilKit */,
+				74FB42CD1ECC3E0400195312 /* DWCommonUtil */,
 				742B3DD21E93CCD900EA891F /* Classes */,
 				74E359F91E7189C600AEDE10 /* AppDelegate.h */,
 				74E359FA1E7189C600AEDE10 /* AppDelegate.m */,
@@ -325,6 +334,38 @@
 				74E35A191E718E0E00AEDE10 /* DWLinearGradientView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		74EA7FE61ECA99CE002C63E5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				74EA7FE71ECA99CE002C63E5 /* ViewController */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		74EA7FE71ECA99CE002C63E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74EA7FE81ECA99F2002C63E5 /* DWProgressViewController.h */,
+				74EA7FE91ECA99F2002C63E5 /* DWProgressViewController.m */,
+				740285DC1ECB374100CEBF8C /* DWSendSMSViewController.h */,
+				740285DD1ECB374100CEBF8C /* DWSendSMSViewController.m */,
+				74FB42CA1ECC144600195312 /* DWGCDViewController.h */,
+				74FB42CB1ECC144600195312 /* DWGCDViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		74FB42CD1ECC3E0400195312 /* DWCommonUtil */ = {
+			isa = PBXGroup;
+			children = (
+				74FB42CE1ECC3E6F00195312 /* NSTextAttachment+DWUtil.h */,
+				74FB42CF1ECC3E6F00195312 /* NSTextAttachment+DWUtil.m */,
+				74FB42D01ECC3E6F00195312 /* NSAttributedString+DWUtil.h */,
+				74FB42D11ECC3E6F00195312 /* NSAttributedString+DWUtil.m */,
+			);
+			path = DWCommonUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,6 +501,7 @@
 				747FAB351E78D41E00AD3CFE /* NSObject+DWKit.m in Sources */,
 				742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */,
 				7435779F1E754641004BC1E1 /* UIView+DWKit.m in Sources */,
+				74EA7FEA1ECA99F2002C63E5 /* DWProgressViewController.m in Sources */,
 				743577A81E755B95004BC1E1 /* UIColor+DWKit.m in Sources */,
 				74BC7A381E95371500DAD94E /* DWPermissionUtil.m in Sources */,
 				747FAB381E78EC9A00AD3CFE /* UILabel+DWKit.m in Sources */,
@@ -475,16 +517,20 @@
 				74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */,
 				743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */,
 				747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */,
+				74FB42CC1ECC144600195312 /* DWGCDViewController.m in Sources */,
 				7435779C1E7544EA004BC1E1 /* UIButton+DWKit.m in Sources */,
 				74E35A131E718A5400AEDE10 /* DWWeakProxy.m in Sources */,
 				74E35A171E718C6E00AEDE10 /* DWFPSLabel.m in Sources */,
 				747FAB3B1E791AB100AD3CFE /* CALayer+DWKit.m in Sources */,
 				743577A51E755B10004BC1E1 /* NSAttributedString+DWKit.m in Sources */,
+				74FB42D31ECC3E6F00195312 /* NSAttributedString+DWUtil.m in Sources */,
 				74E359FB1E7189C600AEDE10 /* AppDelegate.m in Sources */,
 				742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */,
 				74BC7A461E95F89300DAD94E /* DWSettingUtil.m in Sources */,
 				74BC7A401E95D22F00DAD94E /* NSObject+DWModel.m in Sources */,
 				7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */,
+				740285DE1ECB374100CEBF8C /* DWSendSMSViewController.m in Sources */,
+				74FB42D21ECC3E6F00195312 /* NSTextAttachment+DWUtil.m in Sources */,
 				743577A21E755940004BC1E1 /* UIFont+DWKit.m in Sources */,
 				74E359F81E7189C600AEDE10 /* main.m in Sources */,
 			);

@@ -15,29 +15,12 @@
 #import <Masonry/Masonry.h>
 #import "UIColor+DWKit.h"
 #import "DWRichTextEditSelectColorView.h"
+#import "NSAttributedString+DWKit.h"
+#import "NSAttributedString+DWUtil.h"
+#import "NSTextAttachment+DWUtil.h"
 
-NSString *dw_convertAttributedStringToHtml(NSAttributedString *attStr){
-    // http://stackoverflow.com/questions/5298188/how-do-i-convert-nsattributedstring-into-html-string
-    NSDictionary *documentAttributes = @{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType};
-    NSError *error;
-    NSData *htmlData = [attStr dataFromRange:NSMakeRange(0, attStr.length) documentAttributes:documentAttributes error:&error];
-    if (error) {
-        NSLog(@"AttributedString to HTML Error:%@",error);
-    }
-    NSString *htmlString = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
-    return htmlString;
-}
-
-NSAttributedString *dw_convertHtmlToAttributedString(NSString *htmlString) {
-    NSDictionary *options = @{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType,
-                                         NSCharacterEncodingDocumentAttribute:@(NSUTF8StringEncoding)};
-    NSError *error;
-    NSAttributedString *htmlAttributedString = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] options:options documentAttributes:nil error:&error];
-    if (error) {
-        NSLog(@"HTML to AttributedString Error:%@",error);
-    }
-    return htmlAttributedString;
-}
+#define MAIN_TITLE_COLOR       @"#333333"  // 标题文字
+#define TITLE_FONT             [UIFont systemFontOfSize:16.0f] // 正文，按钮文字
 
 CGRect dw_addImageboundsFromSize(CGSize size, UITextView *textView) {
     CGFloat lineFragmentPadding = textView.textContainer.lineFragmentPadding;
@@ -51,11 +34,40 @@ CGRect dw_addImageboundsFromSize(CGSize size, UITextView *textView) {
     }
 }
 
+void dw_changFontOrColor(UITextView **textView, UIFont *font, UIColor *color) {
+    NSRange r = (*textView).selectedRange;
+    if (r.length > 0) {
+        NSMutableAttributedString *attr = [(*textView).attributedText mutableCopy];
+        [attr beginEditing];
+        [attr enumerateAttributesInRange:r options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+            
+            if (font) {
+                [attr addAttributes:[NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName] range:range];
+            }
+            if (color) {
+                [attr addAttributes:[NSDictionary dictionaryWithObject:color forKey:NSForegroundColorAttributeName] range:range];
+            }
+        }];
+        [attr endEditing];
+        (*textView).attributedText = attr;
+        [(*textView) setSelectedRange:r];
+    } else {
+        NSMutableDictionary *typeAttrs = [(*textView).typingAttributes mutableCopy];
+        if (font) {
+            typeAttrs[NSFontAttributeName] = font;
+        }
+        if (color) {
+            typeAttrs[NSForegroundColorAttributeName] = color;
+        }
+        (*textView).typingAttributes = typeAttrs;
+    }
+}
 
 @interface DWRichTextEditViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) DWRichTextEditSelectColorView *selectColorView;
+@property (nonatomic, copy)   NSString *originalHtml;
 
 @end
 
@@ -86,19 +98,41 @@ CGRect dw_addImageboundsFromSize(CGSize size, UITextView *textView) {
 #pragma mark - Event Respond
 
 - (void)doModifyFontBold:(UIButton *)sender {
-    NSString *str = dw_convertAttributedStringToHtml(_textView.attributedText);
-    NSLog(@"%@",str);
+    [self dismissSelectColorView:YES];
+    sender.selected = !sender.isSelected;
+    UIFont *font;
+    if (sender.selected) {
+        font = [_textView.font dw_fontWithBold];
+    } else {
+        font = [_textView.font dw_fontWithNormal];
+    }
+    UITextView *textView = _textView;
+    dw_changFontOrColor(&textView, font, nil);
 }
 
 - (void)doModifyFontColor:(UIButton *)sender {
-    CGPoint point = [[UIApplication sharedApplication].delegate.window convertPoint:CGPointMake(sender.centerX-5, sender.y-15) fromView:_textView.inputAccessoryView];
-    if (!_selectColorView) {
-        _selectColorView = [[DWRichTextEditSelectColorView alloc] initWithColors:[DWRichTextEditSelectColorView dw_richTextColors] atPoint:point selectBlock:^(DWRichTextEditSelectColorView *selectColorView, UIColor *selectColor) {
-            
-        }];
-    }
-    [_selectColorView dw_show:YES inView:[UIApplication sharedApplication].delegate.window];
-}
+    sender.selected = !sender.isSelected;
+    if (sender.selected) {
+        CGPoint point = [[UIApplication sharedApplication].delegate.window convertPoint:CGPointMake(sender.centerX-5, sender.y-5) fromView:_textView.inputAccessoryView];
+        if (!_selectColorView) {
+            kWeakSelf(weakSelf);
+            _selectColorView = [[DWRichTextEditSelectColorView alloc] initWithColors:[DWRichTextEditSelectColorView dw_richTextColors] atPoint:point selectBlock:^(DWRichTextEditSelectColorView *selectColorView, UIColor *selectColor) {
+                UITextView *textView = weakSelf.textView;
+                dw_changFontOrColor(&textView, nil, selectColor);
+            }];
+            _selectColorView.startBlock = ^{
+                sender.enabled = NO;
+            };
+            _selectColorView.completionBlock = ^{
+                sender.enabled = YES;
+            };
+            [_selectColorView dw_setCurrentSelectedColor:_textView.textColor];
+        }
+        [_selectColorView dw_setCurrentSelectedColor:_textView.textColor];
+        [_selectColorView dw_show:YES inView:[UIApplication sharedApplication].delegate.window];
+    } else {
+        [self dismissSelectColorView:YES];
+    }}
 
 - (void)doAddImage:(UIButton *)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
@@ -117,6 +151,10 @@ CGRect dw_addImageboundsFromSize(CGSize size, UITextView *textView) {
 
 #pragma mark - Construct UI
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -124,8 +162,6 @@ CGRect dw_addImageboundsFromSize(CGSize size, UITextView *textView) {
 }
 
 - (void)initView {
-    self.title = @"富文本编辑器";
-
     _textView = [[UITextView alloc] initWithFrame:self.view.bounds];
     _textView.font = [UIFont systemFontOfSize:16];
     _textView.textColor = [UIColor dw_opaqueColorWithHexString:@"#b2b2b2"];
@@ -152,7 +188,95 @@ CGRect dw_addImageboundsFromSize(CGSize size, UITextView *textView) {
         }
     }];
     [_textView becomeFirstResponder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didTextViewTextDidChangeNotification:) name:UITextViewTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
+
+- (void)initData {
+    NSMutableAttributedString *textAttr = [[NSMutableAttributedString alloc] initWithString:@""];
+    [textAttr dw_setForegroundColor:[UIColor dw_opaqueColorWithHexString:MAIN_TITLE_COLOR]];
+    
+    if (!_htmlString || _htmlString.length == 0) {
+        [textAttr dw_setFont:TITLE_FONT];
+        [textAttr dw_setLineSpacing:5];
+        _textView.attributedText = textAttr;
+        return;
+    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSError *error = NULL;
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(<img\\s[\\s\\S]*?src\\s*?=\\s*?['\"](.*?)['\"][\\s\\S]*?>)+?"
+                                                                               options:NSRegularExpressionCaseInsensitive
+                                                                                 error:&error];
+        NSMutableArray *array = [NSMutableArray array];
+        [regex enumerateMatchesInString:_htmlString
+                                options:0
+                                  range:NSMakeRange(0, [_htmlString length])
+                             usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+                                 NSString *img = [_htmlString substringWithRange:[result rangeAtIndex:2]];
+                                 NSLog(@"original img src:%@",img);
+                                 [array addObject:img];
+                             }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSAttributedString *attributedString = dw_convertHtmlToAttributedString(_htmlString);
+            NSMutableArray *mTextAtt = [NSMutableArray array];
+            [attributedString enumerateAttributesInRange:attributedString.dw_rangeOfAll options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+                NSTextAttachment *textAttachment = attrs[NSAttachmentAttributeName];
+                if (textAttachment) {
+                    [mTextAtt addObject:textAttachment];
+                }
+            }];
+            
+            [mTextAtt enumerateObjectsUsingBlock:^(NSTextAttachment *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (idx < array.count) {
+                    obj.dw_imageSrc = array[idx];
+                    // 这里的NSTextAttachment的image需要从fileWrapper中获取，不能直接使用image,此时为nil
+                    UIImage *image = [UIImage imageWithData:obj.fileWrapper.regularFileContents];
+                    obj.bounds = dw_addImageboundsFromSize(image.size, _textView);
+                }
+            }];
+            [textAttr appendAttributedString:attributedString];
+            [textAttr dw_setFont:TITLE_FONT];
+            // 这里设置为系统默认的段落风格，存在格式问题
+            [textAttr dw_setParagraphStyle:[NSParagraphStyle defaultParagraphStyle]];
+            [textAttr dw_setLineSpacing:5];
+            _originalHtml = [textAttr dw_htmlString];
+            _textView.attributedText = textAttr;
+        });
+    });
+}
+
+- (BOOL)isModifyContext {
+    NSString *str = [_textView.attributedText dw_htmlString];
+    if ((!str && !_originalHtml) || [str isEqualToString:_originalHtml]) {
+        return NO;
+    }
+    return YES;
+}
+
+- (void)dismissSelectColorView:(BOOL)animated {
+    if (_selectColorView) {
+        [_selectColorView dw_dismiss:animated];
+    }
+}
+
+#pragma mark - NSNotificationCenter
+
+- (void)didTextViewTextDidChangeNotification:(NSNotification *)notifiy {
+    [self dismissSelectColorView:YES];
+}
+
+#pragma mark - KVO
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    _textView.height = kScreenHeight-kNavigationBarHeight-keyboardSize.height;
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    _textView.height = kScreenHeight-kNavigationBarHeight;
+}
+
 
 
 @end
