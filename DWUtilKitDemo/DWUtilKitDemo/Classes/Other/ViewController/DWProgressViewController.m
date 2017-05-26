@@ -24,8 +24,6 @@
 }
 
 - (void)initView {
-    self.title = @"NSProgress";
-    
     _progress = [NSProgress progressWithTotalUnitCount:60];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(doTimer:) userInfo:nil repeats:YES];
     [_progress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:nil];

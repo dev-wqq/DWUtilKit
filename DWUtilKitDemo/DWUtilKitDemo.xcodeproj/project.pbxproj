@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		42CDCB6A504633675499D193 /* libPods-DWUtilKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F392C529386AABF292FD909C /* libPods-DWUtilKitDemo.a */; };
 		740285DE1ECB374100CEBF8C /* DWSendSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 740285DD1ECB374100CEBF8C /* DWSendSMSViewController.m */; };
+		741B34EF1ED31AD3007D4278 /* NSAttributedString+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B34EC1ED31AD3007D4278 /* NSAttributedString+DWUtil.m */; };
+		741B34F01ED31AD3007D4278 /* NSTextAttachment+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B34EE1ED31AD3007D4278 /* NSTextAttachment+DWUtil.m */; };
 		742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */; };
 		742B3DDC1E93D7AA00EA891F /* DWRichTextEditToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */; };
 		742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F07AF1E8369E500ABEDA8 /* DWUtilities.m */; };
@@ -21,6 +23,7 @@
 		743577AE1E756DBD004BC1E1 /* UIViewController+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577AD1E756DBD004BC1E1 /* UIViewController+DWKit.m */; };
 		743577B11E757C41004BC1E1 /* NSDictionary+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */; };
 		743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */; };
+		7448B81F1ED72A1A00AE165F /* DWUtilKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7448B81E1ED72A1A00AE165F /* DWUtilKitDemoTests.m */; };
 		7455A4951E80C9EE002CA176 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7455A4941E80C9EE002CA176 /* CoreGraphics.framework */; };
 		7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455A4971E80D027002CA176 /* UIImage+DWKit.m */; };
 		747FAB351E78D41E00AD3CFE /* NSObject+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB341E78D41E00AD3CFE /* NSObject+DWKit.m */; };
@@ -30,8 +33,6 @@
 		747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB401E7926C900AD3CFE /* NSNumber+DWKit.m */; };
 		74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B616501E7FCCD4004D350B /* UITextView+DWKit.m */; };
 		74BC7A381E95371500DAD94E /* DWPermissionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A371E95371500DAD94E /* DWPermissionUtil.m */; };
-		74BC7A3D1E95D1CB00DAD94E /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A3C1E95D1CB00DAD94E /* ModelClass.m */; };
-		74BC7A401E95D22F00DAD94E /* NSObject+DWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A3F1E95D22F00DAD94E /* NSObject+DWModel.m */; };
 		74BC7A431E95DA1A00DAD94E /* UIDevice+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A421E95DA1A00DAD94E /* UIDevice+DWKit.m */; };
 		74BC7A461E95F89300DAD94E /* DWSettingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A451E95F89300DAD94E /* DWSettingUtil.m */; };
 		74E359F81E7189C600AEDE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E359F71E7189C600AEDE10 /* main.m */; };
@@ -45,16 +46,35 @@
 		74E35A1A1E718E0E00AEDE10 /* DWLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E35A191E718E0E00AEDE10 /* DWLinearGradientView.m */; };
 		74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E35A1D1E726F1000AEDE10 /* NSDate+DWKit.m */; };
 		74EA7FEA1ECA99F2002C63E5 /* DWProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EA7FE91ECA99F2002C63E5 /* DWProgressViewController.m */; };
+		74EC50251ED6A4E2000A9E3C /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50221ED6A4E2000A9E3C /* ModelClass.m */; };
+		74EC50261ED6A4E2000A9E3C /* NSObject+DWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50241ED6A4E2000A9E3C /* NSObject+DWModel.m */; };
+		74EC502E1ED6A50E000A9E3C /* NSArray+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50291ED6A50E000A9E3C /* NSArray+DWCrash.m */; };
+		74EC502F1ED6A50E000A9E3C /* NSDictionary+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC502B1ED6A50E000A9E3C /* NSDictionary+DWCrash.m */; };
+		74EC50301ED6A50E000A9E3C /* NSNull+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC502D1ED6A50E000A9E3C /* NSNull+DWCrash.m */; };
+		74EC50341ED6A516000A9E3C /* NSObject+DWLogUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50331ED6A516000A9E3C /* NSObject+DWLogUnicode.m */; };
+		74EC50371ED6A5ED000A9E3C /* NSObject+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50361ED6A5ED000A9E3C /* NSObject+DWCrash.m */; };
 		74FB42CC1ECC144600195312 /* DWGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FB42CB1ECC144600195312 /* DWGCDViewController.m */; };
-		74FB42D21ECC3E6F00195312 /* NSTextAttachment+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FB42CF1ECC3E6F00195312 /* NSTextAttachment+DWUtil.m */; };
-		74FB42D31ECC3E6F00195312 /* NSAttributedString+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FB42D11ECC3E6F00195312 /* NSAttributedString+DWUtil.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7448B8211ED72A1A00AE165F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74E359EB1E7189C600AEDE10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74E359F21E7189C600AEDE10;
+			remoteInfo = DWUtilKitDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		43DFB081E7D85AD9BD3D052D /* Pods-DWUtilKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4E5082B3BFFD185D39C9A663 /* Pods-DWUtilKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		740285DC1ECB374100CEBF8C /* DWSendSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSendSMSViewController.h; sourceTree = "<group>"; };
 		740285DD1ECB374100CEBF8C /* DWSendSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSendSMSViewController.m; sourceTree = "<group>"; };
+		741B34EB1ED31AD3007D4278 /* NSAttributedString+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DWUtil.h"; sourceTree = "<group>"; };
+		741B34EC1ED31AD3007D4278 /* NSAttributedString+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DWUtil.m"; sourceTree = "<group>"; };
+		741B34ED1ED31AD3007D4278 /* NSTextAttachment+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextAttachment+DWUtil.h"; sourceTree = "<group>"; };
+		741B34EE1ED31AD3007D4278 /* NSTextAttachment+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextAttachment+DWUtil.m"; sourceTree = "<group>"; };
 		742B3DD61E93CD5100EA891F /* DWRichTextEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditViewController.h; sourceTree = "<group>"; };
 		742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditViewController.m; sourceTree = "<group>"; };
 		742B3DD91E93CF4600EA891F /* DWUtilKitPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWUtilKitPch.pch; sourceTree = SOURCE_ROOT; };
@@ -80,6 +100,9 @@
 		743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DWKit.m"; sourceTree = "<group>"; };
 		743DBAE81EB613DF002009A9 /* DWRichTextEditSelectColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditSelectColorView.h; sourceTree = "<group>"; };
 		743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditSelectColorView.m; sourceTree = "<group>"; };
+		7448B81C1ED72A1A00AE165F /* DWUtilKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWUtilKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7448B81E1ED72A1A00AE165F /* DWUtilKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWUtilKitDemoTests.m; sourceTree = "<group>"; };
+		7448B8201ED72A1A00AE165F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7454F4DB1EB8336700470525 /* DWUtilKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUtilKit.h; sourceTree = "<group>"; };
 		7455A4941E80C9EE002CA176 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7455A4961E80D027002CA176 /* UIImage+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DWKit.h"; sourceTree = "<group>"; };
@@ -98,11 +121,6 @@
 		74B616501E7FCCD4004D350B /* UITextView+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DWKit.m"; sourceTree = "<group>"; };
 		74BC7A361E95371500DAD94E /* DWPermissionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPermissionUtil.h; sourceTree = "<group>"; };
 		74BC7A371E95371500DAD94E /* DWPermissionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPermissionUtil.m; sourceTree = "<group>"; };
-		74BC7A3A1E95D15900DAD94E /* DWModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWModel.h; sourceTree = "<group>"; };
-		74BC7A3B1E95D1CB00DAD94E /* ModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelClass.h; sourceTree = "<group>"; };
-		74BC7A3C1E95D1CB00DAD94E /* ModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelClass.m; sourceTree = "<group>"; };
-		74BC7A3E1E95D22F00DAD94E /* NSObject+DWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWModel.h"; sourceTree = "<group>"; };
-		74BC7A3F1E95D22F00DAD94E /* NSObject+DWModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWModel.m"; sourceTree = "<group>"; };
 		74BC7A411E95DA1A00DAD94E /* UIDevice+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DWKit.h"; sourceTree = "<group>"; };
 		74BC7A421E95DA1A00DAD94E /* UIDevice+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DWKit.m"; sourceTree = "<group>"; };
 		74BC7A441E95F89300DAD94E /* DWSettingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSettingUtil.h; sourceTree = "<group>"; };
@@ -128,16 +146,34 @@
 		74E35A1D1E726F1000AEDE10 /* NSDate+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DWKit.m"; sourceTree = "<group>"; };
 		74EA7FE81ECA99F2002C63E5 /* DWProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWProgressViewController.h; sourceTree = "<group>"; };
 		74EA7FE91ECA99F2002C63E5 /* DWProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWProgressViewController.m; sourceTree = "<group>"; };
+		74EC50201ED6A4E2000A9E3C /* DWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWModel.h; sourceTree = "<group>"; };
+		74EC50211ED6A4E2000A9E3C /* ModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelClass.h; sourceTree = "<group>"; };
+		74EC50221ED6A4E2000A9E3C /* ModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelClass.m; sourceTree = "<group>"; };
+		74EC50231ED6A4E2000A9E3C /* NSObject+DWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWModel.h"; sourceTree = "<group>"; };
+		74EC50241ED6A4E2000A9E3C /* NSObject+DWModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWModel.m"; sourceTree = "<group>"; };
+		74EC50281ED6A50E000A9E3C /* NSArray+DWCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWCrash.h"; sourceTree = "<group>"; };
+		74EC50291ED6A50E000A9E3C /* NSArray+DWCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWCrash.m"; sourceTree = "<group>"; };
+		74EC502A1ED6A50E000A9E3C /* NSDictionary+DWCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DWCrash.h"; sourceTree = "<group>"; };
+		74EC502B1ED6A50E000A9E3C /* NSDictionary+DWCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DWCrash.m"; sourceTree = "<group>"; };
+		74EC502C1ED6A50E000A9E3C /* NSNull+DWCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+DWCrash.h"; sourceTree = "<group>"; };
+		74EC502D1ED6A50E000A9E3C /* NSNull+DWCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+DWCrash.m"; sourceTree = "<group>"; };
+		74EC50321ED6A516000A9E3C /* NSObject+DWLogUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWLogUnicode.h"; sourceTree = "<group>"; };
+		74EC50331ED6A516000A9E3C /* NSObject+DWLogUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWLogUnicode.m"; sourceTree = "<group>"; };
+		74EC50351ED6A5ED000A9E3C /* NSObject+DWCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWCrash.h"; sourceTree = "<group>"; };
+		74EC50361ED6A5ED000A9E3C /* NSObject+DWCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWCrash.m"; sourceTree = "<group>"; };
 		74FB42CA1ECC144600195312 /* DWGCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWGCDViewController.h; sourceTree = "<group>"; };
 		74FB42CB1ECC144600195312 /* DWGCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWGCDViewController.m; sourceTree = "<group>"; };
-		74FB42CE1ECC3E6F00195312 /* NSTextAttachment+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextAttachment+DWUtil.h"; sourceTree = "<group>"; };
-		74FB42CF1ECC3E6F00195312 /* NSTextAttachment+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextAttachment+DWUtil.m"; sourceTree = "<group>"; };
-		74FB42D01ECC3E6F00195312 /* NSAttributedString+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DWUtil.h"; sourceTree = "<group>"; };
-		74FB42D11ECC3E6F00195312 /* NSAttributedString+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DWUtil.m"; sourceTree = "<group>"; };
 		F392C529386AABF292FD909C /* libPods-DWUtilKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWUtilKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7448B8191ED72A1A00AE165F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74E359F01E7189C600AEDE10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,6 +225,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		7448B81D1ED72A1A00AE165F /* DWUtilKitDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7448B81E1ED72A1A00AE165F /* DWUtilKitDemoTests.m */,
+				7448B8201ED72A1A00AE165F /* Info.plist */,
+			);
+			path = DWUtilKitDemoTests;
+			sourceTree = "<group>";
+		};
 		7455A4931E80C9EE002CA176 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,22 +243,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		74BC7A391E95D0E300DAD94E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				74BC7A3A1E95D15900DAD94E /* DWModel.h */,
-				74BC7A3B1E95D1CB00DAD94E /* ModelClass.h */,
-				74BC7A3C1E95D1CB00DAD94E /* ModelClass.m */,
-				74BC7A3E1E95D22F00DAD94E /* NSObject+DWModel.h */,
-				74BC7A3F1E95D22F00DAD94E /* NSObject+DWModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		74E359EA1E7189C600AEDE10 = {
 			isa = PBXGroup;
 			children = (
 				74E359F51E7189C600AEDE10 /* DWUtilKitDemo */,
+				7448B81D1ED72A1A00AE165F /* DWUtilKitDemoTests */,
 				74E359F41E7189C600AEDE10 /* Products */,
 				7455A4931E80C9EE002CA176 /* Frameworks */,
 				3AF117EF41F8E302E91B11E0 /* Pods */,
@@ -224,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				74E359F31E7189C600AEDE10 /* DWUtilKitDemo.app */,
+				7448B81C1ED72A1A00AE165F /* DWUtilKitDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,8 +267,10 @@
 			isa = PBXGroup;
 			children = (
 				74BC7A471E960C7B00DAD94E /* DWUtilKitDemo.entitlements */,
-				74E35A0D1E7189FA00AEDE10 /* DWUtilKit */,
+				74EC50311ED6A516000A9E3C /* DWLogUnicode */,
+				74EC50271ED6A50E000A9E3C /* DWCrashSafe */,
 				74FB42CD1ECC3E0400195312 /* DWCommonUtil */,
+				74E35A0D1E7189FA00AEDE10 /* DWUtilKit */,
 				742B3DD21E93CCD900EA891F /* Classes */,
 				74E359F91E7189C600AEDE10 /* AppDelegate.h */,
 				74E359FA1E7189C600AEDE10 /* AppDelegate.m */,
@@ -260,7 +297,7 @@
 		74E35A0D1E7189FA00AEDE10 /* DWUtilKit */ = {
 			isa = PBXGroup;
 			children = (
-				74BC7A391E95D0E300DAD94E /* Model */,
+				74EC501F1ED6A4E2000A9E3C /* Model */,
 				74E35A0E1E7189FA00AEDE10 /* Category */,
 				74E35A0F1E7189FA00AEDE10 /* Util */,
 				74E35A101E7189FA00AEDE10 /* View */,
@@ -357,13 +394,49 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		74EC501F1ED6A4E2000A9E3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74EC50201ED6A4E2000A9E3C /* DWModel.h */,
+				74EC50211ED6A4E2000A9E3C /* ModelClass.h */,
+				74EC50221ED6A4E2000A9E3C /* ModelClass.m */,
+				74EC50231ED6A4E2000A9E3C /* NSObject+DWModel.h */,
+				74EC50241ED6A4E2000A9E3C /* NSObject+DWModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74EC50271ED6A50E000A9E3C /* DWCrashSafe */ = {
+			isa = PBXGroup;
+			children = (
+				74EC50351ED6A5ED000A9E3C /* NSObject+DWCrash.h */,
+				74EC50361ED6A5ED000A9E3C /* NSObject+DWCrash.m */,
+				74EC50281ED6A50E000A9E3C /* NSArray+DWCrash.h */,
+				74EC50291ED6A50E000A9E3C /* NSArray+DWCrash.m */,
+				74EC502A1ED6A50E000A9E3C /* NSDictionary+DWCrash.h */,
+				74EC502B1ED6A50E000A9E3C /* NSDictionary+DWCrash.m */,
+				74EC502C1ED6A50E000A9E3C /* NSNull+DWCrash.h */,
+				74EC502D1ED6A50E000A9E3C /* NSNull+DWCrash.m */,
+			);
+			path = DWCrashSafe;
+			sourceTree = "<group>";
+		};
+		74EC50311ED6A516000A9E3C /* DWLogUnicode */ = {
+			isa = PBXGroup;
+			children = (
+				74EC50321ED6A516000A9E3C /* NSObject+DWLogUnicode.h */,
+				74EC50331ED6A516000A9E3C /* NSObject+DWLogUnicode.m */,
+			);
+			path = DWLogUnicode;
+			sourceTree = "<group>";
+		};
 		74FB42CD1ECC3E0400195312 /* DWCommonUtil */ = {
 			isa = PBXGroup;
 			children = (
-				74FB42CE1ECC3E6F00195312 /* NSTextAttachment+DWUtil.h */,
-				74FB42CF1ECC3E6F00195312 /* NSTextAttachment+DWUtil.m */,
-				74FB42D01ECC3E6F00195312 /* NSAttributedString+DWUtil.h */,
-				74FB42D11ECC3E6F00195312 /* NSAttributedString+DWUtil.m */,
+				741B34EB1ED31AD3007D4278 /* NSAttributedString+DWUtil.h */,
+				741B34EC1ED31AD3007D4278 /* NSAttributedString+DWUtil.m */,
+				741B34ED1ED31AD3007D4278 /* NSTextAttachment+DWUtil.h */,
+				741B34EE1ED31AD3007D4278 /* NSTextAttachment+DWUtil.m */,
 			);
 			path = DWCommonUtil;
 			sourceTree = "<group>";
@@ -371,6 +444,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7448B81B1ED72A1A00AE165F /* DWUtilKitDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7448B8251ED72A1A00AE165F /* Build configuration list for PBXNativeTarget "DWUtilKitDemoTests" */;
+			buildPhases = (
+				7448B8181ED72A1A00AE165F /* Sources */,
+				7448B8191ED72A1A00AE165F /* Frameworks */,
+				7448B81A1ED72A1A00AE165F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7448B8221ED72A1A00AE165F /* PBXTargetDependency */,
+			);
+			name = DWUtilKitDemoTests;
+			productName = DWUtilKitDemoTests;
+			productReference = 7448B81C1ED72A1A00AE165F /* DWUtilKitDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		74E359F21E7189C600AEDE10 /* DWUtilKitDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74E35A0A1E7189C600AEDE10 /* Build configuration list for PBXNativeTarget "DWUtilKitDemo" */;
@@ -400,6 +491,12 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = duxing;
 				TargetAttributes = {
+					7448B81B1ED72A1A00AE165F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = M2XU6NPV6D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 74E359F21E7189C600AEDE10;
+					};
 					74E359F21E7189C600AEDE10 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = VM764RFM6S;
@@ -427,11 +524,19 @@
 			projectRoot = "";
 			targets = (
 				74E359F21E7189C600AEDE10 /* DWUtilKitDemo */,
+				7448B81B1ED72A1A00AE165F /* DWUtilKitDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7448B81A1ED72A1A00AE165F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74E359F11E7189C600AEDE10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,12 +598,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7448B8181ED72A1A00AE165F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7448B81F1ED72A1A00AE165F /* DWUtilKitDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74E359EF1E7189C600AEDE10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				743577AE1E756DBD004BC1E1 /* UIViewController+DWKit.m in Sources */,
+				74EC50341ED6A516000A9E3C /* NSObject+DWLogUnicode.m in Sources */,
+				74EC50301ED6A50E000A9E3C /* NSNull+DWCrash.m in Sources */,
 				747FAB351E78D41E00AD3CFE /* NSObject+DWKit.m in Sources */,
+				74EC50251ED6A4E2000A9E3C /* ModelClass.m in Sources */,
 				742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */,
 				7435779F1E754641004BC1E1 /* UIView+DWKit.m in Sources */,
 				74EA7FEA1ECA99F2002C63E5 /* DWProgressViewController.m in Sources */,
@@ -511,32 +627,42 @@
 				743577AB1E755FD8004BC1E1 /* UITextField+DWKit.m in Sources */,
 				74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */,
 				743577B11E757C41004BC1E1 /* NSDictionary+DWKit.m in Sources */,
-				74BC7A3D1E95D1CB00DAD94E /* ModelClass.m in Sources */,
 				74E359FE1E7189C600AEDE10 /* ViewController.m in Sources */,
 				747FAB3E1E7920CB00AD3CFE /* NSString+DWKit.m in Sources */,
 				74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */,
+				741B34EF1ED31AD3007D4278 /* NSAttributedString+DWUtil.m in Sources */,
+				74EC502E1ED6A50E000A9E3C /* NSArray+DWCrash.m in Sources */,
 				743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */,
 				747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */,
+				74EC502F1ED6A50E000A9E3C /* NSDictionary+DWCrash.m in Sources */,
 				74FB42CC1ECC144600195312 /* DWGCDViewController.m in Sources */,
 				7435779C1E7544EA004BC1E1 /* UIButton+DWKit.m in Sources */,
 				74E35A131E718A5400AEDE10 /* DWWeakProxy.m in Sources */,
 				74E35A171E718C6E00AEDE10 /* DWFPSLabel.m in Sources */,
 				747FAB3B1E791AB100AD3CFE /* CALayer+DWKit.m in Sources */,
 				743577A51E755B10004BC1E1 /* NSAttributedString+DWKit.m in Sources */,
-				74FB42D31ECC3E6F00195312 /* NSAttributedString+DWUtil.m in Sources */,
 				74E359FB1E7189C600AEDE10 /* AppDelegate.m in Sources */,
+				741B34F01ED31AD3007D4278 /* NSTextAttachment+DWUtil.m in Sources */,
 				742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */,
 				74BC7A461E95F89300DAD94E /* DWSettingUtil.m in Sources */,
-				74BC7A401E95D22F00DAD94E /* NSObject+DWModel.m in Sources */,
+				74EC50371ED6A5ED000A9E3C /* NSObject+DWCrash.m in Sources */,
 				7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */,
+				74EC50261ED6A4E2000A9E3C /* NSObject+DWModel.m in Sources */,
 				740285DE1ECB374100CEBF8C /* DWSendSMSViewController.m in Sources */,
-				74FB42D21ECC3E6F00195312 /* NSTextAttachment+DWUtil.m in Sources */,
 				743577A21E755940004BC1E1 /* UIFont+DWKit.m in Sources */,
 				74E359F81E7189C600AEDE10 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7448B8221ED72A1A00AE165F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74E359F21E7189C600AEDE10 /* DWUtilKitDemo */;
+			targetProxy = 7448B8211ED72A1A00AE165F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		74E359FF1E7189C600AEDE10 /* Main.storyboard */ = {
@@ -558,6 +684,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7448B8231ED72A1A00AE165F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = M2XU6NPV6D;
+				INFOPLIST_FILE = DWUtilKitDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.util.DWUtilKitDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWUtilKitDemo.app/DWUtilKitDemo";
+			};
+			name = Debug;
+		};
+		7448B8241ED72A1A00AE165F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = M2XU6NPV6D;
+				INFOPLIST_FILE = DWUtilKitDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.util.DWUtilKitDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWUtilKitDemo.app/DWUtilKitDemo";
+			};
+			name = Release;
+		};
 		74E35A081E7189C600AEDE10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -692,6 +848,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7448B8251ED72A1A00AE165F /* Build configuration list for PBXNativeTarget "DWUtilKitDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7448B8231ED72A1A00AE165F /* Debug */,
+				7448B8241ED72A1A00AE165F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		74E359EE1E7189C600AEDE10 /* Build configuration list for PBXProject "DWUtilKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

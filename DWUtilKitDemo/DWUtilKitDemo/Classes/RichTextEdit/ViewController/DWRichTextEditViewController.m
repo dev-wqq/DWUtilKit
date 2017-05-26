@@ -264,6 +264,8 @@ void dw_changFontOrColor(UITextView **textView, UIFont *font, UIColor *color) {
 
 - (void)didTextViewTextDidChangeNotification:(NSNotification *)notifiy {
     [self dismissSelectColorView:YES];
+    NSArray *arr = [NSArray array];
+    [arr objectAtIndex:2];
 }
 
 #pragma mark - KVO

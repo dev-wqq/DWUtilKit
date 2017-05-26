@@ -70,4 +70,14 @@
     return NO;
 }
 
++ (BOOL)dw_openSystemSettingInterface {
+    NSURL *settingUrl = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    if ([[UIApplication sharedApplication] canOpenURL:settingUrl]) {
+        [[UIApplication sharedApplication] openURL:settingUrl];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end

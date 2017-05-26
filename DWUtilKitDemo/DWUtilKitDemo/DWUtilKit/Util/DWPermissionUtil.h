@@ -25,4 +25,10 @@
  */
 + (BOOL)dw_isNotificationEnabled;
 
+/**
+ 前往设置界面
+ */
++ (BOOL)dw_openSystemSettingInterface;
+
+
 @end

@@ -24,6 +24,10 @@ typedef void(^DWAsyncCompleteBlock)(NSDictionary *responseDict);
     [self initView];
 }
 
+- (void)dealloc {
+    NSLog(@"dealloc %@",NSStringFromClass(self.class));
+}
+
 - (void)initView {
     self.view.backgroundColor = [UIColor whiteColor];
     NSArray *imageUrlStr = @[@"https://p1.dodoca.com/org/2/df/894/db2c/b3b8f04268d6c199ab38eb.png",
@@ -31,7 +35,6 @@ typedef void(^DWAsyncCompleteBlock)(NSDictionary *responseDict);
                              @"https://p1.dodoca.com/org/7/30/165/c5ca/57d118ff80b79a98028c36.jpg",
                              @"https://p1.dodoca.com/org/f/38/957/97b9/86ebd09619e44e257935a6.jpg"];
     kWeakSelf(weakSelf);
-    
     _indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:_indicatorView];
     _indicatorView.center = CGPointMake(kScreenWidth/2, (kScreenHeight-kNavigationBarHeight)/2-50);

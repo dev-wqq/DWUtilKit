@@ -67,6 +67,7 @@ PODS:
     - DTFoundation/Core
   - DTFoundation/UIKit_BlocksAdditions (1.7.12):
     - DTFoundation/Core
+  - DZNEmptyDataSet (1.8.1)
   - FLAnimatedImage (1.0.12)
   - JSONModel (1.7.0)
   - KVOController (1.2.0)
@@ -111,6 +112,7 @@ DEPENDENCIES:
   - AFNetworking
   - AutoCoding
   - DTFoundation
+  - DZNEmptyDataSet
   - JSONModel
   - KVOController
   - Masonry
@@ -123,6 +125,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AutoCoding: 56fa46dbfa89d44189a26ce64e6a470ed8ff4661
   DTFoundation: 26a164ef510877387906fb92bff524a792db4bf8
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
@@ -130,6 +133,6 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: dd449181ad30726c5897f54d209fd9dfd4587b6f
+PODFILE CHECKSUM: 8330e823930455e066cc1ec21e2368e74b7f6d5b
 
 COCOAPODS: 1.2.0

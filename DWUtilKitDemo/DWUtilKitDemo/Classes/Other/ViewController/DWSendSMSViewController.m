@@ -85,8 +85,6 @@
             [_messageVC addAttachmentData:data typeIdentifier:@"rich_text_edit_color" filename:@"rich_text_edit_color.png"];
         }
     }
-    
-//    [_messageVC disableUserAttachments];
     [self presentViewController:_messageVC animated:YES completion:nil];
 }
 
