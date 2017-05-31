@@ -96,6 +96,7 @@ PODS:
     - libwebp/core
   - libwebp/webp (0.6.0)
   - Masonry (1.0.2)
+  - pop (1.0.9)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -118,6 +119,7 @@ DEPENDENCIES:
   - JSONModel
   - KVOController
   - Masonry
+  - pop
   - SDWebImage
   - SDWebImage/GIF
   - SDWebImage/MapKit
@@ -134,9 +136,10 @@ SPEC CHECKSUMS:
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
 
-PODFILE CHECKSUM: 565a5151d48643e8abfce8b7f0f21c625ef761ce
+PODFILE CHECKSUM: f0535c55adffb90e599fcd64b66963ba8442148f
 
 COCOAPODS: 1.2.0
