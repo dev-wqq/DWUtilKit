@@ -107,6 +107,8 @@ PODS:
   - SDWebImage/WebP (4.0.0):
     - libwebp
     - SDWebImage/Core
+  - YTKNetwork (2.0.3):
+    - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -120,6 +122,7 @@ DEPENDENCIES:
   - SDWebImage/GIF
   - SDWebImage/MapKit
   - SDWebImage/WebP
+  - YTKNetwork
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -132,7 +135,8 @@ SPEC CHECKSUMS:
   libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
 
-PODFILE CHECKSUM: 8330e823930455e066cc1ec21e2368e74b7f6d5b
+PODFILE CHECKSUM: 565a5151d48643e8abfce8b7f0f21c625ef761ce
 
 COCOAPODS: 1.2.0

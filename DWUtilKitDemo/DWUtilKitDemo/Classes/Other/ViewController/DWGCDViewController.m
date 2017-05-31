@@ -57,6 +57,13 @@ typedef void(^DWAsyncCompleteBlock)(NSDictionary *responseDict);
 //    [self apply_downloadImages:imageUrlStr completeBlock:^(NSDictionary *responseDict) {
 //        [weakSelf setupUI:responseDict.allValues];
 //    }];
+    
+    
+    // 线程安全的处理
+    dispatch_async(dispatch_get_main_queue(), ^{
+       // 修复UIKit 时序问题
+    });
+    
 }
 
 - (void)setupUI:(NSArray *)images {

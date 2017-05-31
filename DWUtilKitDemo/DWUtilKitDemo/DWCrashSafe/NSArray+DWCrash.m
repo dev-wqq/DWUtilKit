@@ -23,10 +23,21 @@
          */
         // self.count == 0 调用的该私有类的API<空数组的情况>
         Class atIndexClass = NSClassFromString(@"__NSArray0");
+        [atIndexClass dwcrash_swizzleInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(dwcrash_objectAtIndex:)];
+        [atIndexClass release];
+        
         // self.count >  0 调用的该私有类的API<一般数组的情况>
         Class atIndexClassI = NSClassFromString(@"__NSArrayI");
-        [atIndexClass dwcrash_swizzleInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(dwcrash_objectAtIndex:)];
         [atIndexClassI dwcrash_swizzleInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(dwcrash_iObjectAtIndex:)];
+        [atIndexClassI release];
+       
+        if ([[[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."].firstObject integerValue] >= 10) {
+            // 在iOS10 设备上数组中只有一个元素的时候使用的是该类
+            Class atIndexClassSingle = NSClassFromString(@"__NSSingleObjectArrayI");
+            [atIndexClassSingle dwcrash_swizzleInstanceMethod:@selector(objectAtIndex:) withMethod:@selector(dwcrash_singleObjectAtIndex:)];
+            [atIndexClassSingle release];
+        }
+        
         [self dwcrash_swizzleInstanceMethod:@selector(subarrayWithRange:) withMethod:@selector(dwcrash_subarrayWithRange:)];
     });
 }
@@ -43,6 +54,13 @@
         return nil;
     }
     return [self dwcrash_iObjectAtIndex:index];
+}
+
+- (id)dwcrash_singleObjectAtIndex:(NSUInteger)index {
+    if (index >= self.count) {
+        return nil;
+    }
+    return [self dwcrash_singleObjectAtIndex:index];
 }
 
 - (NSArray *)dwcrash_subarrayWithRange:(NSRange)range {
@@ -84,6 +102,7 @@
         // removeObjectAtIndex: implementation [__NSArrayM removeObjectsInRange:]
         [atIndexClass dwcrash_swizzleInstanceMethod:@selector(removeObjectsInRange:) withMethod:@selector(dwcrash_removeObjectsInRange:)];
         [atIndexClass dwcrash_swizzleInstanceMethod:@selector(replaceObjectAtIndex:withObject:) withMethod:@selector(dwcrash_replaceObjectAtIndex:withObject:)];
+        [atIndexClass release];
     });
 }
 

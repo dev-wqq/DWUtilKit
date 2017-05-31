@@ -38,6 +38,26 @@
                ReferencedContainer = "container:DWUtilKitDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "74CCFE391EDAE0170067F398"
+               BuildableName = "DWUtilKitTests.xctest"
+               BlueprintName = "DWUtilKitTests"
+               ReferencedContainer = "container:DWUtilKitDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "74CCFE471EDAE06C0067F398"
+               BuildableName = "DWUtilTests.xctest"
+               BlueprintName = "DWUtilTests"
+               ReferencedContainer = "container:DWUtilKitDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -75,7 +95,7 @@
          <EnvironmentVariable
             key = "OS_ACTIVITY_MODE"
             value = "disable"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>
