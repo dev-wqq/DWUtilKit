@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Core-SDk.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>DTFoundation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -81,82 +76,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>288F2F67EE90093DDB2F90D34EDCAF42</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>52047B5E2DC50DB077CF29B960DEB616</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5437890023F30CA85DFCA260CA914D48</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>55E3CFFEDC2629EE0C17B343EC00595B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>63AE8F3894A18F3FEF226C8A64A370BE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6B79ACF002EDBC3062BBBF2EFE601A77</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>931AA31A36D0F952DBBE2368619467AF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9ADA26725536FF3655F73DDC5C71DA1A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9C2D3327264C1DB785EADD89D3242323</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9E033EDB5EC0819481B0546434FA577B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A7C6247DA8E2EF4C6697296771608CA7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B385DC0B3F219C1CDC7EEE3B4DD24365</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC466DCE4B5DD2ABDDD8656D70F66448</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE9D4D876C904AC656FA9DDD3E6303A4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

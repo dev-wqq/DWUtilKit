@@ -256,13 +256,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7410D7691EDFE2040001F81B /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Swift;
-			sourceTree = "<group>";
-		};
 		742B3DD21E93CCD900EA891F /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,7 +346,6 @@
 				74E35A0D1E7189FA00AEDE10 /* DWUtilKit */,
 				74FB42CD1ECC3E0400195312 /* DWCommonUtil */,
 				742B3DD21E93CCD900EA891F /* Objective-C */,
-				7410D7691EDFE2040001F81B /* Swift */,
 				74E359F91E7189C600AEDE10 /* AppDelegate.h */,
 				74E359FA1E7189C600AEDE10 /* AppDelegate.m */,
 				742B3DD91E93CF4600EA891F /* DWUtilKitPch.pch */,
