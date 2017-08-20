@@ -98,4 +98,22 @@
 /// @return temp path
 + (NSString *)dw_tempPath;
 
+#pragma mark - elementary arithmetic
+/**
+ if string.length = 0 return self;
+ if self   is not digit(0123456789) or point(.) return nil;
+ if string is not digit(0123456789) or point(.) return self;
+ */
+/// "+"
+- (NSString *)dw_stringByAdding:(NSString *)string;
+/// "-"
+- (NSString *)dw_stringBySubtracting:(NSString *)string;
+/// "*"
+- (NSString *)dw_stringByMultiplyingBy:(NSString *)string;
+/// "/"
+- (NSString *)dw_stringByDividingBy:(NSString *)string;
+
+- (NSString *)dw_stringByMultiplyingByPowerOf10:(short)power;
+
+
 @end

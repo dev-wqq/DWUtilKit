@@ -15,6 +15,13 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - AutoCoding (2.2.2)
+  - Core-SDk (0.1.0):
+    - SDWebImage
+    - UMengUShare/Core
+    - UMengUShare/Network
+    - UMengUShare/Social/QQ
+    - UMengUShare/Social/WeChat
+    - UMengUShare/UI
   - DTFoundation (1.7.12):
     - DTFoundation/AppKit (= 1.7.12)
     - DTFoundation/Core (= 1.7.12)
@@ -69,6 +76,11 @@ PODS:
     - DTFoundation/Core
   - DZNEmptyDataSet (1.8.1)
   - FLAnimatedImage (1.0.12)
+  - IGListKit (3.0.0):
+    - IGListKit/Default (= 3.0.0)
+  - IGListKit/Default (3.0.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.0.0)
   - JSONModel (1.7.0)
   - KVOController (1.2.0)
   - libwebp (0.6.0):
@@ -108,14 +120,31 @@ PODS:
   - SDWebImage/WebP (4.0.0):
     - libwebp
     - SDWebImage/Core
+  - UMengUShare/Core (6.4.5):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.5)
+  - UMengUShare/Social/QQ (6.4.5):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedQQ (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.4.5):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/UI (6.4.5):
+    - UMengUShare/Core
   - YTKNetwork (2.0.3):
     - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
   - AFNetworking
   - AutoCoding
+  - Core-SDk
   - DTFoundation
   - DZNEmptyDataSet
+  - IGListKit
   - JSONModel
   - KVOController
   - Masonry
@@ -129,17 +158,20 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AutoCoding: 56fa46dbfa89d44189a26ce64e6a470ed8ff4661
+  Core-SDk: eab4ec787c70b96de99016d02b66a5a6c92441c3
   DTFoundation: 26a164ef510877387906fb92bff524a792db4bf8
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  UMengUShare: a5711c54e640b04e3048e931d2b88d50f9cfa55c
   YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
 
-PODFILE CHECKSUM: f0535c55adffb90e599fcd64b66963ba8442148f
+PODFILE CHECKSUM: f368506d68a4f917acb23b7edcfaefd5b961b1fe
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.3.0

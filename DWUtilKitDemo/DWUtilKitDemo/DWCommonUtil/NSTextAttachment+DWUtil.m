@@ -7,6 +7,7 @@
 //
 
 #import "NSTextAttachment+DWUtil.h"
+#import <objc/runtime.h>
 
 static const void *kDWTextAttachmentImageUrl = &kDWTextAttachmentImageUrl;
 

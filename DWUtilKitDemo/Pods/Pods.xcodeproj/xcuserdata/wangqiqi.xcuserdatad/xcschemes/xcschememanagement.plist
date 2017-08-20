@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Core-SDk.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DTFoundation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>FLAnimatedImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IGListKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,22 +82,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>073FB53A8AE311DE39BD9B007BC6B12E</key>
+		<key>288F2F67EE90093DDB2F90D34EDCAF42</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>111AAA758FB905A440E09A32536EC989</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2FEE784139A8C47210EE6B0A40933D80</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>53F8571E2D572C4069860E38654A566A</key>
+		<key>52047B5E2DC50DB077CF29B960DEB616</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,6 +112,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>931AA31A36D0F952DBBE2368619467AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ADA26725536FF3655F73DDC5C71DA1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9C2D3327264C1DB785EADD89D3242323</key>
 		<dict>
 			<key>primary</key>
@@ -127,12 +137,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E63AF83C4286EC15CC1F59F31D0434AC</key>
+		<key>A7C6247DA8E2EF4C6697296771608CA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB6F7635FB13EEAE9014EE007FE8B0B7</key>
+		<key>B385DC0B3F219C1CDC7EEE3B4DD24365</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC466DCE4B5DD2ABDDD8656D70F66448</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE9D4D876C904AC656FA9DDD3E6303A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

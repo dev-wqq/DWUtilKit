@@ -9,6 +9,13 @@
 #import "NSString+DWKit.h"
 #import "NSNumber+DWKit.h"
 
+typedef NS_ENUM(NSInteger, DWElementaryArithmetic) {
+    DWElementaryArithmeticAdding      = 0,
+    DWElementaryArithmeticSubtracting = 1,
+    DWElementaryArithmeticMultiplying = 2,
+    DWElementaryArithmeticDividing    = 3,
+};
+
 @implementation NSString (DWKit)
 
 #pragma mark - encode and decode
@@ -230,6 +237,69 @@
 
 + (NSString *)dw_tempPath {
     return NSTemporaryDirectory();
+}
+
+#pragma mark - elementary arithmetic
+
+- (NSString *)dw_stringByArithmeticString:(NSString *)string style:(DWElementaryArithmetic)style {
+    if (string.length == 0) {
+        return self;
+    }
+    if (![self dw_isAllDigitOrPoint]) {
+        NSAssert(NO, @"%@ format is not correct",self);
+        return nil;
+    }
+    if (![string dw_isAllDigitOrPoint]) {
+        NSAssert(NO, @"%@ format is not correct",string);
+        return self;
+    }
+    NSDecimalNumber *decimalNumber = [[NSDecimalNumber alloc] initWithString:self];
+    NSDecimalNumber *byDecimalNumber = [[NSDecimalNumber alloc] initWithString:string];
+    NSDecimalNumber *result = nil;
+    switch (style) {
+        case DWElementaryArithmeticAdding:
+            result = [decimalNumber decimalNumberByAdding:byDecimalNumber];
+            break;
+        case DWElementaryArithmeticSubtracting:
+            result = [decimalNumber decimalNumberBySubtracting:byDecimalNumber];
+            break;
+        case DWElementaryArithmeticMultiplying:
+            result = [decimalNumber decimalNumberByMultiplyingBy:byDecimalNumber];
+            break;
+        case DWElementaryArithmeticDividing:
+            if (byDecimalNumber.doubleValue == 0) {
+                NSAssert(NO, @"DividingBy can not equal zero");
+                break;
+            }
+            result = [decimalNumber decimalNumberByDividingBy:byDecimalNumber];
+            break;
+    }
+    return result.stringValue;
+}
+
+- (NSString *)dw_stringByAdding:(NSString *)string {
+    return [self dw_stringByArithmeticString:string style:DWElementaryArithmeticAdding];
+}
+
+- (NSString *)dw_stringBySubtracting:(NSString *)string {
+    return [self dw_stringByArithmeticString:string style:DWElementaryArithmeticSubtracting];
+}
+
+- (NSString *)dw_stringByMultiplyingBy:(NSString *)string {
+    return [self dw_stringByArithmeticString:string style:DWElementaryArithmeticMultiplying];
+}
+
+- (NSString *)dw_stringByDividingBy:(NSString *)string {
+    return [self dw_stringByArithmeticString:string style:DWElementaryArithmeticDividing];
+}
+
+- (NSString *)dw_stringByMultiplyingByPowerOf10:(short)power {
+    if (![self dw_isAllDigitOrPoint]) {
+        NSAssert(NO, @"%@ format is not correct",self);
+        return nil;
+    }
+    NSDecimalNumber *decimalNumber = [NSDecimalNumber decimalNumberWithString:self];
+    return [decimalNumber decimalNumberByMultiplyingByPowerOf10:power].stringValue;
 }
 
 @end

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		42CDCB6A504633675499D193 /* libPods-DWUtilKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F392C529386AABF292FD909C /* libPods-DWUtilKitDemo.a */; };
-		740285DE1ECB374100CEBF8C /* DWSendSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 740285DD1ECB374100CEBF8C /* DWSendSMSViewController.m */; };
 		741B34EF1ED31AD3007D4278 /* NSAttributedString+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B34EC1ED31AD3007D4278 /* NSAttributedString+DWUtil.m */; };
 		741B34F01ED31AD3007D4278 /* NSTextAttachment+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B34EE1ED31AD3007D4278 /* NSTextAttachment+DWUtil.m */; };
 		742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */; };
@@ -23,8 +22,10 @@
 		743577AE1E756DBD004BC1E1 /* UIViewController+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577AD1E756DBD004BC1E1 /* UIViewController+DWKit.m */; };
 		743577B11E757C41004BC1E1 /* NSDictionary+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */; };
 		743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */; };
+		7452F3EE1F49520F00278B8E /* UIWindow+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7452F3ED1F49520F00278B8E /* UIWindow+DWKit.m */; };
 		7455A4951E80C9EE002CA176 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7455A4941E80C9EE002CA176 /* CoreGraphics.framework */; };
 		7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455A4971E80D027002CA176 /* UIImage+DWKit.m */; };
+		74593C791F37F3780074CAE4 /* DWUtilKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 74593C781F37F3780074CAE4 /* DWUtilKit.podspec */; };
 		745D270B1ED94A19003BE00F /* DWDebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745D270A1ED94A19003BE00F /* DWDebugViewController.m */; };
 		745D270D1ED9564A003BE00F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745D270C1ED9564A003BE00F /* UIKit.framework */; };
 		745D27101ED95831003BE00F /* UIViewController+DWSystemDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 745D270F1ED95831003BE00F /* UIViewController+DWSystemDebug.m */; };
@@ -33,15 +34,21 @@
 		747FAB3B1E791AB100AD3CFE /* CALayer+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB3A1E791AB100AD3CFE /* CALayer+DWKit.m */; };
 		747FAB3E1E7920CB00AD3CFE /* NSString+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB3D1E7920CB00AD3CFE /* NSString+DWKit.m */; };
 		747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB401E7926C900AD3CFE /* NSNumber+DWKit.m */; };
+		748B72781F20AB0C00BE1029 /* DWAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B72771F20AB0C00BE1029 /* DWAnimationViewController.m */; };
+		748B72791F20B45F00BE1029 /* DWDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B72701F20AAD700BE1029 /* DWDelegateViewController.m */; };
+		748B727A1F20B46400BE1029 /* DWGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B726F1F20AAD700BE1029 /* DWGCDViewController.m */; };
+		748B727B1F20B46700BE1029 /* DWPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B726B1F20AAD700BE1029 /* DWPathViewController.m */; };
+		748B727C1F20B46A00BE1029 /* DWProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B726A1F20AAD700BE1029 /* DWProgressViewController.m */; };
+		748B727D1F20B46D00BE1029 /* DWRoundedCornersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B726E1F20AAD700BE1029 /* DWRoundedCornersViewController.m */; };
+		748B727E1F20B46F00BE1029 /* DWSendSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B72681F20AAD700BE1029 /* DWSendSMSViewController.m */; };
+		748B727F1F20B47200BE1029 /* DWSkillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B72691F20AAD700BE1029 /* DWSkillViewController.m */; };
 		74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B616501E7FCCD4004D350B /* UITextView+DWKit.m */; };
 		74BC7A381E95371500DAD94E /* DWPermissionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A371E95371500DAD94E /* DWPermissionUtil.m */; };
 		74BC7A431E95DA1A00DAD94E /* UIDevice+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A421E95DA1A00DAD94E /* UIDevice+DWKit.m */; };
 		74BC7A461E95F89300DAD94E /* DWSettingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BC7A451E95F89300DAD94E /* DWSettingUtil.m */; };
-		74CCFE4B1EDAE06C0067F398 /* DWUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCFE4A1EDAE06C0067F398 /* DWUtilTests.m */; };
-		74CCFE561EDBF17D0067F398 /* DWPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CCFE551EDBF17D0067F398 /* DWPathViewController.m */; };
 		74E359F81E7189C600AEDE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E359F71E7189C600AEDE10 /* main.m */; };
 		74E359FB1E7189C600AEDE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E359FA1E7189C600AEDE10 /* AppDelegate.m */; };
-		74E359FE1E7189C600AEDE10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E359FD1E7189C600AEDE10 /* ViewController.m */; };
+		74E359FE1E7189C600AEDE10 /* ObjcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E359FD1E7189C600AEDE10 /* ObjcViewController.m */; };
 		74E35A011E7189C600AEDE10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E359FF1E7189C600AEDE10 /* Main.storyboard */; };
 		74E35A031E7189C600AEDE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E35A021E7189C600AEDE10 /* Assets.xcassets */; };
 		74E35A061E7189C600AEDE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E35A041E7189C600AEDE10 /* LaunchScreen.storyboard */; };
@@ -49,7 +56,6 @@
 		74E35A171E718C6E00AEDE10 /* DWFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E35A161E718C6E00AEDE10 /* DWFPSLabel.m */; };
 		74E35A1A1E718E0E00AEDE10 /* DWLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E35A191E718E0E00AEDE10 /* DWLinearGradientView.m */; };
 		74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E35A1D1E726F1000AEDE10 /* NSDate+DWKit.m */; };
-		74EA7FEA1ECA99F2002C63E5 /* DWProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EA7FE91ECA99F2002C63E5 /* DWProgressViewController.m */; };
 		74EC50251ED6A4E2000A9E3C /* ModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50221ED6A4E2000A9E3C /* ModelClass.m */; };
 		74EC50261ED6A4E2000A9E3C /* NSObject+DWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50241ED6A4E2000A9E3C /* NSObject+DWModel.m */; };
 		74EC502E1ED6A50E000A9E3C /* NSArray+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50291ED6A50E000A9E3C /* NSArray+DWCrash.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -57,7 +63,7 @@
 		74EC50301ED6A50E000A9E3C /* NSNull+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC502D1ED6A50E000A9E3C /* NSNull+DWCrash.m */; };
 		74EC50341ED6A516000A9E3C /* NSObject+DWLogUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50331ED6A516000A9E3C /* NSObject+DWLogUnicode.m */; };
 		74EC50371ED6A5ED000A9E3C /* NSObject+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50361ED6A5ED000A9E3C /* NSObject+DWCrash.m */; };
-		74FB42CC1ECC144600195312 /* DWGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FB42CB1ECC144600195312 /* DWGCDViewController.m */; };
+		74FCF0F21F24701400BA3147 /* DWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FCF0F11F24701400BA3147 /* DWTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +93,6 @@
 /* Begin PBXFileReference section */
 		43DFB081E7D85AD9BD3D052D /* Pods-DWUtilKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4E5082B3BFFD185D39C9A663 /* Pods-DWUtilKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		740285DC1ECB374100CEBF8C /* DWSendSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSendSMSViewController.h; sourceTree = "<group>"; };
-		740285DD1ECB374100CEBF8C /* DWSendSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSendSMSViewController.m; sourceTree = "<group>"; };
 		741B34EB1ED31AD3007D4278 /* NSAttributedString+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DWUtil.h"; sourceTree = "<group>"; };
 		741B34EC1ED31AD3007D4278 /* NSAttributedString+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DWUtil.m"; sourceTree = "<group>"; };
 		741B34ED1ED31AD3007D4278 /* NSTextAttachment+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextAttachment+DWUtil.h"; sourceTree = "<group>"; };
@@ -116,12 +120,18 @@
 		743577AD1E756DBD004BC1E1 /* UIViewController+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DWKit.m"; sourceTree = "<group>"; };
 		743577AF1E757C41004BC1E1 /* NSDictionary+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DWKit.h"; sourceTree = "<group>"; };
 		743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DWKit.m"; sourceTree = "<group>"; };
+		743873F41F33605600B9DAC0 /* DWUtilKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilKitDemoTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilKitDemoTests.xctest"; sourceTree = "<absolute>"; };
+		743873F51F33605600B9DAC0 /* DWUtilKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilKitTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilKitTests.xctest"; sourceTree = "<absolute>"; };
+		743873F61F33605600B9DAC0 /* DWUtilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilTests.xctest"; sourceTree = "<absolute>"; };
 		743DBAE81EB613DF002009A9 /* DWRichTextEditSelectColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditSelectColorView.h; sourceTree = "<group>"; };
 		743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditSelectColorView.m; sourceTree = "<group>"; };
+		7452F3EC1F49520F00278B8E /* UIWindow+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+DWKit.h"; sourceTree = "<group>"; };
+		7452F3ED1F49520F00278B8E /* UIWindow+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+DWKit.m"; sourceTree = "<group>"; };
 		7454F4DB1EB8336700470525 /* DWUtilKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUtilKit.h; sourceTree = "<group>"; };
 		7455A4941E80C9EE002CA176 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7455A4961E80D027002CA176 /* UIImage+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DWKit.h"; sourceTree = "<group>"; };
 		7455A4971E80D027002CA176 /* UIImage+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DWKit.m"; sourceTree = "<group>"; };
+		74593C781F37F3780074CAE4 /* DWUtilKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DWUtilKit.podspec; sourceTree = "<group>"; };
 		745D26FF1ED7EFA0003BE00F /* DWUtilKitDemo.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = DWUtilKitDemo.profdata; sourceTree = "<group>"; };
 		745D27011ED7F655003BE00F /* DWCrashMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWCrashMacro.h; sourceTree = "<group>"; };
 		745D27091ED94A19003BE00F /* DWDebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDebugViewController.h; sourceTree = "<group>"; };
@@ -139,6 +149,22 @@
 		747FAB3D1E7920CB00AD3CFE /* NSString+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DWKit.m"; sourceTree = "<group>"; };
 		747FAB3F1E7926C900AD3CFE /* NSNumber+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+DWKit.h"; sourceTree = "<group>"; };
 		747FAB401E7926C900AD3CFE /* NSNumber+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+DWKit.m"; sourceTree = "<group>"; };
+		748B72681F20AAD700BE1029 /* DWSendSMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWSendSMSViewController.m; sourceTree = "<group>"; };
+		748B72691F20AAD700BE1029 /* DWSkillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWSkillViewController.m; sourceTree = "<group>"; };
+		748B726A1F20AAD700BE1029 /* DWProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWProgressViewController.m; sourceTree = "<group>"; };
+		748B726B1F20AAD700BE1029 /* DWPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWPathViewController.m; sourceTree = "<group>"; };
+		748B726C1F20AAD700BE1029 /* DWSkillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWSkillViewController.h; sourceTree = "<group>"; };
+		748B726D1F20AAD700BE1029 /* DWSendSMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWSendSMSViewController.h; sourceTree = "<group>"; };
+		748B726E1F20AAD700BE1029 /* DWRoundedCornersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWRoundedCornersViewController.m; sourceTree = "<group>"; };
+		748B726F1F20AAD700BE1029 /* DWGCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWGCDViewController.m; sourceTree = "<group>"; };
+		748B72701F20AAD700BE1029 /* DWDelegateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWDelegateViewController.m; sourceTree = "<group>"; };
+		748B72711F20AAD700BE1029 /* DWGCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWGCDViewController.h; sourceTree = "<group>"; };
+		748B72721F20AAD700BE1029 /* DWProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWProgressViewController.h; sourceTree = "<group>"; };
+		748B72731F20AAD700BE1029 /* DWPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWPathViewController.h; sourceTree = "<group>"; };
+		748B72741F20AAD700BE1029 /* DWRoundedCornersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWRoundedCornersViewController.h; sourceTree = "<group>"; };
+		748B72751F20AAD700BE1029 /* DWDelegateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWDelegateViewController.h; sourceTree = "<group>"; };
+		748B72761F20AB0C00BE1029 /* DWAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWAnimationViewController.h; sourceTree = "<group>"; };
+		748B72771F20AB0C00BE1029 /* DWAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWAnimationViewController.m; sourceTree = "<group>"; };
 		74B6164F1E7FCCD4004D350B /* UITextView+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+DWKit.h"; sourceTree = "<group>"; };
 		74B616501E7FCCD4004D350B /* UITextView+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DWKit.m"; sourceTree = "<group>"; };
 		74BC7A361E95371500DAD94E /* DWPermissionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPermissionUtil.h; sourceTree = "<group>"; };
@@ -148,19 +174,12 @@
 		74BC7A441E95F89300DAD94E /* DWSettingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSettingUtil.h; sourceTree = "<group>"; };
 		74BC7A451E95F89300DAD94E /* DWSettingUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSettingUtil.m; sourceTree = "<group>"; };
 		74BC7A471E960C7B00DAD94E /* DWUtilKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DWUtilKitDemo.entitlements; sourceTree = "<group>"; };
-		74CCFE3A1EDAE0170067F398 /* DWUtilKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWUtilKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74CCFE481EDAE06C0067F398 /* DWUtilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWUtilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74CCFE4A1EDAE06C0067F398 /* DWUtilTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWUtilTests.m; sourceTree = "<group>"; };
-		74CCFE4C1EDAE06C0067F398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74CCFE521EDBF13F0067F398 /* DWUtilKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWUtilKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		74CCFE531EDBF13F0067F398 /* DWUtilKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWUtilKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74CCFE541EDBF17D0067F398 /* DWPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPathViewController.h; sourceTree = "<group>"; };
-		74CCFE551EDBF17D0067F398 /* DWPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPathViewController.m; sourceTree = "<group>"; };
 		74E359F71E7189C600AEDE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74E359F91E7189C600AEDE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74E359FA1E7189C600AEDE10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		74E359FC1E7189C600AEDE10 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		74E359FD1E7189C600AEDE10 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		74E359FC1E7189C600AEDE10 /* ObjcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ObjcViewController.h; path = ../ObjcViewController.h; sourceTree = "<group>"; };
+		74E359FD1E7189C600AEDE10 /* ObjcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ObjcViewController.m; path = ../ObjcViewController.m; sourceTree = "<group>"; };
 		74E35A001E7189C600AEDE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74E35A021E7189C600AEDE10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74E35A051E7189C600AEDE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -173,8 +192,6 @@
 		74E35A191E718E0E00AEDE10 /* DWLinearGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWLinearGradientView.m; sourceTree = "<group>"; };
 		74E35A1C1E726F1000AEDE10 /* NSDate+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DWKit.h"; sourceTree = "<group>"; };
 		74E35A1D1E726F1000AEDE10 /* NSDate+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DWKit.m"; sourceTree = "<group>"; };
-		74EA7FE81ECA99F2002C63E5 /* DWProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWProgressViewController.h; sourceTree = "<group>"; };
-		74EA7FE91ECA99F2002C63E5 /* DWProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWProgressViewController.m; sourceTree = "<group>"; };
 		74EC50201ED6A4E2000A9E3C /* DWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWModel.h; sourceTree = "<group>"; };
 		74EC50211ED6A4E2000A9E3C /* ModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelClass.h; sourceTree = "<group>"; };
 		74EC50221ED6A4E2000A9E3C /* ModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelClass.m; sourceTree = "<group>"; };
@@ -190,8 +207,8 @@
 		74EC50331ED6A516000A9E3C /* NSObject+DWLogUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWLogUnicode.m"; sourceTree = "<group>"; };
 		74EC50351ED6A5ED000A9E3C /* NSObject+DWCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWCrash.h"; sourceTree = "<group>"; };
 		74EC50361ED6A5ED000A9E3C /* NSObject+DWCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWCrash.m"; sourceTree = "<group>"; };
-		74FB42CA1ECC144600195312 /* DWGCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWGCDViewController.h; sourceTree = "<group>"; };
-		74FB42CB1ECC144600195312 /* DWGCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWGCDViewController.m; sourceTree = "<group>"; };
+		74FCF0F01F24701400BA3147 /* DWTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWTableViewController.h; sourceTree = "<group>"; };
+		74FCF0F11F24701400BA3147 /* DWTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWTableViewController.m; sourceTree = "<group>"; };
 		F392C529386AABF292FD909C /* libPods-DWUtilKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DWUtilKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -239,13 +256,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		742B3DD21E93CCD900EA891F /* Classes */ = {
+		7410D7691EDFE2040001F81B /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		742B3DD21E93CCD900EA891F /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				74E359FC1E7189C600AEDE10 /* ObjcViewController.h */,
+				74E359FD1E7189C600AEDE10 /* ObjcViewController.m */,
 				745D27071ED94A0D003BE00F /* Debug */,
 				74EA7FE61ECA99CE002C63E5 /* Other */,
 				742B3DD31E93CD2B00EA891F /* RichTextEdit */,
 			);
+			name = "Objective-C";
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -305,43 +332,30 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		74CCFE491EDAE06C0067F398 /* DWUtilTests */ = {
-			isa = PBXGroup;
-			children = (
-				74CCFE4A1EDAE06C0067F398 /* DWUtilTests.m */,
-				74CCFE4C1EDAE06C0067F398 /* Info.plist */,
-			);
-			path = DWUtilTests;
-			sourceTree = "<group>";
-		};
 		74E359EA1E7189C600AEDE10 = {
 			isa = PBXGroup;
 			children = (
 				74E359F51E7189C600AEDE10 /* DWUtilKitDemo */,
-				74CCFE491EDAE06C0067F398 /* DWUtilTests */,
 				7455A4931E80C9EE002CA176 /* Frameworks */,
 				3AF117EF41F8E302E91B11E0 /* Pods */,
 				745D26FE1ED7EFA0003BE00F /* OptimizationProfiles */,
-				74CCFE3A1EDAE0170067F398 /* DWUtilKitTests.xctest */,
-				74CCFE481EDAE06C0067F398 /* DWUtilTests.xctest */,
 				74CCFE521EDBF13F0067F398 /* DWUtilKitDemo.app */,
-				74CCFE531EDBF13F0067F398 /* DWUtilKitDemoTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		74E359F51E7189C600AEDE10 /* DWUtilKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				74593C781F37F3780074CAE4 /* DWUtilKit.podspec */,
 				74BC7A471E960C7B00DAD94E /* DWUtilKitDemo.entitlements */,
 				74EC50311ED6A516000A9E3C /* DWLogUnicode */,
 				74EC50271ED6A50E000A9E3C /* DWCrashSafe */,
-				74FB42CD1ECC3E0400195312 /* DWCommonUtil */,
 				74E35A0D1E7189FA00AEDE10 /* DWUtilKit */,
-				742B3DD21E93CCD900EA891F /* Classes */,
+				74FB42CD1ECC3E0400195312 /* DWCommonUtil */,
+				742B3DD21E93CCD900EA891F /* Objective-C */,
+				7410D7691EDFE2040001F81B /* Swift */,
 				74E359F91E7189C600AEDE10 /* AppDelegate.h */,
 				74E359FA1E7189C600AEDE10 /* AppDelegate.m */,
-				74E359FC1E7189C600AEDE10 /* ViewController.h */,
-				74E359FD1E7189C600AEDE10 /* ViewController.m */,
 				742B3DD91E93CF4600EA891F /* DWUtilKitPch.pch */,
 				74E359FF1E7189C600AEDE10 /* Main.storyboard */,
 				74E35A021E7189C600AEDE10 /* Assets.xcassets */,
@@ -409,6 +423,8 @@
 				747FAB401E7926C900AD3CFE /* NSNumber+DWKit.m */,
 				747FAB391E791AB100AD3CFE /* CALayer+DWKit.h */,
 				747FAB3A1E791AB100AD3CFE /* CALayer+DWKit.m */,
+				7452F3EC1F49520F00278B8E /* UIWindow+DWKit.h */,
+				7452F3ED1F49520F00278B8E /* UIWindow+DWKit.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -442,24 +458,26 @@
 		74EA7FE61ECA99CE002C63E5 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				74EA7FE71ECA99CE002C63E5 /* ViewController */,
+				748B72751F20AAD700BE1029 /* DWDelegateViewController.h */,
+				748B72701F20AAD700BE1029 /* DWDelegateViewController.m */,
+				748B72711F20AAD700BE1029 /* DWGCDViewController.h */,
+				748B726F1F20AAD700BE1029 /* DWGCDViewController.m */,
+				748B72731F20AAD700BE1029 /* DWPathViewController.h */,
+				748B726B1F20AAD700BE1029 /* DWPathViewController.m */,
+				748B72721F20AAD700BE1029 /* DWProgressViewController.h */,
+				748B726A1F20AAD700BE1029 /* DWProgressViewController.m */,
+				748B72741F20AAD700BE1029 /* DWRoundedCornersViewController.h */,
+				748B726E1F20AAD700BE1029 /* DWRoundedCornersViewController.m */,
+				748B726D1F20AAD700BE1029 /* DWSendSMSViewController.h */,
+				748B72681F20AAD700BE1029 /* DWSendSMSViewController.m */,
+				748B726C1F20AAD700BE1029 /* DWSkillViewController.h */,
+				748B72691F20AAD700BE1029 /* DWSkillViewController.m */,
+				748B72761F20AB0C00BE1029 /* DWAnimationViewController.h */,
+				748B72771F20AB0C00BE1029 /* DWAnimationViewController.m */,
+				74FCF0F01F24701400BA3147 /* DWTableViewController.h */,
+				74FCF0F11F24701400BA3147 /* DWTableViewController.m */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		74EA7FE71ECA99CE002C63E5 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				74EA7FE81ECA99F2002C63E5 /* DWProgressViewController.h */,
-				74EA7FE91ECA99F2002C63E5 /* DWProgressViewController.m */,
-				740285DC1ECB374100CEBF8C /* DWSendSMSViewController.h */,
-				740285DD1ECB374100CEBF8C /* DWSendSMSViewController.m */,
-				74FB42CA1ECC144600195312 /* DWGCDViewController.h */,
-				74FB42CB1ECC144600195312 /* DWGCDViewController.m */,
-				74CCFE541EDBF17D0067F398 /* DWPathViewController.h */,
-				74CCFE551EDBF17D0067F398 /* DWPathViewController.m */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		74EC501F1ED6A4E2000A9E3C /* Model */ = {
@@ -530,7 +548,7 @@
 			);
 			name = DWUtilKitDemoTests;
 			productName = DWUtilKitDemoTests;
-			productReference = 74CCFE531EDBF13F0067F398 /* DWUtilKitDemoTests.xctest */;
+			productReference = 743873F41F33605600B9DAC0 /* DWUtilKitDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		74CCFE391EDAE0170067F398 /* DWUtilKitTests */ = {
@@ -548,7 +566,7 @@
 			);
 			name = DWUtilKitTests;
 			productName = DWUtilKitTests;
-			productReference = 74CCFE3A1EDAE0170067F398 /* DWUtilKitTests.xctest */;
+			productReference = 743873F51F33605600B9DAC0 /* DWUtilKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		74CCFE471EDAE06C0067F398 /* DWUtilTests */ = {
@@ -566,7 +584,7 @@
 			);
 			name = DWUtilTests;
 			productName = DWUtilTests;
-			productReference = 74CCFE481EDAE06C0067F398 /* DWUtilTests.xctest */;
+			productReference = 743873F61F33605600B9DAC0 /* DWUtilTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		74E359F21E7189C600AEDE10 /* DWUtilKitDemo */ = {
@@ -679,6 +697,7 @@
 			files = (
 				74E35A061E7189C600AEDE10 /* LaunchScreen.storyboard in Resources */,
 				74E35A031E7189C600AEDE10 /* Assets.xcassets in Resources */,
+				74593C791F37F3780074CAE4 /* DWUtilKit.podspec in Resources */,
 				74E35A011E7189C600AEDE10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,13 +711,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DWUtilKitDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9359F1A2717B66F11DCE7613 /* [CP] Copy Pods Resources */ = {
@@ -707,9 +729,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo-resources.sh",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -752,7 +779,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74CCFE4B1EDAE06C0067F398 /* DWUtilTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,41 +793,47 @@
 				74EC50251ED6A4E2000A9E3C /* ModelClass.m in Sources */,
 				742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */,
 				7435779F1E754641004BC1E1 /* UIView+DWKit.m in Sources */,
-				74EA7FEA1ECA99F2002C63E5 /* DWProgressViewController.m in Sources */,
 				745D27101ED95831003BE00F /* UIViewController+DWSystemDebug.m in Sources */,
 				743577A81E755B95004BC1E1 /* UIColor+DWKit.m in Sources */,
 				74BC7A381E95371500DAD94E /* DWPermissionUtil.m in Sources */,
+				748B72781F20AB0C00BE1029 /* DWAnimationViewController.m in Sources */,
 				747FAB381E78EC9A00AD3CFE /* UILabel+DWKit.m in Sources */,
 				742B3DDC1E93D7AA00EA891F /* DWRichTextEditToolBar.m in Sources */,
 				74BC7A431E95DA1A00DAD94E /* UIDevice+DWKit.m in Sources */,
 				74E35A1A1E718E0E00AEDE10 /* DWLinearGradientView.m in Sources */,
 				745D270B1ED94A19003BE00F /* DWDebugViewController.m in Sources */,
+				748B727D1F20B46D00BE1029 /* DWRoundedCornersViewController.m in Sources */,
 				743577AB1E755FD8004BC1E1 /* UITextField+DWKit.m in Sources */,
 				74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */,
 				743577B11E757C41004BC1E1 /* NSDictionary+DWKit.m in Sources */,
-				74E359FE1E7189C600AEDE10 /* ViewController.m in Sources */,
+				74E359FE1E7189C600AEDE10 /* ObjcViewController.m in Sources */,
 				747FAB3E1E7920CB00AD3CFE /* NSString+DWKit.m in Sources */,
 				74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */,
 				741B34EF1ED31AD3007D4278 /* NSAttributedString+DWUtil.m in Sources */,
 				74EC502E1ED6A50E000A9E3C /* NSArray+DWCrash.m in Sources */,
-				74CCFE561EDBF17D0067F398 /* DWPathViewController.m in Sources */,
+				74FCF0F21F24701400BA3147 /* DWTableViewController.m in Sources */,
+				748B727B1F20B46700BE1029 /* DWPathViewController.m in Sources */,
 				743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */,
 				747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */,
 				74EC502F1ED6A50E000A9E3C /* NSDictionary+DWCrash.m in Sources */,
-				74FB42CC1ECC144600195312 /* DWGCDViewController.m in Sources */,
+				748B727E1F20B46F00BE1029 /* DWSendSMSViewController.m in Sources */,
 				7435779C1E7544EA004BC1E1 /* UIButton+DWKit.m in Sources */,
+				748B727C1F20B46A00BE1029 /* DWProgressViewController.m in Sources */,
 				74E35A131E718A5400AEDE10 /* DWWeakProxy.m in Sources */,
 				74E35A171E718C6E00AEDE10 /* DWFPSLabel.m in Sources */,
 				747FAB3B1E791AB100AD3CFE /* CALayer+DWKit.m in Sources */,
 				743577A51E755B10004BC1E1 /* NSAttributedString+DWKit.m in Sources */,
+				748B727A1F20B46400BE1029 /* DWGCDViewController.m in Sources */,
+				748B72791F20B45F00BE1029 /* DWDelegateViewController.m in Sources */,
 				74E359FB1E7189C600AEDE10 /* AppDelegate.m in Sources */,
 				741B34F01ED31AD3007D4278 /* NSTextAttachment+DWUtil.m in Sources */,
 				742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */,
 				74BC7A461E95F89300DAD94E /* DWSettingUtil.m in Sources */,
 				74EC50371ED6A5ED000A9E3C /* NSObject+DWCrash.m in Sources */,
+				748B727F1F20B47200BE1029 /* DWSkillViewController.m in Sources */,
+				7452F3EE1F49520F00278B8E /* UIWindow+DWKit.m in Sources */,
 				7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */,
 				74EC50261ED6A4E2000A9E3C /* NSObject+DWModel.m in Sources */,
-				740285DE1ECB374100CEBF8C /* DWSendSMSViewController.m in Sources */,
 				743577A21E755940004BC1E1 /* UIFont+DWKit.m in Sources */,
 				74E359F81E7189C600AEDE10 /* main.m in Sources */,
 			);
@@ -1042,6 +1074,13 @@
 				DEVELOPMENT_TEAM = J3RSV264ZA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DWUtilKitPch.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"SD_WEBP=1",
+					"DWCrashSafeClose=1",
+				);
 				INFOPLIST_FILE = DWUtilKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
