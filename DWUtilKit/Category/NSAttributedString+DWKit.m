@@ -10,6 +10,32 @@
 
 @implementation NSAttributedString (DWKit)
 
++ (NSAttributedString *)dw_attributedStringWithHtmlString:(NSString *)htmlString {
+    if (htmlString.length == 0) {
+        return [[NSAttributedString alloc] init];
+    }
+    NSDictionary *documentAttributes = @{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType,
+                                         NSCharacterEncodingDocumentAttribute:@(NSUTF8StringEncoding)};
+    NSError *error;
+    NSAttributedString *attrs = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] options:documentAttributes documentAttributes:nil error:&error];
+    if (error) {
+        NSAssert(NO, @"HTML to AttributedString Error:%@",error.description);
+    }
+    return attrs;
+}
+
++ (NSString *)dw_htmlStringWithAttributdString:(NSAttributedString *)attrs {
+    // http://stackoverflow.com/questions/5298188/how-do-i-convert-nsattributedstring-into-html-string
+    NSDictionary *documentAttributes = @{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType};
+    NSError *error;
+    NSData *htmlData = [attrs dataFromRange:NSMakeRange(0, attrs.length) documentAttributes:documentAttributes error:&error];
+    if (error) {
+        NSAssert(NO,@"AttributedString to HTML Error:%@",error.description);
+    }
+    NSString *htmlString = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
+    return htmlString;
+}
+
 - (NSDictionary *)dw_attributes {
     return [self dw_attributesAtIndex:0];
 }

@@ -26,5 +26,6 @@
 + (NSString *)dw_getStringValueForKey:(NSString *)key;
 
 + (void)dw_deleteValueForkey:(NSString *)key;
++ (void)dw_synchronize;
 
 @end

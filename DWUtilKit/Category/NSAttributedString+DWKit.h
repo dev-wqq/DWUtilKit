@@ -12,6 +12,16 @@
 @interface NSAttributedString (DWKit)
 
 /**
+ @return AttributedString, use system method conver
+ */
++ (NSAttributedString *)dw_attributedStringWithHtmlString:(NSString *)htmlString;
+
+/**
+ @return htmlString, use system method conver
+ */
++ (NSString *)dw_htmlStringWithAttributdString:(NSAttributedString *)attrs;
+
+/**
  @return the attributes at first character.
  */
 - (NSDictionary *)dw_attributes;

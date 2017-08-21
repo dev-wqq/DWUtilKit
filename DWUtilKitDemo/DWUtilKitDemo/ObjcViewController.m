@@ -19,6 +19,7 @@
 #import "DWTableViewController.h"
 #import "NSString+DWKit.h"
 #import "DWPermissionUtil.h"
+#import "DWSkillViewController.h"
 
 @interface DWItemModel : NSObject
 
@@ -130,6 +131,7 @@ __weak id reference = nil;
     [self addClass:NSStringFromClass([DWDelegateViewController class]) des:@"delegate"];
     [self addClass:NSStringFromClass([DWAnimationViewController class]) des:@"dotzoon"];
     [self addClass:NSStringFromClass([DWTableViewController class]) des:@"tableView"];
+    [self addClass:NSStringFromClass([DWSkillViewController class]) des:@"tableView"];
 }
 
 - (void)addClass:(NSString *)className des:(NSString *)des {

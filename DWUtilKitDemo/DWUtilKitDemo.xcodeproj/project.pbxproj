@@ -120,9 +120,9 @@
 		743577AD1E756DBD004BC1E1 /* UIViewController+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DWKit.m"; sourceTree = "<group>"; };
 		743577AF1E757C41004BC1E1 /* NSDictionary+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DWKit.h"; sourceTree = "<group>"; };
 		743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DWKit.m"; sourceTree = "<group>"; };
-		743873F41F33605600B9DAC0 /* DWUtilKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilKitDemoTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilKitDemoTests.xctest"; sourceTree = "<absolute>"; };
-		743873F51F33605600B9DAC0 /* DWUtilKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilKitTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilKitTests.xctest"; sourceTree = "<absolute>"; };
-		743873F61F33605600B9DAC0 /* DWUtilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilTests.xctest"; sourceTree = "<absolute>"; };
+		743863201F4ABA95007E4402 /* DWUtilKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilKitDemoTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilKitDemoTests.xctest"; sourceTree = "<absolute>"; };
+		743863211F4ABA95007E4402 /* DWUtilKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilKitTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilKitTests.xctest"; sourceTree = "<absolute>"; };
+		743863221F4ABA95007E4402 /* DWUtilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DWUtilTests.xctest; path = "/Users/wangqiqi/Documents/DWUtilKit/DWUtilKitDemo/build/Debug-iphoneos/DWUtilTests.xctest"; sourceTree = "<absolute>"; };
 		743DBAE81EB613DF002009A9 /* DWRichTextEditSelectColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditSelectColorView.h; sourceTree = "<group>"; };
 		743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditSelectColorView.m; sourceTree = "<group>"; };
 		7452F3EC1F49520F00278B8E /* UIWindow+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+DWKit.h"; sourceTree = "<group>"; };
@@ -540,7 +540,7 @@
 			);
 			name = DWUtilKitDemoTests;
 			productName = DWUtilKitDemoTests;
-			productReference = 743873F41F33605600B9DAC0 /* DWUtilKitDemoTests.xctest */;
+			productReference = 743863201F4ABA95007E4402 /* DWUtilKitDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		74CCFE391EDAE0170067F398 /* DWUtilKitTests */ = {
@@ -558,7 +558,7 @@
 			);
 			name = DWUtilKitTests;
 			productName = DWUtilKitTests;
-			productReference = 743873F51F33605600B9DAC0 /* DWUtilKitTests.xctest */;
+			productReference = 743863211F4ABA95007E4402 /* DWUtilKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		74CCFE471EDAE06C0067F398 /* DWUtilTests */ = {
@@ -576,7 +576,7 @@
 			);
 			name = DWUtilTests;
 			productName = DWUtilTests;
-			productReference = 743873F61F33605600B9DAC0 /* DWUtilTests.xctest */;
+			productReference = 743863221F4ABA95007E4402 /* DWUtilTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		74E359F21E7189C600AEDE10 /* DWUtilKitDemo */ = {

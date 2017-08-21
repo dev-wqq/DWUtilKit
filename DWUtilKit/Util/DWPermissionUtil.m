@@ -12,6 +12,7 @@
 #import <Photos/Photos.h>
 #import <AVFoundation/AVCaptureDevice.h>
 #import <AVFoundation/AVMediaFormat.h>
+#import <CoreTelephony/CTCellularData.h>
 
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
@@ -28,28 +29,43 @@
     }
 }
 
-+ (BOOL)dw_isPhotoLibraryAccess {
-    if (DWDeviceSystemMajorVersion() < 8.0) {
-        ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
-        if (status == ALAuthorizationStatusDenied || status == ALAuthorizationStatusRestricted) {
-            return NO;
-        }
-    } else {
-        PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-        if (status == PHAuthorizationStatusDenied || status == PHAuthorizationStatusRestricted) {
-            return NO;
-        }
++ (void)dw_cameraAccess:(DWAccessResult)result completionHandler:(DWCompletionHandler)handler {
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        if (result) result(DWAuthorizationStatusNotInstall);
+        return;
     }
-    return YES;
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (result) result((DWAuthorizationStatus)status);
+    if (status == DWAuthorizationStatusNotDetermined && handler) {
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:handler];
+    }
+}
+
++ (BOOL)dw_isPhotoLibraryAccess {
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if (status == PHAuthorizationStatusDenied || status == PHAuthorizationStatusRestricted) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
++ (void)dw_photoLibraryAccess:(DWAccessResult)result completionHandler:(DWCompletionHandler)handler {
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if (result) result((DWAuthorizationStatus)status);
+    if (status == PHAuthorizationStatusNotDetermined && handler) {
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            if (status == PHAuthorizationStatusAuthorized) {
+                handler(YES);
+            } else {
+                handler(NO);
+            }
+        }];
+    }
 }
 
 + (BOOL)dw_isNotificationEnabled {
-#if !defined(IS_EXTENSION_TARGET)
-    if (DWDeviceSystemMajorVersion() < 8.0) {
-        UIRemoteNotificationType notificationType = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
-        [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
-        return (notificationType != UIRemoteNotificationTypeNone);
-    } else if (DWDeviceSystemMajorVersion() >= 8.0 && DWDeviceSystemMajorVersion() <10) {
+    if (DWDeviceSystemMajorVersion() >= 8.0 && DWDeviceSystemMajorVersion() <10) {
         UIUserNotificationSettings * setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
         const UIUserNotificationType notificationType = setting.types;
         return (notificationType != UIUserNotificationTypeNone);
@@ -64,10 +80,17 @@
         }];
         return notificationsAlertAuthorization;
     }
-#else
-    // extension不支持
-#endif
     return NO;
+}
+
++ (BOOL)dw_openSystemSettingInterface {
+    NSURL *settingUrl = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    if ([[UIApplication sharedApplication] canOpenURL:settingUrl]) {
+        [[UIApplication sharedApplication] openURL:settingUrl];
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 @end

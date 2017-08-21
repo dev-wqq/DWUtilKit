@@ -24,5 +24,6 @@
 #import "NSAttributedString+DWKit.h"
 #import "NSString+DWKit.h"
 #import "NSNumber+DWKit.h"
+#import "UIWindow+DWKit.h"
 
 

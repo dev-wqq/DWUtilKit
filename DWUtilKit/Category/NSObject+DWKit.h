@@ -18,5 +18,16 @@
 + (NSData *)dw_dataWithJson:(id)json;
 + (NSString *)dw_stringWithJson:(id)json;
 
+#pragma mark - swizzle method
+
+/**
+ exchange instance method
+ */
++ (BOOL)dw_swizzleInstanceMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector;
+
+/**
+ exchange class method
+ */
++ (BOOL)dw_swizzleClassMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector;
 
 @end

@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSObject+DWModel.h"
-
 #import "UIView+DWKit.h"
 #import "UIFont+DWKit.h"
 #import "UILabel+DWKit.h"
@@ -26,5 +24,6 @@
 #import "NSAttributedString+DWKit.h"
 #import "NSString+DWKit.h"
 #import "NSNumber+DWKit.h"
+#import "UIWindow+DWKit.h"
 
 

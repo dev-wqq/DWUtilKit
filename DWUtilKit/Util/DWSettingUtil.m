@@ -69,4 +69,8 @@
     [persistentDefaults removeObjectForKey:key];
 }
 
++ (void)dw_synchronize {
+    [[NSUserDefaults standardUserDefaults] synchronize];
+ }
+
 @end
