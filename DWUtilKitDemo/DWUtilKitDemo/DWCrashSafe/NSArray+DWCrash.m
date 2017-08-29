@@ -159,7 +159,6 @@
     }
     [self dwcrash_replaceObjectAtIndex:index withObject:anObject];
 }
-
 #endif
 
 @end

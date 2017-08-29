@@ -1,1 +1,0 @@
-../../../DTFoundation/Core/Source/DTScripting/DTScriptVariable.h

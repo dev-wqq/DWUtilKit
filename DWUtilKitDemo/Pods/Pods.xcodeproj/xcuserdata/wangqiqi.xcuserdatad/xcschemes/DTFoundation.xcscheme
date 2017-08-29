@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '63AE8F3894A18F3FEF226C8A64A370BE'
+               BlueprintIdentifier = '7C86F69DB8BCA399021B41B313E2455A'
                BlueprintName = 'DTFoundation'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libDTFoundation.a'>
+               BuildableName = 'DTFoundation.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

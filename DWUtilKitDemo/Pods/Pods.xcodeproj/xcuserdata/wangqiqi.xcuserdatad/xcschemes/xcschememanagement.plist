@@ -54,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-DWUtilKitDemoTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,72 +82,77 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>53F8571E2D572C4069860E38654A566A</key>
+		<key>0D5F1592BB499BC6DB6425FC78A736FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5437890023F30CA85DFCA260CA914D48</key>
+		<key>0FB408FDD1724548E283FB7940306AF3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>55E3CFFEDC2629EE0C17B343EC00595B</key>
+		<key>3773B8A39B0A52978381D8737FBF6430</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63AE8F3894A18F3FEF226C8A64A370BE</key>
+		<key>624C5A9D7E41DE757CEDA330D7C13308</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66B79D30D6A531344BD8C585B8A4F4E3</key>
+		<key>62537C072B58EC16E31FFFB49416CD34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B79ACF002EDBC3062BBBF2EFE601A77</key>
+		<key>6A0705B3917FE4A684B9B1914A32FDB6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>931AA31A36D0F952DBBE2368619467AF</key>
+		<key>6A671C7904155C84FAAD3803AEC555ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93857086BC29FA8CFEE1AC98212F3DCB</key>
+		<key>7C86F69DB8BCA399021B41B313E2455A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C2D3327264C1DB785EADD89D3242323</key>
+		<key>83B5B60C676A8D31829A6AE91CE86A75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<key>8AD3B1050390A0E167456C6ECBBB96F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB1FE4DD6669DA0ACE6DCD91C238FB3E</key>
+		<key>D386C75EFD4F03725E4EFB866B600B9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F598DF5B55DFA9FE142406E85FCC9F8E</key>
+		<key>D52144DE9D7255DE912490FF5A806573</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB6F7635FB13EEAE9014EE007FE8B0B7</key>
+		<key>DC3688684BF42A20A8998F31DDA51A49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1BB2FCBCF83B5DDB315512A21BC40B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

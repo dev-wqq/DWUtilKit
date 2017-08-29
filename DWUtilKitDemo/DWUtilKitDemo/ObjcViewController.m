@@ -20,6 +20,7 @@
 #import "NSString+DWKit.h"
 #import "DWPermissionUtil.h"
 #import "DWSkillViewController.h"
+#import "DWSectionCellViewController.h"
 
 @interface DWItemModel : NSObject
 
@@ -109,9 +110,11 @@ __weak id reference = nil;
 //    NSLog(@"%s:%@",__FUNCTION__,reference);
 //}
 
-- (void)initView {
-    NSString *str = nil;
+- (void)didTapView:(id)sender {
+    
+}
 
+- (void)initView {
     self.title = @"objc";
     
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -132,6 +135,7 @@ __weak id reference = nil;
     [self addClass:NSStringFromClass([DWAnimationViewController class]) des:@"dotzoon"];
     [self addClass:NSStringFromClass([DWTableViewController class]) des:@"tableView"];
     [self addClass:NSStringFromClass([DWSkillViewController class]) des:@"tableView"];
+    [self addClass:NSStringFromClass([DWSectionCellViewController class]) des:@"tableViewCell"];
 }
 
 - (void)addClass:(NSString *)className des:(NSString *)des {
@@ -143,101 +147,7 @@ __weak id reference = nil;
     itemModel.classDes = des;
     [_mDataSource addObject:itemModel];
 }
-//
-//- (UIImage *)previewImage {
-//    if (_previewImage) {
-//        return _previewImage;
-//    }
-//    __block UIImage *resultImage;
-//    if (_usePhotoKit) {
-//        PHImageRequestOptions *imageRequestOptions = [[PHImageRequestOptions alloc] init];
-//        imageRequestOptions.synchronous = YES;
-//        [[[QMUIAssetsManager sharedInstance] phCachingImageManager] requestImageForAsset:_phAsset
-//                                                                              targetSize:CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT)
-//                                                                             contentMode:PHImageContentModeAspectFill
-//                                                                                 options:imageRequestOptions
-//                                                                           resultHandler:^(UIImage *result, NSDictionary *info) {
-//                                                                               resultImage = result;
-//                                                                           }];
-//    } else {
-//        CGImageRef fullScreenImageRef = [_alAssetRepresentation fullScreenImage];
-//        resultImage = [UIImage imageWithCGImage:fullScreenImageRef];
-//    }
-//    _previewImage = resultImage;
-//    return resultImage;
-//}
-//
 
-//- (UIImage *)originImage {
-//    if (_originImage) {
-//        return _originImage;
-//    }
-//    __block UIImage *resultImage;
-//    if (_usePhotoKit) {
-//        PHImageRequestOptions *phImageRequestOptions = [[PHImageRequestOptions alloc] init];
-//        phImageRequestOptions.synchronous = YES;
-//        [[[QMUIAssetsManager sharedInstance] phCachingImageManager] requestImageForAsset:_phAsset
-//                                                                              targetSize:PHImageManagerMaximumSize
-//                                                                             contentMode:PHImageContentModeDefault
-//                                                                                 options:phImageRequestOptions
-//                                                                           resultHandler:^(UIImage *result, NSDictionary *info) {
-//                                                                               resultImage = result;
-//                                                                           }];
-//    } else {
-//        CGImageRef fullResolutionImageRef = [_alAssetRepresentation fullResolutionImage];
-//        // 通过 fullResolutionImage 获取到的的高清图实际上并不带上在照片应用中使用“编辑”处理的效果，需要额外在 AlAssetRepresentation 中获取这些信息
-//        NSString *adjustment = [[_alAssetRepresentation metadata] objectForKey:@"AdjustmentXMP"];
-//        if (adjustment) {
-//            // 如果有在照片应用中使用“编辑”效果，则需要获取这些编辑后的滤镜，手工叠加到原图中
-//            NSData *xmpData = [adjustment dataUsingEncoding:NSUTF8StringEncoding];
-//            CIImage *tempImage = [CIImage imageWithCGImage:fullResolutionImageRef];
-//
-//            NSError *error;
-//            NSArray *filterArray = [CIFilter filterArrayFromSerializedXMP:xmpData
-//                                                         inputImageExtent:tempImage.extent
-//                                                                    error:&error];
-//            CIContext *context = [CIContext contextWithOptions:nil];
-//            if (filterArray && !error) {
-//                for (CIFilter *filter in filterArray) {
-//                    [filter setValue:tempImage forKey:kCIInputImageKey];
-//                    tempImage = [filter outputImage];
-//                }
-//                fullResolutionImageRef = [context createCGImage:tempImage fromRect:[tempImage extent]];
-//            }
-//        }
-//        // 生成最终返回的 UIImage，同时把图片的 orientation 也补充上去
-//        resultImage = [UIImage imageWithCGImage:fullResolutionImageRef scale:[_alAssetRepresentation scale] orientation:(UIImageOrientation)[_alAssetRepresentation orientation]];
-//    }
-//    _originImage = resultImage;
-//    return resultImage;
-//}
-//
-
-//- (UIImage *)thumbnailWithSize:(CGSize)size {
-//    if (_thumbnailImage) {
-//        return _thumbnailImage;
-//    }
-//    __block UIImage *resultImage;
-//    if (_usePhotoKit) {
-//        PHImageRequestOptions *phImageRequestOptions = [[PHImageRequestOptions alloc] init];
-//        phImageRequestOptions.resizeMode = PHImageRequestOptionsResizeModeExact;
-//        // 在 PHImageManager 中，targetSize 等 size 都是使用 px 作为单位，因此需要对targetSize 中对传入的 Size 进行处理，宽高各自乘以 ScreenScale，从而得到正确的图片
-//        [[[QMUIAssetsManager sharedInstance] phCachingImageManager] requestImageForAsset:_phAsset
-//                                                                              targetSize:CGSizeMake(size.width * ScreenScale, size.height * ScreenScale)
-//                                                                             contentMode:PHImageContentModeAspectFill options:phImageRequestOptions
-//                                                                           resultHandler:^(UIImage *result, NSDictionary *info) {
-//                                                                               resultImage = result;
-//                                                                           }];
-//    } else {
-//        CGImageRef thumbnailImageRef = [_alAsset thumbnail];
-//        if (thumbnailImageRef) {
-//            resultImage = [UIImage imageWithCGImage:thumbnailImageRef];
-//        }
-//    }
-//    _thumbnailImage = resultImage;
-//    return resultImage;
-//}
-//
 
 @end
 
