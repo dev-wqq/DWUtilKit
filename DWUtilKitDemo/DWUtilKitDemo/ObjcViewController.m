@@ -16,11 +16,11 @@
 #import "DWPathViewController.h"
 #import "DWDelegateViewController.h"
 #import "DWAnimationViewController.h"
-#import "DWTableViewController.h"
 #import "NSString+DWKit.h"
 #import "DWPermissionUtil.h"
 #import "DWSkillViewController.h"
 #import "DWSectionCellViewController.h"
+#import "DWDramImageViewController.h"
 
 @interface DWItemModel : NSObject
 
@@ -125,6 +125,7 @@ __weak id reference = nil;
     _tableView.dataSource = self;
     _tableView.rowHeight = 60;
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
+    
     [self addClass:NSStringFromClass([DWRichTextEditViewController class]) des:@"富文本编辑器"];
     [self addClass:NSStringFromClass([DWProgressViewController class]) des:@"NSProgress"];
     [self addClass:NSStringFromClass([DWSendSMSViewController class]) des:@"短信发送"];
@@ -133,9 +134,9 @@ __weak id reference = nil;
     [self addClass:NSStringFromClass([DWPathViewController class]) des:@"path"];
     [self addClass:NSStringFromClass([DWDelegateViewController class]) des:@"delegate"];
     [self addClass:NSStringFromClass([DWAnimationViewController class]) des:@"dotzoon"];
-    [self addClass:NSStringFromClass([DWTableViewController class]) des:@"tableView"];
-    [self addClass:NSStringFromClass([DWSkillViewController class]) des:@"tableView"];
-    [self addClass:NSStringFromClass([DWSectionCellViewController class]) des:@"tableViewCell"];
+    [self addClass:NSStringFromClass([DWSkillViewController class]) des:@"开发技巧"];
+    [self addClass:NSStringFromClass([DWSectionCellViewController class]) des:@"优雅处理first cell顶部分割线和last cell分割线边距"];
+    [self addClass:NSStringFromClass([DWDramImageViewController class]) des:@"图像的性能优化"];
 }
 
 - (void)addClass:(NSString *)className des:(NSString *)des {
