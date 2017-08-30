@@ -66,33 +66,11 @@
 		74EC50301ED6A50E000A9E3C /* NSNull+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC502D1ED6A50E000A9E3C /* NSNull+DWCrash.m */; };
 		74EC50341ED6A516000A9E3C /* NSObject+DWLogUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50331ED6A516000A9E3C /* NSObject+DWLogUnicode.m */; };
 		74EC50371ED6A5ED000A9E3C /* NSObject+DWCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EC50361ED6A5ED000A9E3C /* NSObject+DWCrash.m */; };
+		B457EEBB3C5A9E31EB57CC02 /* Pods_DWUtilKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217F9670BB59BC29A882F736 /* Pods_DWUtilKitDemo.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7448B8211ED72A1A00AE165F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 74E359EB1E7189C600AEDE10 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 74E359F21E7189C600AEDE10;
-			remoteInfo = DWUtilKitDemo;
-		};
-		74CCFE3F1EDAE0170067F398 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 74E359EB1E7189C600AEDE10 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 74E359F21E7189C600AEDE10;
-			remoteInfo = DWUtilKitDemo;
-		};
-		74CCFE4D1EDAE06C0067F398 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 74E359EB1E7189C600AEDE10 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 74E359F21E7189C600AEDE10;
-			remoteInfo = DWUtilKitDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		217F9670BB59BC29A882F736 /* Pods_DWUtilKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DWUtilKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6E1C81FBBE2824B1DCBA79 /* Pods-DWUtilKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemoTests/Pods-DWUtilKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		43DFB081E7D85AD9BD3D052D /* Pods-DWUtilKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4E5082B3BFFD185D39C9A663 /* Pods-DWUtilKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,9 +85,6 @@
 		740C9EB71F55A44A00A0A228 /* DWEdgeInsetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWEdgeInsetViewController.h; sourceTree = "<group>"; };
 		740C9EB81F55A44A00A0A228 /* DWEdgeInsetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWEdgeInsetViewController.m; sourceTree = "<group>"; };
 		740C9EDA1F56E5F600A0A228 /* DWUtilKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWUtilKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		740C9EDB1F56E5F600A0A228 /* DWUtilKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWUtilKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		740C9EDC1F56E5F600A0A228 /* DWUtilKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWUtilKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		740C9EDD1F56E5F600A0A228 /* DWUtilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DWUtilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		741B34EB1ED31AD3007D4278 /* NSAttributedString+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DWUtil.h"; sourceTree = "<group>"; };
 		741B34EC1ED31AD3007D4278 /* NSAttributedString+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DWUtil.m"; sourceTree = "<group>"; };
 		741B34ED1ED31AD3007D4278 /* NSTextAttachment+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextAttachment+DWUtil.h"; sourceTree = "<group>"; };
@@ -218,37 +193,18 @@
 		74EC50331ED6A516000A9E3C /* NSObject+DWLogUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWLogUnicode.m"; sourceTree = "<group>"; };
 		74EC50351ED6A5ED000A9E3C /* NSObject+DWCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWCrash.h"; sourceTree = "<group>"; };
 		74EC50361ED6A5ED000A9E3C /* NSObject+DWCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWCrash.m"; sourceTree = "<group>"; };
+		86637C8533612731306936B8 /* Pods_DWUtilKitDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DWUtilKitDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91BE27A00E517414740AF8F /* Pods-DWUtilKitDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWUtilKitDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWUtilKitDemoTests/Pods-DWUtilKitDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7448B8191ED72A1A00AE165F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74CCFE371EDAE0170067F398 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74CCFE451EDAE06C0067F398 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		74E359F01E7189C600AEDE10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				745D270D1ED9564A003BE00F /* UIKit.framework in Frameworks */,
 				7455A4951E80C9EE002CA176 /* CoreGraphics.framework in Frameworks */,
+				B457EEBB3C5A9E31EB57CC02 /* Pods_DWUtilKitDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +300,8 @@
 			children = (
 				745D270C1ED9564A003BE00F /* UIKit.framework */,
 				7455A4941E80C9EE002CA176 /* CoreGraphics.framework */,
+				217F9670BB59BC29A882F736 /* Pods_DWUtilKitDemo.framework */,
+				86637C8533612731306936B8 /* Pods_DWUtilKitDemoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -381,9 +339,6 @@
 				3AF117EF41F8E302E91B11E0 /* Pods */,
 				745D26FE1ED7EFA0003BE00F /* OptimizationProfiles */,
 				740C9EDA1F56E5F600A0A228 /* DWUtilKitDemo.app */,
-				740C9EDB1F56E5F600A0A228 /* DWUtilKitDemoTests.xctest */,
-				740C9EDC1F56E5F600A0A228 /* DWUtilKitTests.xctest */,
-				740C9EDD1F56E5F600A0A228 /* DWUtilTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -575,63 +530,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7448B81B1ED72A1A00AE165F /* DWUtilKitDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7448B8251ED72A1A00AE165F /* Build configuration list for PBXNativeTarget "DWUtilKitDemoTests" */;
-			buildPhases = (
-				F50EC02AB8ADF82C684FAE3E /* [CP] Check Pods Manifest.lock */,
-				7448B8181ED72A1A00AE165F /* Sources */,
-				7448B8191ED72A1A00AE165F /* Frameworks */,
-				7448B81A1ED72A1A00AE165F /* Resources */,
-				390D1121CBDFE998B56AF577 /* [CP] Embed Pods Frameworks */,
-				98F181ACAC3131163185C99B /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7448B8221ED72A1A00AE165F /* PBXTargetDependency */,
-			);
-			name = DWUtilKitDemoTests;
-			productName = DWUtilKitDemoTests;
-			productReference = 740C9EDB1F56E5F600A0A228 /* DWUtilKitDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		74CCFE391EDAE0170067F398 /* DWUtilKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 74CCFE411EDAE0170067F398 /* Build configuration list for PBXNativeTarget "DWUtilKitTests" */;
-			buildPhases = (
-				74CCFE361EDAE0170067F398 /* Sources */,
-				74CCFE371EDAE0170067F398 /* Frameworks */,
-				74CCFE381EDAE0170067F398 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				74CCFE401EDAE0170067F398 /* PBXTargetDependency */,
-			);
-			name = DWUtilKitTests;
-			productName = DWUtilKitTests;
-			productReference = 740C9EDC1F56E5F600A0A228 /* DWUtilKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		74CCFE471EDAE06C0067F398 /* DWUtilTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 74CCFE4F1EDAE06C0067F398 /* Build configuration list for PBXNativeTarget "DWUtilTests" */;
-			buildPhases = (
-				74CCFE441EDAE06C0067F398 /* Sources */,
-				74CCFE451EDAE06C0067F398 /* Frameworks */,
-				74CCFE461EDAE06C0067F398 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				74CCFE4E1EDAE06C0067F398 /* PBXTargetDependency */,
-			);
-			name = DWUtilTests;
-			productName = DWUtilTests;
-			productReference = 740C9EDD1F56E5F600A0A228 /* DWUtilTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		74E359F21E7189C600AEDE10 /* DWUtilKitDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74E35A0A1E7189C600AEDE10 /* Build configuration list for PBXNativeTarget "DWUtilKitDemo" */;
@@ -662,24 +560,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = duxing;
 				TargetAttributes = {
-					7448B81B1ED72A1A00AE165F = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = M2XU6NPV6D;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 74E359F21E7189C600AEDE10;
-					};
-					74CCFE391EDAE0170067F398 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = M2XU6NPV6D;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 74E359F21E7189C600AEDE10;
-					};
-					74CCFE471EDAE06C0067F398 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = M2XU6NPV6D;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 74E359F21E7189C600AEDE10;
-					};
 					74E359F21E7189C600AEDE10 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = J3RSV264ZA;
@@ -707,35 +587,11 @@
 			projectRoot = "";
 			targets = (
 				74E359F21E7189C600AEDE10 /* DWUtilKitDemo */,
-				7448B81B1ED72A1A00AE165F /* DWUtilKitDemoTests */,
-				74CCFE391EDAE0170067F398 /* DWUtilKitTests */,
-				74CCFE471EDAE06C0067F398 /* DWUtilTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7448B81A1ED72A1A00AE165F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74CCFE381EDAE0170067F398 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74CCFE461EDAE06C0067F398 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		74E359F11E7189C600AEDE10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -767,21 +623,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		390D1121CBDFE998B56AF577 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DWUtilKitDemoTests/Pods-DWUtilKitDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9359F1A2717B66F11DCE7613 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -802,21 +643,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98F181ACAC3131163185C99B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DWUtilKitDemoTests/Pods-DWUtilKitDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A6644330BE3C410710CD9C47 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -835,6 +661,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -851,6 +678,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -859,48 +687,9 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DWUtilKitDemo/Pods-DWUtilKitDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F50EC02AB8ADF82C684FAE3E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DWUtilKitDemoTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7448B8181ED72A1A00AE165F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74CCFE361EDAE0170067F398 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74CCFE441EDAE06C0067F398 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		74E359EF1E7189C600AEDE10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -964,24 +753,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		7448B8221ED72A1A00AE165F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 74E359F21E7189C600AEDE10 /* DWUtilKitDemo */;
-			targetProxy = 7448B8211ED72A1A00AE165F /* PBXContainerItemProxy */;
-		};
-		74CCFE401EDAE0170067F398 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 74E359F21E7189C600AEDE10 /* DWUtilKitDemo */;
-			targetProxy = 74CCFE3F1EDAE0170067F398 /* PBXContainerItemProxy */;
-		};
-		74CCFE4E1EDAE06C0067F398 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 74E359F21E7189C600AEDE10 /* DWUtilKitDemo */;
-			targetProxy = 74CCFE4D1EDAE06C0067F398 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		74E359FF1E7189C600AEDE10 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1002,103 +773,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7448B8231ED72A1A00AE165F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F91BE27A00E517414740AF8F /* Pods-DWUtilKitDemoTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = M2XU6NPV6D;
-				INFOPLIST_FILE = DWUtilKitDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.util.DWUtilKitDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWUtilKitDemo.app/DWUtilKitDemo";
-			};
-			name = Debug;
-		};
-		7448B8241ED72A1A00AE165F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A6E1C81FBBE2824B1DCBA79 /* Pods-DWUtilKitDemoTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = M2XU6NPV6D;
-				INFOPLIST_FILE = DWUtilKitDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.util.DWUtilKitDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWUtilKitDemo.app/DWUtilKitDemo";
-			};
-			name = Release;
-		};
-		74CCFE421EDAE0170067F398 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = M2XU6NPV6D;
-				INFOPLIST_FILE = DWUtilKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.util.DWUtilKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWUtilKitDemo.app/DWUtilKitDemo";
-			};
-			name = Debug;
-		};
-		74CCFE431EDAE0170067F398 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = M2XU6NPV6D;
-				INFOPLIST_FILE = DWUtilKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.util.DWUtilKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWUtilKitDemo.app/DWUtilKitDemo";
-			};
-			name = Release;
-		};
-		74CCFE501EDAE06C0067F398 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = M2XU6NPV6D;
-				INFOPLIST_FILE = DWUtilTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.util.DWUtilTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWUtilKitDemo.app/DWUtilKitDemo";
-			};
-			name = Debug;
-		};
-		74CCFE511EDAE06C0067F398 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				DEVELOPMENT_TEAM = M2XU6NPV6D;
-				INFOPLIST_FILE = DWUtilTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.util.DWUtilTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWUtilKitDemo.app/DWUtilKitDemo";
-			};
-			name = Release;
-		};
 		74E35A081E7189C600AEDE10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1246,33 +920,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7448B8251ED72A1A00AE165F /* Build configuration list for PBXNativeTarget "DWUtilKitDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7448B8231ED72A1A00AE165F /* Debug */,
-				7448B8241ED72A1A00AE165F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		74CCFE411EDAE0170067F398 /* Build configuration list for PBXNativeTarget "DWUtilKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				74CCFE421EDAE0170067F398 /* Debug */,
-				74CCFE431EDAE0170067F398 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		74CCFE4F1EDAE06C0067F398 /* Build configuration list for PBXNativeTarget "DWUtilTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				74CCFE501EDAE06C0067F398 /* Debug */,
-				74CCFE511EDAE06C0067F398 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		74E359EE1E7189C600AEDE10 /* Build configuration list for PBXProject "DWUtilKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -45,7 +45,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
+    }
+    
     DWItemModel *itemModel = _mDataSource[indexPath.row];
     cell.textLabel.text = itemModel.className;
     cell.detailTextLabel.text = itemModel.classDes;
@@ -64,51 +68,13 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-#pragma mark - DWDelegateTemp 
-
-- (void)dw_text {
-    NSLog(@"dw_text");
-}
-
-- (void)dw_textOne {
-    NSLog(@"dw_text_one");
-}
-
-
 #pragma mark - Construct UI
 
 __weak id reference = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
-//    @autoreleasepool {
-//        NSString *str = [NSString stringWithFormat:@"test autorelease"];
-//        reference = str;
-//    }
-//    [[NSArray array] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-    
-//    }];
-//    NSLog(@"%s:%@",__FUNCTION__,reference);
-    [DWPermissionUtil dw_photoLibraryAccess:^(DWAuthorizationStatus status) {
-        NSLog(@"status %ld",status);
-    } completionHandler:^(BOOL granted) {
-        if (granted) {
-            NSLog(@"granted YES");
-        } else {
-            NSLog(@"granted NO");
-        }
-    }];
 }
-//
-//- (void)viewWillAppear:(BOOL)animated {
-//    [super viewWillAppear:animated];
-//    NSLog(@"%s:%@",__FUNCTION__,reference);
-//}
-//
-//- (void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//    NSLog(@"%s:%@",__FUNCTION__,reference);
-//}
 
 - (void)didTapView:(id)sender {
     
@@ -124,7 +90,6 @@ __weak id reference = nil;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = 60;
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellId"];
     
     [self addClass:NSStringFromClass([DWRichTextEditViewController class]) des:@"富文本编辑器"];
     [self addClass:NSStringFromClass([DWProgressViewController class]) des:@"NSProgress"];

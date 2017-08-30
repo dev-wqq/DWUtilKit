@@ -18,6 +18,7 @@ target 'DWUtilKitDemo' do
   pod 'YTKNetwork'
   pod 'pop'
   pod 'IGListKit'
+  pod 'YYModel'
 
 
   # Pods for DWUtilKitDemo
