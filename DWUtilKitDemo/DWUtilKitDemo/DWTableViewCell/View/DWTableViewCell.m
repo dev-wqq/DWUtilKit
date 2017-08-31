@@ -10,7 +10,7 @@
 
 @interface DWTableViewCell ()
 
-@property (nonatomic, strong) UIView *dwTapSeparatorLine;
+@property (nonatomic, strong) CALayer *dwTapSeparatorLine;
 
 @end
 
@@ -41,13 +41,9 @@
     }
     
     // first cell display top separator line
-    if (!_dwHideTopSeparatorLine && indexPath.row == 0) {
-        self.dwTapSeparatorLine.backgroundColor = tableView.separatorColor;
-        self.dwTapSeparatorLine.frame = CGRectMake(0, 0, self.contentView.width, CGFloatFromPixel(1));
-    } else {
-        [_dwTapSeparatorLine removeFromSuperview];
-        _dwTapSeparatorLine = nil;
-    }
+    BOOL hidden = !(indexPath.row == 0);
+    self.dwTapSeparatorLine.hidden = hidden;
+    self.dwTapSeparatorLine.frame = CGRectMake(0, 0, self.contentView.width, CGFloatFromPixel(1));
     
     if (tableView.separatorStyle == UITableViewCellSeparatorStyleNone) {
         return;
@@ -84,10 +80,12 @@
     return _dwTableView;
 }
 
-- (UIView *)dwTapSeparatorLine {
+- (CALayer *)dwTapSeparatorLine {
     if (!_dwTapSeparatorLine) {
-        _dwTapSeparatorLine = [[UIView alloc] initWithFrame:CGRectZero];
-        [self.contentView addSubview:_dwTapSeparatorLine];
+        _dwTapSeparatorLine = [[CALayer alloc] init];
+        _dwTapSeparatorLine.backgroundColor = self.dwTableView.separatorColor.CGColor;
+        _dwTapSeparatorLine.hidden = YES;
+        [self.contentView.layer addSublayer:_dwTapSeparatorLine];
     }
     return _dwTapSeparatorLine;
 }
