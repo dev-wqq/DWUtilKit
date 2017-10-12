@@ -21,6 +21,35 @@
 #import "DWSkillViewController.h"
 #import "DWSectionCellViewController.h"
 #import "DWDramImageViewController.h"
+#import "DWCollectionViewController.h"
+
+@interface UIView (FindUIViewController)
+- (UIViewController *) containingViewController;
+@end
+
+@implementation UIView (FindUIViewController)
+- (UIViewController *) containingViewController {
+    UIView * target = self;
+    return (UIViewController *)[target traverseResponderChainForUIViewController];
+}
+
+- (id) traverseResponderChainForUIViewController {
+    id nextResponder = [self nextResponder];
+    NSLog(@"nextResponder:%@",self.nextResponder);
+    BOOL isViewController = [nextResponder isKindOfClass:[UIViewController class]];
+    BOOL isTabBarController = [nextResponder isKindOfClass:[UITabBarController class]];
+    if (isViewController && !isTabBarController) {
+        return nextResponder;
+    } else if(isTabBarController){
+        UITabBarController *tabBarController = nextResponder;
+        return [tabBarController selectedViewController];
+    } else if ([nextResponder isKindOfClass:[UIView class]]) {
+        return [nextResponder traverseResponderChainForUIViewController];
+    } else {
+        return nil;
+    }
+}
+@end
 
 @interface DWItemModel : NSObject
 
@@ -47,7 +76,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cellId"];
     }
     
     DWItemModel *itemModel = _mDataSource[indexPath.row];
@@ -60,6 +89,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     DWItemModel *model = _mDataSource[indexPath.row];
     UIViewController *vc = [[NSClassFromString(model.className) alloc] init];
     vc.title = model.classDes;
@@ -104,6 +134,7 @@ __weak id reference = nil;
     [self addClass:NSStringFromClass([DWSkillViewController class]) des:@"开发技巧"];
     [self addClass:NSStringFromClass([DWSectionCellViewController class]) des:@"优雅处理first cell顶部分割线和last cell分割线边距"];
     [self addClass:NSStringFromClass([DWDramImageViewController class]) des:@"图像的性能优化"];
+    [self addClass:NSStringFromClass([DWCollectionViewController class]) des:@"collection View"];
 }
 
 - (void)addClass:(NSString *)className des:(NSString *)des {

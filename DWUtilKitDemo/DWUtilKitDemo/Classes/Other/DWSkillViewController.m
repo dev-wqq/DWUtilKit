@@ -38,11 +38,6 @@
                     } completion:nil];
 }
 
-- (void)removeRepetitionAtArray {
-    NSArray *arr = @[@1,@2,@3,@1,@2,@3];
-    NSArray *newArr = [arr valueForKeyPath:@"@distinctUnionOfObjects.self"];
-    NSLog(@"old arr:%@,new arr:%@",arr,newArr);
-}
 
 
 

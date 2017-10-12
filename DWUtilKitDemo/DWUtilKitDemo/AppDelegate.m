@@ -17,11 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    UIButton *buttn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [buttn setTitleColor:nil forState:UIControlStateNormal];
-    [buttn setBackgroundImage:nil forState:UIControlStateNormal];
-    
     return YES;
 
 }

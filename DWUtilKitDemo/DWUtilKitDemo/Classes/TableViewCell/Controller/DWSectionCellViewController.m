@@ -45,8 +45,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DWSectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId" forIndexPath:indexPath];
-    cell.dwHideTopSeparatorLine = NO;
-    cell.dwLastEdgeInsets = UIEdgeInsetsZero;
+    cell.dwHideFisrtCellTopSeparatorLine = NO;
     NSArray *arr = _dictionary[@(indexPath.section)];
     DWSectionCellItem *item = arr[indexPath.row];
     cell.imageViewIcon.image = item.icon;
@@ -77,7 +76,7 @@
 - (void)setupUI {
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.translucent = NO;
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-kNavigationBarHeight) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-kNavigationBarHeight) style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
