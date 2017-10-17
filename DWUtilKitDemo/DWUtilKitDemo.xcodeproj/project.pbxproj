@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		740C9EB31F55A1F400A0A228 /* DWDramImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 740C9EB21F55A1F400A0A228 /* DWDramImageViewController.m */; };
+		7417AAD21F95EEEE00ADCF2C /* UIScrollView+DWAdapterIOS11.m in Sources */ = {isa = PBXBuildFile; fileRef = 7417AAD11F95EEEE00ADCF2C /* UIScrollView+DWAdapterIOS11.m */; };
+		7417AAD51F95EF3200ADCF2C /* UITableView+DWAdapterIOS11.m in Sources */ = {isa = PBXBuildFile; fileRef = 7417AAD41F95EF3200ADCF2C /* UITableView+DWAdapterIOS11.m */; };
 		741B34EF1ED31AD3007D4278 /* NSAttributedString+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B34EC1ED31AD3007D4278 /* NSAttributedString+DWUtil.m */; };
 		741B34F01ED31AD3007D4278 /* NSTextAttachment+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B34EE1ED31AD3007D4278 /* NSTextAttachment+DWUtil.m */; };
 		742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */; };
@@ -32,7 +34,6 @@
 		7479A3D61F5CE830008AD738 /* DWSectionCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3CC1F5CE830008AD738 /* DWSectionCellViewController.m */; };
 		7479A3D71F5CE830008AD738 /* DWEdgeInsetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3D01F5CE830008AD738 /* DWEdgeInsetTableViewCell.m */; };
 		7479A3D81F5CE830008AD738 /* DWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3D21F5CE830008AD738 /* DWTableViewCell.m */; };
-		7479A3D91F5CE830008AD738 /* UITableViewCell+SeparatorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3D41F5CE830008AD738 /* UITableViewCell+SeparatorLine.m */; };
 		7479A3DF1F5CF7C4008AD738 /* DWLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3DE1F5CF7C4008AD738 /* DWLoginButton.m */; };
 		747FAB351E78D41E00AD3CFE /* NSObject+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB341E78D41E00AD3CFE /* NSObject+DWKit.m */; };
 		747FAB381E78EC9A00AD3CFE /* UILabel+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB371E78EC9A00AD3CFE /* UILabel+DWKit.m */; };
@@ -81,6 +82,10 @@
 		740C9EB11F55A1F400A0A228 /* DWDramImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDramImageViewController.h; sourceTree = "<group>"; };
 		740C9EB21F55A1F400A0A228 /* DWDramImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDramImageViewController.m; sourceTree = "<group>"; };
 		740C9EDA1F56E5F600A0A228 /* DWUtilKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWUtilKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7417AAD01F95EEEE00ADCF2C /* UIScrollView+DWAdapterIOS11.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DWAdapterIOS11.h"; sourceTree = "<group>"; };
+		7417AAD11F95EEEE00ADCF2C /* UIScrollView+DWAdapterIOS11.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DWAdapterIOS11.m"; sourceTree = "<group>"; };
+		7417AAD31F95EF3200ADCF2C /* UITableView+DWAdapterIOS11.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+DWAdapterIOS11.h"; sourceTree = "<group>"; };
+		7417AAD41F95EF3200ADCF2C /* UITableView+DWAdapterIOS11.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DWAdapterIOS11.m"; sourceTree = "<group>"; };
 		741B34EB1ED31AD3007D4278 /* NSAttributedString+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DWUtil.h"; sourceTree = "<group>"; };
 		741B34EC1ED31AD3007D4278 /* NSAttributedString+DWUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DWUtil.m"; sourceTree = "<group>"; };
 		741B34ED1ED31AD3007D4278 /* NSTextAttachment+DWUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextAttachment+DWUtil.h"; sourceTree = "<group>"; };
@@ -130,8 +135,6 @@
 		7479A3D01F5CE830008AD738 /* DWEdgeInsetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWEdgeInsetTableViewCell.m; sourceTree = "<group>"; };
 		7479A3D11F5CE830008AD738 /* DWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWTableViewCell.h; sourceTree = "<group>"; };
 		7479A3D21F5CE830008AD738 /* DWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWTableViewCell.m; sourceTree = "<group>"; };
-		7479A3D31F5CE830008AD738 /* UITableViewCell+SeparatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+SeparatorLine.h"; sourceTree = "<group>"; };
-		7479A3D41F5CE830008AD738 /* UITableViewCell+SeparatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+SeparatorLine.m"; sourceTree = "<group>"; };
 		7479A3DD1F5CF7C4008AD738 /* DWLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWLoginButton.h; sourceTree = "<group>"; };
 		7479A3DE1F5CF7C4008AD738 /* DWLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWLoginButton.m; sourceTree = "<group>"; };
 		747FAB331E78D41E00AD3CFE /* NSObject+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWKit.h"; sourceTree = "<group>"; };
@@ -375,8 +378,6 @@
 				7479A3D01F5CE830008AD738 /* DWEdgeInsetTableViewCell.m */,
 				7479A3D11F5CE830008AD738 /* DWTableViewCell.h */,
 				7479A3D21F5CE830008AD738 /* DWTableViewCell.m */,
-				7479A3D31F5CE830008AD738 /* UITableViewCell+SeparatorLine.h */,
-				7479A3D41F5CE830008AD738 /* UITableViewCell+SeparatorLine.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +473,10 @@
 				747FAB3A1E791AB100AD3CFE /* CALayer+DWKit.m */,
 				7452F3EC1F49520F00278B8E /* UIWindow+DWKit.h */,
 				7452F3ED1F49520F00278B8E /* UIWindow+DWKit.m */,
+				7417AAD01F95EEEE00ADCF2C /* UIScrollView+DWAdapterIOS11.h */,
+				7417AAD11F95EEEE00ADCF2C /* UIScrollView+DWAdapterIOS11.m */,
+				7417AAD31F95EF3200ADCF2C /* UITableView+DWAdapterIOS11.h */,
+				7417AAD41F95EF3200ADCF2C /* UITableView+DWAdapterIOS11.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -794,6 +799,7 @@
 				74EC50301ED6A50E000A9E3C /* NSNull+DWCrash.m in Sources */,
 				747FAB351E78D41E00AD3CFE /* NSObject+DWKit.m in Sources */,
 				74EC50251ED6A4E2000A9E3C /* ModelClass.m in Sources */,
+				7417AAD51F95EF3200ADCF2C /* UITableView+DWAdapterIOS11.m in Sources */,
 				742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */,
 				7435779F1E754641004BC1E1 /* UIView+DWKit.m in Sources */,
 				745D27101ED95831003BE00F /* UIViewController+DWSystemDebug.m in Sources */,
@@ -814,7 +820,6 @@
 				74E35A1E1E726F1000AEDE10 /* NSDate+DWKit.m in Sources */,
 				741B34EF1ED31AD3007D4278 /* NSAttributedString+DWUtil.m in Sources */,
 				7479A3D61F5CE830008AD738 /* DWSectionCellViewController.m in Sources */,
-				7479A3D91F5CE830008AD738 /* UITableViewCell+SeparatorLine.m in Sources */,
 				74EC502E1ED6A50E000A9E3C /* NSArray+DWCrash.m in Sources */,
 				748B727B1F20B46700BE1029 /* DWPathViewController.m in Sources */,
 				740C9EB31F55A1F400A0A228 /* DWDramImageViewController.m in Sources */,
@@ -822,6 +827,7 @@
 				747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */,
 				74EC502F1ED6A50E000A9E3C /* NSDictionary+DWCrash.m in Sources */,
 				748B727E1F20B46F00BE1029 /* DWSendSMSViewController.m in Sources */,
+				7417AAD21F95EEEE00ADCF2C /* UIScrollView+DWAdapterIOS11.m in Sources */,
 				7435779C1E7544EA004BC1E1 /* UIButton+DWKit.m in Sources */,
 				748B727C1F20B46A00BE1029 /* DWProgressViewController.m in Sources */,
 				74E35A131E718A5400AEDE10 /* DWWeakProxy.m in Sources */,

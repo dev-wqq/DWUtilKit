@@ -65,22 +65,9 @@
 }
 
 + (BOOL)dw_isNotificationEnabled {
-    if (DWDeviceSystemMajorVersion() >= 8.0 && DWDeviceSystemMajorVersion() <10) {
-        UIUserNotificationSettings * setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
-        const UIUserNotificationType notificationType = setting.types;
-        return (notificationType != UIUserNotificationTypeNone);
-    } else {
-        __block BOOL notificationsAlertAuthorization = NO;
-        [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-            if (settings.alertSetting == UNNotificationSettingEnabled ||
-                settings.soundSetting == UNNotificationSettingEnabled ||
-                settings.badgeSetting == UNNotificationSettingEnabled ) {
-                notificationsAlertAuthorization = YES;
-            }
-        }];
-        return notificationsAlertAuthorization;
-    }
-    return NO;
+    UIUserNotificationSettings * setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
+    const UIUserNotificationType notificationType = setting.types;
+    return (notificationType != UIUserNotificationTypeNone);
 }
 
 + (BOOL)dw_openSystemSettingInterface {

@@ -22,6 +22,7 @@
 #import "DWSectionCellViewController.h"
 #import "DWDramImageViewController.h"
 #import "DWCollectionViewController.h"
+#import "DWTestViewController.h"
 
 @interface UIView (FindUIViewController)
 - (UIViewController *) containingViewController;
@@ -96,6 +97,7 @@
     vc.hidesBottomBarWhenPushed = YES;
     vc.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark - Construct UI

@@ -14,6 +14,10 @@
 #pragma mark - Json
 
 + (id)dw_jsonWithData:(NSData *)data {
+    if (data.length == 0 || ![NSJSONSerialization isValidJSONObject:data]) {
+        return nil;
+    }
+    
     NSError *error;
     id serial = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     if (error) {
@@ -24,6 +28,9 @@
 }
 
 + (id)dw_jsonWithString:(NSString *)string {
+    if (string.length == 0) {
+        return nil;
+    }
     NSError *error;
     id serial = [NSJSONSerialization JSONObjectWithData:[string dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
     if (error) {

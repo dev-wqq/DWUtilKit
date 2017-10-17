@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DWUtilKit"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "DWUtilKit is public library"
 
   # This description is used to generate tags and improve search results.
@@ -63,10 +63,10 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "8.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dev-wqq/DWUtilKit.git", :tag => "v0.0.7" }
+  s.source       = { :git => "https://github.com/dev-wqq/DWUtilKit.git", :tag => "v0.0.8" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "DWUtilKit/**/*.{h,m}"
-  s.public_header_files = "DWUtilKit/**/*.h"
+  s.public_header_files = "DWUtilKit/**/*.{h}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -114,7 +114,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "UIKit","Foundation","Accelerate","AVFoundation","Photos","AssetsLibrary","UserNotifications"
+  s.frameworks = "UIKit","Foundation","Accelerate","UserNotifications"
 
   # s.library   = "UserNotifications"
   # s.libraries = "iconv", "xml2"

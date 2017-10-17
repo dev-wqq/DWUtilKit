@@ -50,7 +50,7 @@
     // first cell display top separator line
     if (indexPath.row == 0 && !self.dwHideFisrtCellTopSeparatorLine) {
         self.dwTapSeparatorLine.hidden = self.dwHideFisrtCellTopSeparatorLine;
-        self.dwTapSeparatorLine.frame = CGRectMake(0, 0, self.contentView.width, CGFloatFromPixel(1));
+        self.dwTapSeparatorLine.frame = CGRectMake(0, 0, self.width, CGFloatFromPixel(1));
     } else {
         _dwTapSeparatorLine.hidden = YES;
     }
@@ -99,7 +99,7 @@
         _dwTapSeparatorLine = [[CALayer alloc] init];
         _dwTapSeparatorLine.backgroundColor = self.dwTableView.separatorColor.CGColor;
         _dwTapSeparatorLine.hidden = YES;
-        [self.contentView.layer addSublayer:_dwTapSeparatorLine];
+        [self.layer addSublayer:_dwTapSeparatorLine];
     }
     return _dwTapSeparatorLine;
 }
