@@ -25,5 +25,7 @@
 #import "NSString+DWKit.h"
 #import "NSNumber+DWKit.h"
 #import "UIWindow+DWKit.h"
+#import "UIScrollView+DWAdapterIOS11.h"
+#import "UITableView+DWAdapterIOS11.h"
 
 

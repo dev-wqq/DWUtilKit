@@ -36,16 +36,24 @@
 #define kScreenHeight DWScreenSize().height
 #endif
 
-#ifndef kNavigationBarHeight
-#define kNavigationBarHeight 64
+#ifndef kStatusBarHeight
+#define kStatusBarHeight CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
 #endif
 
-#ifndef kStatusBarHeight
-#define kStatusBarHeight 20
+#ifndef kNavBarHeight
+#define kNavBarHeight 44
+#endif
+
+#ifndef kNavigationBarHeight
+#define kNavigationBarHeight (kStatusBarHeight + kNavBarHeight)
 #endif
 
 #ifndef kTabBarHeight
-#define kTabBarHeight 49
+#define kTabBarHeight (kStatusBarHeight > 20 ? 83 : 49)
+#endif
+
+#ifndef kIPhoneX
+#define kIPhoneX (kStatusBarHeight > 20)
 #endif
 
 /**
@@ -117,18 +125,30 @@ CG_INLINE CGFloat DWAutoScaleX(const CGFloat value) {
 }
 
 CG_INLINE CGFloat DWAutoScaleY(const CGFloat value) {
+    if (kIPhoneX) {
+        return value;
+    }
     return kScreenHeight / kScreen_UED_Height * value;
 }
 
 CG_INLINE CGFloat DWAutoScaleY_noNavigationBar (const CGFloat value) {
+    if (kIPhoneX) {
+        return value;
+    }
     return (kScreenHeight - kNavigationBarHeight) / (kScreen_UED_Height - kNavigationBarHeight) * value;
 }
 
 CG_INLINE CGFloat DWAutoScaleY_noTabBar(const CGFloat value) {
+    if (kIPhoneX) {
+        return value;
+    }
     return (kScreenHeight - kTabBarHeight) / (kScreen_UED_Height - kTabBarHeight) * value;
 }
 
 CG_INLINE CGFloat DWAutoScaleY_noBar(const CGFloat value) {
+    if (kIPhoneX) {
+        return value;
+    }
     return (kScreenHeight-kNavigationBarHeight-kTabBarHeight) / (kScreen_UED_Height-kNavigationBarHeight-kTabBarHeight) * value;
 }
 
