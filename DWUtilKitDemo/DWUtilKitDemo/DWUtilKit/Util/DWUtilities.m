@@ -8,6 +8,18 @@
 
 #import "DWUtilities.h"
 
+BOOL DWIPhoneX() {
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone &&
+               [UIScreen mainScreen].nativeBounds.size.height == 2436) {
+        return YES;
+    }
+    return NO;
+}
+
+CGFloat DWStatusHeight() {
+    return [[UIApplication sharedApplication] statusBarFrame].size.height;
+}
+
 CGFloat DWScreenScale() {
     static CGFloat scale;
     static dispatch_once_t onceToken;

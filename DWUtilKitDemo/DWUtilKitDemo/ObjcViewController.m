@@ -22,6 +22,7 @@
 #import "DWSectionCellViewController.h"
 #import "DWDramImageViewController.h"
 #import "DWCollectionViewController.h"
+#import "DWUtilities.h"
 
 @interface UIView (FindUIViewController)
 - (UIViewController *) containingViewController;

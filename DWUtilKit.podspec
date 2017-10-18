@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DWUtilKit"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
 
   s.license      = "MIT"
   #s.license      = { :type => "MIT", :file => "FILE_LICENSE" }

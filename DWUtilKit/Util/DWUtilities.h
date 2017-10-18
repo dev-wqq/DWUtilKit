@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Foundation/Foundation.h>
 /**
  *  main screen's scale
  */
@@ -37,7 +37,7 @@
 #endif
 
 #ifndef kStatusBarHeight
-#define kStatusBarHeight CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
+#define kStatusBarHeight DWStatusHeight()
 #endif
 
 #ifndef kNavBarHeight
@@ -52,14 +52,20 @@
 #define kTabBarHeight (kStatusBarHeight > 20 ? 83 : 49)
 #endif
 
-#ifndef kIPhoneX
-#define kIPhoneX (kStatusBarHeight > 20)
-#endif
-
 /**
  *  marco define __weak
  */
 #define kWeakSelf(weakSelf) __weak typeof(&*self) weakSelf = self;
+
+/**
+ * Get status height.
+ */
+CGFloat DWStatusHeight();
+
+/**
+ * Judge is iphoneX.
+ */
+BOOL DWIPhoneX();
 
 /**
  *  Get main screen's scale.
@@ -125,28 +131,28 @@ CG_INLINE CGFloat DWAutoScaleX(const CGFloat value) {
 }
 
 CG_INLINE CGFloat DWAutoScaleY(const CGFloat value) {
-    if (kIPhoneX) {
+    if (DWIPhoneX()) {
         return value;
     }
     return kScreenHeight / kScreen_UED_Height * value;
 }
 
 CG_INLINE CGFloat DWAutoScaleY_noNavigationBar (const CGFloat value) {
-    if (kIPhoneX) {
+    if (DWIPhoneX()) {
         return value;
     }
     return (kScreenHeight - kNavigationBarHeight) / (kScreen_UED_Height - kNavigationBarHeight) * value;
 }
 
 CG_INLINE CGFloat DWAutoScaleY_noTabBar(const CGFloat value) {
-    if (kIPhoneX) {
+    if (DWIPhoneX()) {
         return value;
     }
     return (kScreenHeight - kTabBarHeight) / (kScreen_UED_Height - kTabBarHeight) * value;
 }
 
 CG_INLINE CGFloat DWAutoScaleY_noBar(const CGFloat value) {
-    if (kIPhoneX) {
+    if (DWIPhoneX()) {
         return value;
     }
     return (kScreenHeight-kNavigationBarHeight-kTabBarHeight) / (kScreen_UED_Height-kNavigationBarHeight-kTabBarHeight) * value;
