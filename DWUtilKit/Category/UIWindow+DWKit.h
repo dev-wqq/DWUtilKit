@@ -11,12 +11,17 @@
 @interface UIWindow (DWKit)
 
 /**
- @return key window visible viewController
+ @return key window visible viewController.
  */
 + (UIViewController *)dw_keyWindowVisibleViewController;
 
 /**
- @return current window visible viewController
+ @return current window navigation controller.
+ */
+- (UINavigationController *)dw_currentNavigationController;
+
+/**
+ @return current window visible viewController.
  */
 - (UIViewController *)dw_visibleViewController;
 

@@ -24,6 +24,7 @@
 		743577AE1E756DBD004BC1E1 /* UIViewController+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577AD1E756DBD004BC1E1 /* UIViewController+DWKit.m */; };
 		743577B11E757C41004BC1E1 /* NSDictionary+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */; };
 		743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */; };
+		74513A7D1F9CEF4C007DD4E9 /* DWUtilAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 74513A7C1F9CEF4C007DD4E9 /* DWUtilAppInfo.m */; };
 		7452F3EE1F49520F00278B8E /* UIWindow+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7452F3ED1F49520F00278B8E /* UIWindow+DWKit.m */; };
 		7455A4951E80C9EE002CA176 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7455A4941E80C9EE002CA176 /* CoreGraphics.framework */; };
 		7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455A4971E80D027002CA176 /* UIImage+DWKit.m */; };
@@ -116,6 +117,8 @@
 		743577B01E757C41004BC1E1 /* NSDictionary+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DWKit.m"; sourceTree = "<group>"; };
 		743DBAE81EB613DF002009A9 /* DWRichTextEditSelectColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditSelectColorView.h; sourceTree = "<group>"; };
 		743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditSelectColorView.m; sourceTree = "<group>"; };
+		74513A7B1F9CEF4C007DD4E9 /* DWUtilAppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWUtilAppInfo.h; sourceTree = "<group>"; };
+		74513A7C1F9CEF4C007DD4E9 /* DWUtilAppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWUtilAppInfo.m; sourceTree = "<group>"; };
 		7452F3EC1F49520F00278B8E /* UIWindow+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+DWKit.h"; sourceTree = "<group>"; };
 		7452F3ED1F49520F00278B8E /* UIWindow+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+DWKit.m"; sourceTree = "<group>"; };
 		7454F4DB1EB8336700470525 /* DWUtilKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUtilKit.h; sourceTree = "<group>"; };
@@ -494,6 +497,8 @@
 				74BC7A371E95371500DAD94E /* DWPermissionUtil.m */,
 				74BC7A441E95F89300DAD94E /* DWSettingUtil.h */,
 				74BC7A451E95F89300DAD94E /* DWSettingUtil.m */,
+				74513A7B1F9CEF4C007DD4E9 /* DWUtilAppInfo.h */,
+				74513A7C1F9CEF4C007DD4E9 /* DWUtilAppInfo.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -815,6 +820,7 @@
 				745D270B1ED94A19003BE00F /* DWDebugViewController.m in Sources */,
 				748B727D1F20B46D00BE1029 /* DWRoundedCornersViewController.m in Sources */,
 				743577AB1E755FD8004BC1E1 /* UITextField+DWKit.m in Sources */,
+				74513A7D1F9CEF4C007DD4E9 /* DWUtilAppInfo.m in Sources */,
 				74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */,
 				743577B11E757C41004BC1E1 /* NSDictionary+DWKit.m in Sources */,
 				74E359FE1E7189C600AEDE10 /* ObjcViewController.m in Sources */,

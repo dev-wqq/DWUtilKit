@@ -8,16 +8,36 @@
 
 #import "DWUtilities.h"
 
-BOOL DWIPhoneX() {
+@interface DWUtilConfig: NSObject
+
++ (CGFloat)dw_statusHeight;
+
++ (BOOL)dw_iPhoneX;
+
+@end
+
+@implementation DWUtilConfig
+
++ (CGFloat)dw_statusHeight {
+    return [[UIApplication sharedApplication] statusBarFrame].size.height;
+}
+
++ (BOOL)dw_iPhoneX {
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone &&
-               [UIScreen mainScreen].nativeBounds.size.height == 2436) {
+        CGSizeEqualToSize([UIScreen mainScreen].nativeBounds.size, CGSizeMake(1125, 3436))) {
         return YES;
     }
     return NO;
 }
 
+@end
+
+BOOL DWIPhoneX() {
+    return [DWUtilConfig dw_iPhoneX];
+}
+
 CGFloat DWStatusHeight() {
-    return [[UIApplication sharedApplication] statusBarFrame].size.height;
+    return [DWUtilConfig dw_statusHeight];
 }
 
 CGFloat DWScreenScale() {

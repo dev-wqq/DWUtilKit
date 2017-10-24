@@ -7,6 +7,7 @@
 //
 
 #import "UIDevice+DWKit.h"
+#import "DWUtilAppInfo.h"
 
 @implementation UIDevice (DWKit)
 
@@ -27,26 +28,23 @@
 }
 
 + (NSString *)dw_getBundleIdentifier {
-    NSDictionary *dict = [[NSBundle mainBundle] infoDictionary];
-    return [dict objectForKey:@"CFBundleIdentifier"];
+    return [DWUtilAppInfo dw_getBundleIdentifier];
 }
 
 + (NSString *)dw_getBundleVersion {
-    NSDictionary *dict = [[NSBundle mainBundle] infoDictionary];
-    return [dict objectForKey:@"CFBundleVersion"];
+    return [DWUtilAppInfo dw_getBundleVersion];
 }
 
 + (NSString *)dw_getPureVersionName {
-    NSDictionary *dict = [[NSBundle mainBundle] infoDictionary];
-    return [dict objectForKey:@"CFBundleShortVersionString"];
+    return [DWUtilAppInfo dw_getPureVersionName];
 }
 
 + (NSString *)dw_getVersionIName {
-    return [NSString stringWithFormat:@"i.%@", [self dw_getPureVersionName]];
+    return [DWUtilAppInfo dw_getVersionIName];
 }
 
 + (NSString *)dw_getVersionVName {
-    return [NSString stringWithFormat:@"V.%@", [self dw_getPureVersionName]];
+    return [DWUtilAppInfo dw_getVersionVName];
 }
 
 

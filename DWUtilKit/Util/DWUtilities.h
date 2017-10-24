@@ -220,4 +220,3 @@ CG_INLINE CGFloat DWForHeight480(const CGFloat value1, const CGFloat value2) {
 CG_INLINE CGFloat DWForWith320(const CGFloat value1, const CGFloat value2) {
     return kScreenWidth == 320 ? value1 : value2;
 }
-

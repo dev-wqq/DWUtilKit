@@ -14,6 +14,10 @@
     return [[UIApplication sharedApplication].keyWindow dw_visibleViewController];
 }
 
+- (UINavigationController *)dw_currentNavigationController {
+    return self.dw_visibleViewController.navigationController;
+}
+
 - (UIViewController *)dw_visibleViewController {
     UIViewController *vc = self.rootViewController;
     return [self.class _dw_visibleViewControllerFromVC:vc];
