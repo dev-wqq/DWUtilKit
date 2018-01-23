@@ -22,6 +22,14 @@ typedef void(^DWAsyncCompleteBlock)(NSDictionary *responseDict);
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        
+    });
 }
 
 - (void)dealloc {

@@ -23,6 +23,9 @@
 #import "DWDramImageViewController.h"
 #import "DWCollectionViewController.h"
 #import "DWUtilities.h"
+#import "DWWebViewController.h"
+#import "DWRuntimeViewController.h"
+#import "DWTestViewController.h"
 
 @interface UIView (FindUIViewController)
 - (UIViewController *) containingViewController;
@@ -66,6 +69,23 @@
 
 @end
 
+@interface DWRuntimeTest2 : NSObject
+
+@property (nonatomic, copy) NSString *name;
+
+- (void)say;
+
+@end
+
+@implementation DWRuntimeTest2
+
+- (void)say {
+    NSLog(@"name is %@",self.name);
+}
+
+@end
+
+
 @implementation ObjcViewController
 
 #pragma mark - UITableViewDataSource
@@ -106,7 +126,22 @@ __weak id reference = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
+    
+    NSLog(@"vc = %@ , 地址 = %p", self, &self);
+    
+    id cls = [DWRuntimeTest2 class];
+     NSLog(@"DWRuntimeTest2 = %@ 地址 = %p", cls, &cls);
+    
+    void *obj = &cls;
+    NSLog(@"Void *obj = %@ 地址 = %p", obj,&obj);
+    
+    [(__bridge id)obj say];
+    
+    DWRuntimeTest2 *sark = [[DWRuntimeTest2 alloc]init];
+    NSLog(@"DWRuntimeTest2 instance = %@ 地址 = %p",sark,&sark);
+    [sark say];
 }
+
 
 - (void)didTapView:(id)sender {
     
@@ -116,6 +151,7 @@ __weak id reference = nil;
     self.title = @"objc";
     
     NSLog(@"%s,%s,%d,",__FILE__,__FUNCTION__,__LINE__);
+    
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.translucent = NO;
@@ -137,6 +173,9 @@ __weak id reference = nil;
     [self addClass:NSStringFromClass([DWSectionCellViewController class]) des:@"优雅处理first cell顶部分割线和last cell分割线边距"];
     [self addClass:NSStringFromClass([DWDramImageViewController class]) des:@"图像的性能优化"];
     [self addClass:NSStringFromClass([DWCollectionViewController class]) des:@"collection View"];
+    [self addClass:NSStringFromClass([DWWebViewController class]) des:@"web"];
+    [self addClass:NSStringFromClass([DWRuntimeViewController class]) des:@"runtime 消息转发"];
+     [self addClass:NSStringFromClass([DWTestViewController class]) des:@"test string"];
 }
 
 - (void)addClass:(NSString *)className des:(NSString *)des {

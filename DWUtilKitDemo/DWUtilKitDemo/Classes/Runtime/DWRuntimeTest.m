@@ -12,7 +12,25 @@
 /*
  clang -rewrite-objc DWRuntime.m (使用clang重写为cpp代码)
  */
-@interface DWRuntimeTest : NSObject {
+
+@interface DWRuntime: NSObject
+
+@end
+
+@implementation DWRuntime
+
+- (instancetype)init {
+    if (self = [super init]) {
+        NSLog(@"call [self class] %@", NSStringFromClass([self class]));
+        NSLog(@"call [super class] %@", NSStringFromClass([super class]));
+    }
+    return self;
+}
+
+
+@end
+
+@interface DWRuntimeTest : DWRuntime {
     int age;
     NSString *name;
 }

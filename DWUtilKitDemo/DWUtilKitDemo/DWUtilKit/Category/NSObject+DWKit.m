@@ -41,6 +41,9 @@
 }
 
 + (NSData *)dw_dataWithJson:(id)json {
+    if (!json) {
+        return nil;
+    }
     NSError *error;
     NSData *data = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:&error];
     if (error) {

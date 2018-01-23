@@ -52938,10 +52938,12 @@ _mm_stream_ps(float *__p, __m128 __a)
 {
   __builtin_nontemporal_store((__v4sf)__a, (__v4sf*)__p);
 }
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_sfence(void)
-{
-  __builtin_ia32_sfence();
+
+
+extern "C" {
+void _mm_sfence(void);
+
+
 }
 static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
 _mm_max_pi16(__m64 __a, __m64 __b)
@@ -52993,15 +52995,13 @@ _mm_sad_pu8(__m64 __a, __m64 __b)
 {
   return (__m64)__builtin_ia32_psadbw((__v8qi)__a, (__v8qi)__b);
 }
-static __inline__ unsigned int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_getcsr(void)
-{
-  return __builtin_ia32_stmxcsr();
-}
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_setcsr(unsigned int __i)
-{
-  __builtin_ia32_ldmxcsr(__i);
+
+
+extern "C" {
+unsigned int _mm_getcsr(void);
+void _mm_setcsr(unsigned int);
+
+
 }
 static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
 _mm_unpackhi_ps(__m128 __a, __m128 __b)
@@ -53151,437 +53151,364 @@ _mm_cvtph_ps(__m128i __a)
 {
   return (__m128)__builtin_ia32_vcvtph2ps((__v8hi)__a);
 }
-
-
-
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_add_sd(__m128d __a, __m128d __b)
 {
   __a[0] += __b[0];
   return __a;
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_add_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)((__v2df)__a + (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_sub_sd(__m128d __a, __m128d __b)
 {
   __a[0] -= __b[0];
   return __a;
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_sub_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)((__v2df)__a - (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_mul_sd(__m128d __a, __m128d __b)
 {
   __a[0] *= __b[0];
   return __a;
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_mul_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)((__v2df)__a * (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_div_sd(__m128d __a, __m128d __b)
 {
   __a[0] /= __b[0];
   return __a;
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_div_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)((__v2df)__a / (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_sqrt_sd(__m128d __a, __m128d __b)
 {
   __m128d __c = __builtin_ia32_sqrtsd((__v2df)__b);
   return (__m128d) { __c[0], __a[1] };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_sqrt_pd(__m128d __a)
 {
   return __builtin_ia32_sqrtpd((__v2df)__a);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_min_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_minsd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_min_pd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_minpd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_max_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_maxsd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_max_pd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_maxpd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_and_pd(__m128d __a, __m128d __b)
 {
-  return (__m128d)((__v4su)__a & (__v4su)__b);
+  return (__m128d)((__v2du)__a & (__v2du)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_andnot_pd(__m128d __a, __m128d __b)
 {
-  return (__m128d)(~(__v4su)__a & (__v4su)__b);
+  return (__m128d)(~(__v2du)__a & (__v2du)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_or_pd(__m128d __a, __m128d __b)
 {
-  return (__m128d)((__v4su)__a | (__v4su)__b);
+  return (__m128d)((__v2du)__a | (__v2du)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_xor_pd(__m128d __a, __m128d __b)
 {
-  return (__m128d)((__v4su)__a ^ (__v4su)__b);
+  return (__m128d)((__v2du)__a ^ (__v2du)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpeq_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpeqpd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmplt_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpltpd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmple_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmplepd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpgt_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpltpd((__v2df)__b, (__v2df)__a);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpge_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmplepd((__v2df)__b, (__v2df)__a);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpord_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpordpd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpunord_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpunordpd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpneq_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpneqpd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpnlt_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpnltpd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpnle_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpnlepd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpngt_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpnltpd((__v2df)__b, (__v2df)__a);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpnge_pd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpnlepd((__v2df)__b, (__v2df)__a);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpeq_sd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpeqsd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmplt_sd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpltsd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmple_sd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmplesd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpgt_sd(__m128d __a, __m128d __b)
 {
   __m128d __c = __builtin_ia32_cmpltsd((__v2df)__b, (__v2df)__a);
   return (__m128d) { __c[0], __a[1] };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpge_sd(__m128d __a, __m128d __b)
 {
   __m128d __c = __builtin_ia32_cmplesd((__v2df)__b, (__v2df)__a);
   return (__m128d) { __c[0], __a[1] };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpord_sd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpordsd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpunord_sd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpunordsd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpneq_sd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpneqsd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpnlt_sd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpnltsd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpnle_sd(__m128d __a, __m128d __b)
 {
   return (__m128d)__builtin_ia32_cmpnlesd((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpngt_sd(__m128d __a, __m128d __b)
 {
   __m128d __c = __builtin_ia32_cmpnltsd((__v2df)__b, (__v2df)__a);
   return (__m128d) { __c[0], __a[1] };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cmpnge_sd(__m128d __a, __m128d __b)
 {
   __m128d __c = __builtin_ia32_cmpnlesd((__v2df)__b, (__v2df)__a);
   return (__m128d) { __c[0], __a[1] };
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_comieq_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_comisdeq((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_comilt_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_comisdlt((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_comile_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_comisdle((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_comigt_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_comisdgt((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_comige_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_comisdge((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_comineq_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_comisdneq((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_ucomieq_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_ucomisdeq((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_ucomilt_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_ucomisdlt((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_ucomile_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_ucomisdle((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_ucomigt_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_ucomisdgt((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_ucomige_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_ucomisdge((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_ucomineq_sd(__m128d __a, __m128d __b)
 {
   return __builtin_ia32_ucomisdneq((__v2df)__a, (__v2df)__b);
 }
-
 static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtpd_ps(__m128d __a)
 {
   return __builtin_ia32_cvtpd2ps((__v2df)__a);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtps_pd(__m128 __a)
 {
   return (__m128d) __builtin_convertvector(
       __builtin_shufflevector((__v4sf)__a, (__v4sf)__a, 0, 1), __v2df);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtepi32_pd(__m128i __a)
 {
   return (__m128d) __builtin_convertvector(
       __builtin_shufflevector((__v4si)__a, (__v4si)__a, 0, 1), __v2df);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtpd_epi32(__m128d __a)
 {
   return __builtin_ia32_cvtpd2dq((__v2df)__a);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtsd_si32(__m128d __a)
 {
   return __builtin_ia32_cvtsd2si((__v2df)__a);
 }
-
 static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtsd_ss(__m128 __a, __m128d __b)
 {
   return (__m128)__builtin_ia32_cvtsd2ss((__v4sf)__a, (__v2df)__b);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtsi32_sd(__m128d __a, int __b)
 {
   __a[0] = __b;
   return __a;
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtss_sd(__m128d __a, __m128 __b)
 {
   __a[0] = __b[0];
   return __a;
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvttpd_epi32(__m128d __a)
 {
   return (__m128i)__builtin_ia32_cvttpd2dq((__v2df)__a);
 }
-
 static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvttsd_si32(__m128d __a)
 {
   return __builtin_ia32_cvttsd2si((__v2df)__a);
 }
-
 static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtpd_pi32(__m128d __a)
 {
   return (__m64)__builtin_ia32_cvtpd2pi((__v2df)__a);
 }
-
 static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvttpd_pi32(__m128d __a)
 {
   return (__m64)__builtin_ia32_cvttpd2pi((__v2df)__a);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtpi32_pd(__m64 __a)
 {
   return __builtin_ia32_cvtpi2pd((__v2si)__a);
 }
-
 static __inline__ double __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_cvtsd_f64(__m128d __a)
 {
   return __a[0];
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_load_pd(double const *__dp)
 {
   return *(__m128d*)__dp;
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_load1_pd(double const *__dp)
 {
@@ -53591,16 +53518,12 @@ _mm_load1_pd(double const *__dp)
   double __u = ((struct __mm_load1_pd_struct*)__dp)->__u;
   return (__m128d){ __u, __u };
 }
-
-
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_loadr_pd(double const *__dp)
 {
   __m128d __u = *(__m128d*)__dp;
   return __builtin_shufflevector((__v2df)__u, (__v2df)__u, 1, 0);
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_loadu_pd(double const *__dp)
 {
@@ -53629,7 +53552,6 @@ _mm_load_sd(double const *__dp)
   double __u = ((struct __mm_load_sd_struct*)__dp)->__u;
   return (__m128d){ __u, 0 };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_loadh_pd(__m128d __a, double const *__dp)
 {
@@ -53639,7 +53561,6 @@ _mm_loadh_pd(__m128d __a, double const *__dp)
   double __u = ((struct __mm_loadh_pd_struct*)__dp)->__u;
   return (__m128d){ __a[0], __u };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_loadl_pd(__m128d __a, double const *__dp)
 {
@@ -53649,49 +53570,41 @@ _mm_loadl_pd(__m128d __a, double const *__dp)
   double __u = ((struct __mm_loadl_pd_struct*)__dp)->__u;
   return (__m128d){ __u, __a[1] };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_undefined_pd(void)
 {
   return (__m128d)__builtin_ia32_undef128();
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_set_sd(double __w)
 {
   return (__m128d){ __w, 0 };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_set1_pd(double __w)
 {
   return (__m128d){ __w, __w };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_set_pd(double __w, double __x)
 {
   return (__m128d){ __x, __w };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_setr_pd(double __w, double __x)
 {
   return (__m128d){ __w, __x };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_setzero_pd(void)
 {
   return (__m128d){ 0, 0 };
 }
-
 static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_move_sd(__m128d __a, __m128d __b)
 {
   return (__m128d){ __b[0], __a[1] };
 }
-
 static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_store_sd(double *__dp, __m128d __a)
 {
@@ -53713,13 +53626,11 @@ _mm_store1_pd(double *__dp, __m128d __a)
   __a = __builtin_shufflevector((__v2df)__a, (__v2df)__a, 0, 0);
   _mm_store_pd(__dp, __a);
 }
-
 static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_store_pd1(double *__dp, __m128d __a)
 {
   return _mm_store1_pd(__dp, __a);
 }
-
 static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_storeu_pd(double *__dp, __m128d __a)
 {
@@ -53728,14 +53639,12 @@ _mm_storeu_pd(double *__dp, __m128d __a)
   } __attribute__((__packed__, __may_alias__));
   ((struct __storeu_pd*)__dp)->__v = __a;
 }
-
 static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_storer_pd(double *__dp, __m128d __a)
 {
   __a = __builtin_shufflevector((__v2df)__a, (__v2df)__a, 1, 0);
   *(__m128d *)__dp = __a;
 }
-
 static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_storeh_pd(double *__dp, __m128d __a)
 {
@@ -53744,7 +53653,6 @@ _mm_storeh_pd(double *__dp, __m128d __a)
   } __attribute__((__packed__, __may_alias__));
   ((struct __mm_storeh_pd_struct*)__dp)->__u = __a[1];
 }
-
 static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_storel_pd(double *__dp, __m128d __a)
 {
@@ -53753,109 +53661,91 @@ _mm_storel_pd(double *__dp, __m128d __a)
   } __attribute__((__packed__, __may_alias__));
   ((struct __mm_storeh_pd_struct*)__dp)->__u = __a[0];
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_add_epi8(__m128i __a, __m128i __b)
 {
   return (__m128i)((__v16qu)__a + (__v16qu)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_add_epi16(__m128i __a, __m128i __b)
 {
   return (__m128i)((__v8hu)__a + (__v8hu)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_add_epi32(__m128i __a, __m128i __b)
 {
   return (__m128i)((__v4su)__a + (__v4su)__b);
 }
-
 static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_add_si64(__m64 __a, __m64 __b)
 {
   return (__m64)__builtin_ia32_paddq((__v1di)__a, (__v1di)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_add_epi64(__m128i __a, __m128i __b)
 {
   return (__m128i)((__v2du)__a + (__v2du)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_adds_epi8(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_paddsb128((__v16qi)__a, (__v16qi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_adds_epi16(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_paddsw128((__v8hi)__a, (__v8hi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_adds_epu8(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_paddusb128((__v16qi)__a, (__v16qi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_adds_epu16(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_paddusw128((__v8hi)__a, (__v8hi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_avg_epu8(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_pavgb128((__v16qi)__a, (__v16qi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_avg_epu16(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_pavgw128((__v8hi)__a, (__v8hi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_madd_epi16(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_pmaddwd128((__v8hi)__a, (__v8hi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_max_epi16(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_pmaxsw128((__v8hi)__a, (__v8hi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_max_epu8(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_pmaxub128((__v16qi)__a, (__v16qi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_min_epi16(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_pminsw128((__v8hi)__a, (__v8hi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_min_epu8(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_pminub128((__v16qi)__a, (__v16qi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_mulhi_epi16(__m128i __a, __m128i __b)
 {
   return (__m128i)__builtin_ia32_pmulhw128((__v8hi)__a, (__v8hi)__b);
 }
-
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_mulhi_epu16(__m128i __a, __m128i __b)
 {
@@ -54272,20 +54162,15 @@ _mm_stream_si64(long long *__p, long long __a)
 {
   __builtin_ia32_movnti64(__p, __a);
 }
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_clflush(void const *__p)
-{
-  __builtin_ia32_clflush(__p);
-}
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_lfence(void)
-{
-  __builtin_ia32_lfence();
-}
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_mfence(void)
-{
-  __builtin_ia32_mfence();
+
+
+
+extern "C" {
+void _mm_clflush(void const *);
+void _mm_lfence(void);
+void _mm_mfence(void);
+
+
 }
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
 _mm_packs_epi16(__m128i __a, __m128i __b)
@@ -54420,10 +54305,12 @@ _mm_castsi128_pd(__m128i __a)
 {
   return (__m128d)__a;
 }
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_pause(void)
-{
-  __builtin_ia32_pause();
+
+
+extern "C" {
+void _mm_pause(void);
+
+
 }
 extern "C" {
 
@@ -95684,6 +95571,30 @@ struct NSXPCListenerEndpoint_IMPL {
 
 
 
+
+
+
+
+
+#ifndef _REWRITER_typedef_DWRuntime
+#define _REWRITER_typedef_DWRuntime
+typedef struct objc_object DWRuntime;
+typedef struct {} _objc_exc_DWRuntime;
+#endif
+
+struct DWRuntime_IMPL {
+	struct NSObject_IMPL NSObject_IVARS;
+};
+
+
+/* @end */
+
+
+// @implementation DWRuntime
+
+// @end
+
+
 #ifndef _REWRITER_typedef_DWRuntimeTest
 #define _REWRITER_typedef_DWRuntimeTest
 typedef struct objc_object DWRuntimeTest;
@@ -95691,7 +95602,7 @@ typedef struct {} _objc_exc_DWRuntimeTest;
 #endif
 
 struct DWRuntimeTest_IMPL {
-	struct NSObject_IMPL NSObject_IVARS;
+	struct DWRuntime_IMPL DWRuntime_IVARS;
 	int age;
 	NSString *name;
 };
@@ -95767,11 +95678,11 @@ struct _class_ro_t {
 };
 
 struct _class_t {
-	struct _class_t *isa;
-	struct _class_t *superclass;
+	struct _class_t *isa;        // isa指针
+	struct _class_t *superclass; // 父类
 	void *cache;
 	void *vtable;
-	struct _class_ro_t *ro;
+	struct _class_ro_t *ro;      、、
 };
 
 struct _category_t {
@@ -95784,6 +95695,58 @@ struct _category_t {
 };
 extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
 #pragma warning(disable:4273)
+
+static struct _class_ro_t _OBJC_METACLASS_RO_$_DWRuntime __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	1, sizeof(struct _class_t), sizeof(struct _class_t), 
+	(unsigned int)0, 
+	0, 
+	"DWRuntime",
+	0, 
+	0, 
+	0, 
+	0, 
+	0, 
+};
+
+static struct _class_ro_t _OBJC_CLASS_RO_$_DWRuntime __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	0, sizeof(struct DWRuntime_IMPL), sizeof(struct DWRuntime_IMPL), 
+	(unsigned int)0, 
+	0, 
+	"DWRuntime",
+	0, 
+	0, 
+	0, 
+	0, 
+	0, 
+};
+
+extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_DWRuntime __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_METACLASS_RO_$_DWRuntime,
+};
+
+extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_DWRuntime __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_DWRuntime,
+	0, // &OBJC_CLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_CLASS_RO_$_DWRuntime,
+};
+static void OBJC_CLASS_SETUP_$_DWRuntime(void ) {
+	OBJC_METACLASS_$_DWRuntime.isa = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_DWRuntime.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_DWRuntime.cache = &_objc_empty_cache;
+	OBJC_CLASS_$_DWRuntime.isa = &OBJC_METACLASS_$_DWRuntime;
+	OBJC_CLASS_$_DWRuntime.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_DWRuntime.cache = &_objc_empty_cache;
+}
 
 extern "C" unsigned long int OBJC_IVAR_$_DWRuntimeTest$age __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct DWRuntimeTest, age);
 extern "C" unsigned long int OBJC_IVAR_$_DWRuntimeTest$name __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct DWRuntimeTest, name);
@@ -95843,38 +95806,41 @@ static struct _class_ro_t _OBJC_CLASS_RO_$_DWRuntimeTest __attribute__ ((used, s
 	0, 
 };
 
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_DWRuntime;
 extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
 
 extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_DWRuntimeTest __attribute__ ((used, section ("__DATA,__objc_data"))) = {
 	0, // &OBJC_METACLASS_$_NSObject,
-	0, // &OBJC_METACLASS_$_NSObject,
+	0, // &OBJC_METACLASS_$_DWRuntime,
 	0, // (void *)&_objc_empty_cache,
 	0, // unused, was (void *)&_objc_empty_vtable,
 	&_OBJC_METACLASS_RO_$_DWRuntimeTest,
 };
 
-extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_DWRuntime;
 
 extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_DWRuntimeTest __attribute__ ((used, section ("__DATA,__objc_data"))) = {
 	0, // &OBJC_METACLASS_$_DWRuntimeTest,
-	0, // &OBJC_CLASS_$_NSObject,
+	0, // &OBJC_CLASS_$_DWRuntime,
 	0, // (void *)&_objc_empty_cache,
 	0, // unused, was (void *)&_objc_empty_vtable,
 	&_OBJC_CLASS_RO_$_DWRuntimeTest,
 };
 static void OBJC_CLASS_SETUP_$_DWRuntimeTest(void ) {
 	OBJC_METACLASS_$_DWRuntimeTest.isa = &OBJC_METACLASS_$_NSObject;
-	OBJC_METACLASS_$_DWRuntimeTest.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_DWRuntimeTest.superclass = &OBJC_METACLASS_$_DWRuntime;
 	OBJC_METACLASS_$_DWRuntimeTest.cache = &_objc_empty_cache;
 	OBJC_CLASS_$_DWRuntimeTest.isa = &OBJC_METACLASS_$_DWRuntimeTest;
-	OBJC_CLASS_$_DWRuntimeTest.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_DWRuntimeTest.superclass = &OBJC_CLASS_$_DWRuntime;
 	OBJC_CLASS_$_DWRuntimeTest.cache = &_objc_empty_cache;
 }
 #pragma section(".objc_inithooks$B", long, read, write)
 __declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
+	(void *)&OBJC_CLASS_SETUP_$_DWRuntime,
 	(void *)&OBJC_CLASS_SETUP_$_DWRuntimeTest,
 };
-static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
+static struct _class_t *L_OBJC_LABEL_CLASS_$ [2] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
+	&OBJC_CLASS_$_DWRuntime,
 	&OBJC_CLASS_$_DWRuntimeTest,
 };
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };
