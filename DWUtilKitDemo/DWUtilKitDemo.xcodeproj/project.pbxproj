@@ -538,9 +538,9 @@
 			isa = PBXGroup;
 			children = (
 				748B72751F20AAD700BE1029 /* DWDelegateViewController.h */,
+				748B72701F20AAD700BE1029 /* DWDelegateViewController.m */,
 				7412C0581FBD6F4B00256898 /* DWWebViewController.h */,
 				7412C0591FBD6F4B00256898 /* DWWebViewController.m */,
-				748B72701F20AAD700BE1029 /* DWDelegateViewController.m */,
 				748B72711F20AAD700BE1029 /* DWGCDViewController.h */,
 				748B726F1F20AAD700BE1029 /* DWGCDViewController.m */,
 				748B72731F20AAD700BE1029 /* DWPathViewController.h */,
