@@ -14,6 +14,7 @@
 #import <IGListKit/IGListScrollDelegate.h>
 #import <IGListKit/IGListSupplementaryViewSource.h>
 #import <IGListKit/IGListWorkingRangeDelegate.h>
+#import <IGListKit/IGListTransitionDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -82,6 +83,33 @@ NS_SWIFT_NAME(ListSectionController)
 - (void)didSelectItemAtIndex:(NSInteger)index;
 
 /**
+ Tells the section controller that the cell at the specified index path was deselected.
+
+ @param index The index of the deselected cell.
+
+ @note The default implementation does nothing. **Calling super is not required.**
+ */
+- (void)didDeselectItemAtIndex:(NSInteger)index;
+
+/**
+ Tells the section controller that the cell at the specified index path was highlighted.
+
+ @param index The index of the highlighted cell.
+
+ @note The default implementation does nothing. **Calling super is not required.**
+ */
+- (void)didHighlightItemAtIndex:(NSInteger)index;
+
+/**
+ Tells the section controller that the cell at the specified index path was unhighlighted.
+
+ @param index The index of the unhighlighted cell.
+
+ @note The default implementation does nothing. **Calling super is not required.**
+ */
+- (void)didUnhighlightItemAtIndex:(NSInteger)index;
+
+/**
  The view controller housing the adapter that created this section controller.
 
  @note Use this view controller to push, pop, present, or do other custom transitions. 
@@ -94,7 +122,7 @@ NS_SWIFT_NAME(ListSectionController)
 /**
  A context object for interacting with the collection. 
  
- Use this property for accessing the collection size, dequeing cells, reloading, inserting, deleting, etc.
+ Use this property for accessing the collection size, dequeuing cells, reloading, inserting, deleting, etc.
  */
 @property (nonatomic, weak, nullable, readonly) id <IGListCollectionContext> collectionContext;
 
@@ -172,6 +200,15 @@ NS_SWIFT_NAME(ListSectionController)
  @note You may wish to return `self` if your section controller implements this protocol.
  */
 @property (nonatomic, weak, nullable) id <IGListScrollDelegate> scrollDelegate;
+
+/**
+ An object that handles transition events for the section controller. Can be `nil`.
+
+ @return An object that conforms to `IGListTransitionDelegat` or `nil`.
+
+ @note You may wish to return `self` if your section controller implements this protocol.
+ */
+@property (nonatomic, weak, nullable) id<IGListTransitionDelegate> transitionDelegate;
 
 @end
 

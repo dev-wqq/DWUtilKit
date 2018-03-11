@@ -16,8 +16,16 @@
  */
 NS_SWIFT_NAME(ListExperiment)
 typedef NS_OPTIONS (NSInteger, IGListExperiment) {
-    /// Specifies no experiements.
+    /// Specifies no experiments.
     IGListExperimentNone = 1 << 1,
+    /// Test updater diffing performed on a background queue.
+    IGListExperimentBackgroundDiffing = 1 << 2,
+    /// Test fallback to reloadData when "too many" update operations.
+    IGListExperimentReloadDataFallback = 1 << 3,
+    /// Test a faster way to return visible section controllers.
+    IGListExperimentFasterVisibleSectionController = 1 << 4,
+    /// Test deduping item-level updates.
+    IGListExperimentDedupeItemUpdates = 1 << 5,
 };
 
 /**

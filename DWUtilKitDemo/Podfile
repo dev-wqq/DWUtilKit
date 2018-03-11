@@ -23,9 +23,4 @@ target 'DWUtilKitDemo' do
 
   # Pods for DWUtilKitDemo
 
-  target 'DWUtilKitDemoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

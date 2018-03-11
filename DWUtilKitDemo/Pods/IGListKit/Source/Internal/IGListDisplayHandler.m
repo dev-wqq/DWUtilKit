@@ -16,7 +16,6 @@
 
 @interface IGListDisplayHandler ()
 
-@property (nonatomic, strong) NSCountedSet *visibleListSections;
 @property (nonatomic, strong) NSMapTable *visibleViewObjectMap;
 
 @end
@@ -25,7 +24,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _visibleListSections = [[NSCountedSet alloc] init];
+        _visibleListSections = [NSCountedSet new];
         _visibleViewObjectMap = [[NSMapTable alloc] initWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableStrongMemory capacity:0];
     }
     return self;

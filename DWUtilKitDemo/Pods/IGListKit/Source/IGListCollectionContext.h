@@ -15,11 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class IGListSectionController;
 
-
-
 /**
  The collection context provides limited access to the collection-related information that
- section controllers need for operations like sizing, dequeing cells, insterting, deleting, reloading, etc.
+ section controllers need for operations like sizing, dequeuing cells, inserting, deleting, reloading, etc.
  */
 NS_SWIFT_NAME(ListCollectionContext)
 @protocol IGListCollectionContext <NSObject>
@@ -33,6 +31,11 @@ NS_SWIFT_NAME(ListCollectionContext)
  The content insets of the collection view. You can use this for sizing cells.
  */
 @property (nonatomic, readonly) UIEdgeInsets containerInset;
+
+/**
+ The adjusted content insets of the collection view. Equivalent to containerInset under iOS 11.
+ */
+@property (nonatomic, readonly) UIEdgeInsets adjustedContainerInset;
 
 /**
  The size of the collection view with content insets applied.
@@ -100,6 +103,19 @@ NS_SWIFT_NAME(ListCollectionContext)
 - (void)deselectItemAtIndex:(NSInteger)index
           sectionController:(IGListSectionController *)sectionController
                    animated:(BOOL)animated;
+
+/**
+ Selects a cell in the collection.
+ 
+ @param index The index of the item to select.
+ @param sectionController The section controller requesting this information.
+ @param animated Pass `YES` to animate the change, `NO` otherwise.
+ @param scrollPosition An option that specifies where the item should be positioned when scrolling finishes.
+ */
+- (void)selectItemAtIndex:(NSInteger)index
+        sectionController:(IGListSectionController *)sectionController
+                 animated:(BOOL)animated
+           scrollPosition:(UICollectionViewScrollPosition)scrollPosition;
 
 /**
  Dequeues a cell from the collection view reuse pool.

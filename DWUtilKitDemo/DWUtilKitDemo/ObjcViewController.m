@@ -152,7 +152,6 @@ __weak id reference = nil;
     
     NSLog(@"%s,%s,%d,",__FILE__,__FUNCTION__,__LINE__);
     
-    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.translucent = NO;
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth,   kScreenHeight-kNavigationBarHeight-kTabBarHeight)];
