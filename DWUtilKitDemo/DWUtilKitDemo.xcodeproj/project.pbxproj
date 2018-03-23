@@ -16,6 +16,7 @@
 		741B34F01ED31AD3007D4278 /* NSTextAttachment+DWUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 741B34EE1ED31AD3007D4278 /* NSTextAttachment+DWUtil.m */; };
 		742B3DD81E93CD5100EA891F /* DWRichTextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DD71E93CD5100EA891F /* DWRichTextEditViewController.m */; };
 		742B3DDC1E93D7AA00EA891F /* DWRichTextEditToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */; };
+		742CF54D20561E0D000BD92B /* DWKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742CF54C20561E0D000BD92B /* DWKVOViewController.m */; };
 		742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F07AF1E8369E500ABEDA8 /* DWUtilities.m */; };
 		7435779C1E7544EA004BC1E1 /* UIButton+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7435779B1E7544EA004BC1E1 /* UIButton+DWKit.m */; };
 		7435779F1E754641004BC1E1 /* UIView+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7435779E1E754641004BC1E1 /* UIView+DWKit.m */; };
@@ -106,6 +107,8 @@
 		742B3DD91E93CF4600EA891F /* DWUtilKitPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWUtilKitPch.pch; sourceTree = SOURCE_ROOT; };
 		742B3DDA1E93D7AA00EA891F /* DWRichTextEditToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWRichTextEditToolBar.h; sourceTree = "<group>"; };
 		742B3DDB1E93D7AA00EA891F /* DWRichTextEditToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWRichTextEditToolBar.m; sourceTree = "<group>"; };
+		742CF54B20561E0D000BD92B /* DWKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWKVOViewController.h; sourceTree = "<group>"; };
+		742CF54C20561E0D000BD92B /* DWKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWKVOViewController.m; sourceTree = "<group>"; };
 		742F07AE1E8369E500ABEDA8 /* DWUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUtilities.h; sourceTree = "<group>"; };
 		742F07AF1E8369E500ABEDA8 /* DWUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWUtilities.m; sourceTree = "<group>"; };
 		743050841FD00FE8009D97CB /* DWRuntimeTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWRuntimeTest.cpp; sourceTree = "<group>"; };
@@ -262,10 +265,11 @@
 			children = (
 				74E359FC1E7189C600AEDE10 /* ObjcViewController.h */,
 				74E359FD1E7189C600AEDE10 /* ObjcViewController.m */,
+				74F7234C1F5B913700714DA0 /* Runtime */,
+				742CF54820561DE2000BD92B /* KVO */,
 				7479A3C31F5CE830008AD738 /* LoginButton */,
 				7479A3C71F5CE830008AD738 /* TableViewCell */,
 				745D27071ED94A0D003BE00F /* Debug */,
-				74F7234C1F5B913700714DA0 /* Runtime */,
 				74EA7FE61ECA99CE002C63E5 /* Other */,
 				742B3DD31E93CD2B00EA891F /* RichTextEdit */,
 			);
@@ -292,6 +296,15 @@
 				743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		742CF54820561DE2000BD92B /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				742CF54B20561E0D000BD92B /* DWKVOViewController.h */,
+				742CF54C20561E0D000BD92B /* DWKVOViewController.m */,
+			);
+			path = KVO;
 			sourceTree = "<group>";
 		};
 		7455A4931E80C9EE002CA176 /* Frameworks */ = {
@@ -580,7 +593,6 @@
 		74EC50271ED6A50E000A9E3C /* DWCrashSafe */ = {
 			isa = PBXGroup;
 			children = (
-				74F7235F1F5C474500714DA0 /* DWLoginButton */,
 				74EC50351ED6A5ED000A9E3C /* NSObject+DWCrash.h */,
 				74EC50361ED6A5ED000A9E3C /* NSObject+DWCrash.m */,
 				74EC50281ED6A50E000A9E3C /* NSArray+DWCrash.h */,
@@ -612,37 +624,6 @@
 				74D04A451FE8A6910019B861 /* DWRuntimeViewController.m */,
 			);
 			path = Runtime;
-			sourceTree = "<group>";
-		};
-		74F7235F1F5C474500714DA0 /* DWLoginButton */ = {
-			isa = PBXGroup;
-			children = (
-				74F723601F5C474500714DA0 /* Controller */,
-				74F723611F5C474500714DA0 /* Model */,
-				74F723621F5C474500714DA0 /* View */,
-			);
-			path = DWLoginButton;
-			sourceTree = "<group>";
-		};
-		74F723601F5C474500714DA0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		74F723611F5C474500714DA0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		74F723621F5C474500714DA0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		74FB42CD1ECC3E0400195312 /* DWCommonUtil */ = {
@@ -788,7 +769,6 @@
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
-				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
@@ -805,7 +785,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
@@ -835,6 +814,7 @@
 				74EC50251ED6A4E2000A9E3C /* ModelClass.m in Sources */,
 				7417AAD51F95EF3200ADCF2C /* UITableView+DWAdapterIOS11.m in Sources */,
 				742F07B01E8369E500ABEDA8 /* DWUtilities.m in Sources */,
+				742CF54D20561E0D000BD92B /* DWKVOViewController.m in Sources */,
 				7435779F1E754641004BC1E1 /* UIView+DWKit.m in Sources */,
 				745D27101ED95831003BE00F /* UIViewController+DWSystemDebug.m in Sources */,
 				740EAF6E20177E6B00565218 /* NSURL+DWKit.m in Sources */,

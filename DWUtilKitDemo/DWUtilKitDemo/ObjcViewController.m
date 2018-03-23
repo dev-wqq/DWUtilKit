@@ -26,34 +26,7 @@
 #import "DWWebViewController.h"
 #import "DWRuntimeViewController.h"
 #import "DWTestViewController.h"
-
-@interface UIView (FindUIViewController)
-- (UIViewController *) containingViewController;
-@end
-
-@implementation UIView (FindUIViewController)
-- (UIViewController *) containingViewController {
-    UIView * target = self;
-    return (UIViewController *)[target traverseResponderChainForUIViewController];
-}
-
-- (id) traverseResponderChainForUIViewController {
-    id nextResponder = [self nextResponder];
-    NSLog(@"nextResponder:%@",self.nextResponder);
-    BOOL isViewController = [nextResponder isKindOfClass:[UIViewController class]];
-    BOOL isTabBarController = [nextResponder isKindOfClass:[UITabBarController class]];
-    if (isViewController && !isTabBarController) {
-        return nextResponder;
-    } else if(isTabBarController){
-        UITabBarController *tabBarController = nextResponder;
-        return [tabBarController selectedViewController];
-    } else if ([nextResponder isKindOfClass:[UIView class]]) {
-        return [nextResponder traverseResponderChainForUIViewController];
-    } else {
-        return nil;
-    }
-}
-@end
+#import "DWKVOViewController.h"
 
 @interface DWItemModel : NSObject
 
@@ -69,23 +42,6 @@
 
 @end
 
-@interface DWRuntimeTest2 : NSObject
-
-@property (nonatomic, copy) NSString *name;
-
-- (void)say;
-
-@end
-
-@implementation DWRuntimeTest2
-
-- (void)say {
-    NSLog(@"name is %@",self.name);
-}
-
-@end
-
-
 @implementation ObjcViewController
 
 #pragma mark - UITableViewDataSource
@@ -97,7 +53,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cellId"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
     }
     
     DWItemModel *itemModel = _mDataSource[indexPath.row];
@@ -117,7 +73,6 @@
     vc.hidesBottomBarWhenPushed = YES;
     vc.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:vc animated:YES];
-    
 }
 
 #pragma mark - Construct UI
@@ -127,29 +82,23 @@ __weak id reference = nil;
     [super viewDidLoad];
     [self initView];
     
-    NSLog(@"vc = %@ , 地址 = %p", self, &self);
-    
-    id cls = [DWRuntimeTest2 class];
-     NSLog(@"DWRuntimeTest2 = %@ 地址 = %p", cls, &cls);
-    
-    void *obj = &cls;
-    NSLog(@"Void *obj = %@ 地址 = %p", obj,&obj);
-    
-    [(__bridge id)obj say];
-    
-    DWRuntimeTest2 *sark = [[DWRuntimeTest2 alloc]init];
-    NSLog(@"DWRuntimeTest2 instance = %@ 地址 = %p",sark,&sark);
-    [sark say];
-}
-
-
-- (void)didTapView:(id)sender {
-    
+//    NSLog(@"vc = %@ , 地址 = %p", self, &self);
+//    id cls = [DWRuntimeTest2 class];
+//     NSLog(@"DWRuntimeTest2 = %@ 地址 = %p", cls, &cls);
+//
+//    void *obj = &cls;
+//    NSLog(@"Void *obj = %@ 地址 = %p", obj,&obj);
+//
+//    [(__bridge id)obj say];
+//
+//    DWRuntimeTest2 *sark = [[DWRuntimeTest2 alloc]init];
+//    NSLog(@"DWRuntimeTest2 instance = %@ 地址 = %p",sark,&sark);
+//    [sark say];
 }
 
 - (void)initView {
     self.title = @"objc";
-    
+
     NSLog(@"%s,%s,%d,",__FILE__,__FUNCTION__,__LINE__);
     
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -160,21 +109,38 @@ __weak id reference = nil;
     _tableView.dataSource = self;
     _tableView.rowHeight = 60;
     
-    [self addClass:NSStringFromClass([DWRichTextEditViewController class]) des:@"富文本编辑器"];
-    [self addClass:NSStringFromClass([DWProgressViewController class]) des:@"NSProgress"];
-    [self addClass:NSStringFromClass([DWSendSMSViewController class]) des:@"短信发送"];
-    [self addClass:NSStringFromClass([DWGCDViewController class]) des:@"GCD并发"];
-    [self addClass:NSStringFromClass([DWDebugViewController class]) des:@"debug"];
-    [self addClass:NSStringFromClass([DWPathViewController class]) des:@"path"];
-    [self addClass:NSStringFromClass([DWDelegateViewController class]) des:@"delegate"];
-    [self addClass:NSStringFromClass([DWAnimationViewController class]) des:@"dotzoon"];
-    [self addClass:NSStringFromClass([DWSkillViewController class]) des:@"开发技巧"];
-    [self addClass:NSStringFromClass([DWSectionCellViewController class]) des:@"优雅处理first cell顶部分割线和last cell分割线边距"];
-    [self addClass:NSStringFromClass([DWDramImageViewController class]) des:@"图像的性能优化"];
-    [self addClass:NSStringFromClass([DWCollectionViewController class]) des:@"collection View"];
-    [self addClass:NSStringFromClass([DWWebViewController class]) des:@"web"];
-    [self addClass:NSStringFromClass([DWRuntimeViewController class]) des:@"runtime 消息转发"];
-     [self addClass:NSStringFromClass([DWTestViewController class]) des:@"test string"];
+    [self addClass:NSStringFromClass([DWRuntimeViewController class])
+               des:@"消息传递和消息转发"];
+    [self addClass:NSStringFromClass([DWKVOViewController class])
+               des:@"KVO 自动/手动实现，依赖键"];
+    [self addClass:NSStringFromClass([DWGCDViewController class])
+               des:@"GCD并发"];
+    [self addClass:NSStringFromClass([DWSectionCellViewController class])
+               des:@"优雅处理first cell顶部分割线和last cell分割线边距"];
+    [self addClass:NSStringFromClass([DWDramImageViewController class])
+               des:@"图像的性能优化"];
+    [self addClass:NSStringFromClass([DWDelegateViewController class])
+               des:@"delegate"];
+    [self addClass:NSStringFromClass([DWProgressViewController class])
+               des:@"NSProgress"];
+    [self addClass:NSStringFromClass([DWSendSMSViewController class])
+               des:@"短信发送"];
+    [self addClass:NSStringFromClass([DWDebugViewController class])
+               des:@"debug"];
+    [self addClass:NSStringFromClass([DWPathViewController class])
+               des:@"path"];
+    [self addClass:NSStringFromClass([DWAnimationViewController class])
+               des:@"dotzoon"];
+    [self addClass:NSStringFromClass([DWSkillViewController class])
+               des:@"开发技巧"];
+    [self addClass:NSStringFromClass([DWCollectionViewController class])
+               des:@"collection View"];
+    [self addClass:NSStringFromClass([DWWebViewController class])
+               des:@"web"];
+     [self addClass:NSStringFromClass([DWTestViewController class])
+                des:@"test string"];
+    [self addClass:NSStringFromClass([DWRichTextEditViewController class])
+               des:@"富文本编辑器"];
 }
 
 - (void)addClass:(NSString *)className des:(NSString *)des {

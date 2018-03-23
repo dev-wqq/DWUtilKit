@@ -15,6 +15,13 @@
  */
 @property (nonatomic, readonly) CGFloat dw_duration;
 
+
+/**
+ *  
+ *  self as a middle page, need from stack remove.
+ */
+- (void)dw_middlePagePushViewController:(UIViewController *)vc animated:(BOOL)animated;
+
 @end
 
 @interface UIViewController (DWShowHeaderView)

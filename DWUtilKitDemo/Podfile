@@ -11,7 +11,7 @@ target 'DWUtilKitDemo' do
   pod 'SDWebImage/MapKit'
   pod 'SDWebImage/GIF'
   pod 'SDWebImage/WebP'
-  pod 'KVOController'
+#  pod 'KVOController'
   pod 'Masonry'
   pod 'AutoCoding'
   pod 'DZNEmptyDataSet'

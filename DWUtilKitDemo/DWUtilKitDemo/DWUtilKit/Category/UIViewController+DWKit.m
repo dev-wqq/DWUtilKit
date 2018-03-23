@@ -86,6 +86,16 @@ static void *kFooterView = &kFooterView;
     return 0.4;
 }
 
+- (void)dw_middlePagePushViewController:(UIViewController *)vc animated:(BOOL)animated {
+    NSParameterAssert(vc);
+    if (!vc) return;
+    [self.navigationController pushViewController:vc animated:animated];
+    
+    NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    [viewControllers removeObject:vc];
+    self.navigationController.viewControllers = viewControllers;
+}
+
 @end
 
 @implementation UIViewController (DWShowHeaderView)
