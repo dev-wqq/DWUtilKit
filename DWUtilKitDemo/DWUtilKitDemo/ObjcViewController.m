@@ -27,6 +27,7 @@
 #import "DWRuntimeViewController.h"
 #import "DWTestViewController.h"
 #import "DWKVOViewController.h"
+#import "DWSingletonViewController.h"
 
 @interface DWItemModel : NSObject
 
@@ -108,7 +109,8 @@ __weak id reference = nil;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = 60;
-    
+    [self addClass:NSStringFromClass([DWSingletonViewController class])
+               des:@"如何写好一个单例（共享单例）"];
     [self addClass:NSStringFromClass([DWRuntimeViewController class])
                des:@"消息传递和消息转发"];
     [self addClass:NSStringFromClass([DWKVOViewController class])

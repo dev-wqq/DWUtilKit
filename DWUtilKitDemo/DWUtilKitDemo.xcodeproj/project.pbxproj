@@ -29,6 +29,7 @@
 		743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743DBAE91EB613DF002009A9 /* DWRichTextEditSelectColorView.m */; };
 		74513A7D1F9CEF4C007DD4E9 /* DWUtilAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 74513A7C1F9CEF4C007DD4E9 /* DWUtilAppInfo.m */; };
 		7452F3EE1F49520F00278B8E /* UIWindow+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7452F3ED1F49520F00278B8E /* UIWindow+DWKit.m */; };
+		74544A26206555CB001E3FAD /* DWSingletonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74544A25206555CB001E3FAD /* DWSingletonViewController.m */; };
 		7455A4951E80C9EE002CA176 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7455A4941E80C9EE002CA176 /* CoreGraphics.framework */; };
 		7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455A4971E80D027002CA176 /* UIImage+DWKit.m */; };
 		745D270B1ED94A19003BE00F /* DWDebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745D270A1ED94A19003BE00F /* DWDebugViewController.m */; };
@@ -134,6 +135,8 @@
 		74513A7C1F9CEF4C007DD4E9 /* DWUtilAppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWUtilAppInfo.m; sourceTree = "<group>"; };
 		7452F3EC1F49520F00278B8E /* UIWindow+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+DWKit.h"; sourceTree = "<group>"; };
 		7452F3ED1F49520F00278B8E /* UIWindow+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+DWKit.m"; sourceTree = "<group>"; };
+		74544A24206555CB001E3FAD /* DWSingletonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWSingletonViewController.h; sourceTree = "<group>"; };
+		74544A25206555CB001E3FAD /* DWSingletonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWSingletonViewController.m; sourceTree = "<group>"; };
 		7454F4DB1EB8336700470525 /* DWUtilKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUtilKit.h; sourceTree = "<group>"; };
 		7455A4941E80C9EE002CA176 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7455A4961E80D027002CA176 /* UIImage+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DWKit.h"; sourceTree = "<group>"; };
@@ -550,6 +553,8 @@
 		74EA7FE61ECA99CE002C63E5 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				74544A24206555CB001E3FAD /* DWSingletonViewController.h */,
+				74544A25206555CB001E3FAD /* DWSingletonViewController.m */,
 				748B72751F20AAD700BE1029 /* DWDelegateViewController.h */,
 				748B72701F20AAD700BE1029 /* DWDelegateViewController.m */,
 				7412C0581FBD6F4B00256898 /* DWWebViewController.h */,
@@ -863,6 +868,7 @@
 				74BC7A461E95F89300DAD94E /* DWSettingUtil.m in Sources */,
 				74EC50371ED6A5ED000A9E3C /* NSObject+DWCrash.m in Sources */,
 				74F7234F1F5B914800714DA0 /* DWRuntimeTest.m in Sources */,
+				74544A26206555CB001E3FAD /* DWSingletonViewController.m in Sources */,
 				748B727F1F20B47200BE1029 /* DWSkillViewController.m in Sources */,
 				7452F3EE1F49520F00278B8E /* UIWindow+DWKit.m in Sources */,
 				7455A4981E80D027002CA176 /* UIImage+DWKit.m in Sources */,
