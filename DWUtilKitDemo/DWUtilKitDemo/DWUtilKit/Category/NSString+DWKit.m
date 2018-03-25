@@ -21,11 +21,25 @@ typedef NS_ENUM(NSInteger, DWElementaryArithmetic) {
 #pragma mark - encode and decode
 
 - (NSString *)dw_urlEncodeString {
-    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    // return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *outputStr = (NSString *)
+    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                              (CFStringRef)self,
+                                                              NULL,
+                                                              (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                              kCFStringEncodingUTF8));
+    return outputStr;
 }
 
 - (NSString *)dw_urlDecodeString {
-    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    // return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSMutableString *outputStr = [NSMutableString stringWithString:self];
+    [outputStr replaceOccurrencesOfString:@"+"
+                               withString:@" "
+                                  options:NSLiteralSearch
+                                    range:NSMakeRange(0, [outputStr length])];
+    
+    return [outputStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 #pragma mark - drawing
