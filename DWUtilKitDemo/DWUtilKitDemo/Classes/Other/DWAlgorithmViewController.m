@@ -24,6 +24,22 @@
     
     tempArr = [self quickSortWithArr:arr];
     NSLog(@"quick sort:\n%@->%@",arr,tempArr);
+    
+    NSArray *binary = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+    NSString *key = @"7";
+    NSInteger index = [self binarySearch1:binary key:key];
+    NSLog(@"binary search method 1 index:%ld",index);
+    
+    index = [self binarySearch2:binary low:0 high:binary.count-1 key:key];
+    NSLog(@"binary search method 2 index:%ld",index);
+    
+    key = @"20";
+    index = [self binarySearch1:binary key:key];
+    NSLog(@"binary search method 1 index:%ld",index);
+    
+    index = [self binarySearch2:binary low:0 high:binary.count-1 key:key];
+    NSLog(@"binary search method 2 index:%ld",index);
+    
 }
 
 #pragma mark - 冒泡排序
@@ -92,10 +108,54 @@
     if (i != left) {
         [mSortArr exchangeObjectAtIndex:left withObjectAtIndex:i];
     }
-    
     [self quickSortWithArr:mSortArr left:left right:i-1];
     [self quickSortWithArr:mSortArr left:i+1 right:right];
 }
 
+#pragma mark - 二分查找
+
+// 非递归二分查找
+- (NSInteger)binarySearch1:(NSArray<NSString *> *)sortArr key:(NSString *)key {
+    NSInteger low   = 0;
+    NSInteger hight = sortArr.count - 1;
+    NSInteger middle = 0;
+    while (low <= hight && low < sortArr.count && hight < sortArr.count) {
+        middle = (low + hight)/2;
+        NSString *temp = sortArr[middle];
+        if (temp.integerValue > key.integerValue) {
+            hight = middle - 1;
+        } else if (temp.integerValue < key.integerValue) {
+            low = middle + 1;
+        } else {
+            return middle;
+        }
+    }
+    return -1;
+}
+
+// 递归二分查找
+- (NSInteger)binarySearch2:(NSArray<NSString *> *)sortArr
+                       low:(NSInteger)low
+                      high:(NSInteger)high
+                       key:(NSString *)key {
+    if (sortArr.count == 0) {
+        return -1;
+    }
+    if (low >= sortArr.count || high >= sortArr.count || low > high) {
+        return -1;
+    }
+    
+    NSInteger middle = (low + high)/2;
+    NSString *temp = sortArr[middle];
+    if (temp.integerValue > key.integerValue) {
+        return [self binarySearch2:sortArr low:low high:middle-1 key:key];
+    } else if (temp.integerValue < key.integerValue) {
+        return [self binarySearch2:sortArr low:middle+1 high:high key:key];
+    } else {
+        return middle;
+    }
+}
+
+#pragma mark - 链表反转
 
 @end
