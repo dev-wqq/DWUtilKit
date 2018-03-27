@@ -28,6 +28,7 @@
 #import "DWTestViewController.h"
 #import "DWKVOViewController.h"
 #import "DWSingletonViewController.h"
+#import "DWAlgorithmViewController.h"
 
 @interface DWItemModel : NSObject
 
@@ -117,6 +118,8 @@ __weak id reference = nil;
                des:@"KVO 自动/手动实现，依赖键"];
     [self addClass:NSStringFromClass([DWGCDViewController class])
                des:@"GCD并发"];
+    [self addClass:NSStringFromClass([DWAlgorithmViewController class])
+               des:@"常见算法的实现：冒泡、快速、二分查找、链表翻转、栈、普通二叉树^前中后、栈、BFS、DFS"];
     [self addClass:NSStringFromClass([DWSectionCellViewController class])
                des:@"优雅处理first cell顶部分割线和last cell分割线边距"];
     [self addClass:NSStringFromClass([DWDramImageViewController class])
