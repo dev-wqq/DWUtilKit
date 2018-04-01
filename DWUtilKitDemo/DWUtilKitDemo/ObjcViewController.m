@@ -9,11 +9,9 @@
 #import "ObjcViewController.h"
 #import "DWUtilities.h"
 #import "DWRichTextEditViewController.h"
-#import "DWProgressViewController.h"
 #import "DWSendSMSViewController.h"
 #import "DWGCDViewController.h"
 #import "DWDebugViewController.h"
-#import "DWPathViewController.h"
 #import "DWDelegateViewController.h"
 #import "DWAnimationViewController.h"
 #import "NSString+DWKit.h"
@@ -102,7 +100,6 @@ __weak id reference = nil;
     self.title = @"objc";
 
     NSLog(@"%s,%s,%d,",__FILE__,__FUNCTION__,__LINE__);
-    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.navigationBar.translucent = NO;
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth,   kScreenHeight-kNavigationBarHeight-kTabBarHeight)];
@@ -110,14 +107,15 @@ __weak id reference = nil;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = 60;
+    
     [self addClass:NSStringFromClass([DWSingletonViewController class])
-               des:@"如何写好一个单例（共享单例）"];
+               des:@"如何写好一个单例（非共享单例）"];
     [self addClass:NSStringFromClass([DWRuntimeViewController class])
                des:@"消息传递和消息转发"];
     [self addClass:NSStringFromClass([DWKVOViewController class])
                des:@"KVO 自动/手动实现，依赖键"];
     [self addClass:NSStringFromClass([DWGCDViewController class])
-               des:@"GCD并发"];
+               des:@"GCD并发, A、B先执行然后在执行C"];
     [self addClass:NSStringFromClass([DWAlgorithmViewController class])
                des:@"常见算法的实现：冒泡、快速、二分查找、链表翻转、栈、普通二叉树^前中后、栈、BFS、DFS"];
     [self addClass:NSStringFromClass([DWSectionCellViewController class])
@@ -125,15 +123,11 @@ __weak id reference = nil;
     [self addClass:NSStringFromClass([DWDramImageViewController class])
                des:@"图像的性能优化"];
     [self addClass:NSStringFromClass([DWDelegateViewController class])
-               des:@"delegate"];
-    [self addClass:NSStringFromClass([DWProgressViewController class])
-               des:@"NSProgress"];
+               des:@"weak和assign的区别"];
     [self addClass:NSStringFromClass([DWSendSMSViewController class])
                des:@"短信发送"];
     [self addClass:NSStringFromClass([DWDebugViewController class])
                des:@"debug"];
-    [self addClass:NSStringFromClass([DWPathViewController class])
-               des:@"path"];
     [self addClass:NSStringFromClass([DWAnimationViewController class])
                des:@"dotzoon"];
     [self addClass:NSStringFromClass([DWSkillViewController class])

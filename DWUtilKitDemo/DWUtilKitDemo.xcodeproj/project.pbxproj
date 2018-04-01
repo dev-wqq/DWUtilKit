@@ -41,7 +41,6 @@
 		7479A3D61F5CE830008AD738 /* DWSectionCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3CC1F5CE830008AD738 /* DWSectionCellViewController.m */; };
 		7479A3D71F5CE830008AD738 /* DWEdgeInsetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3D01F5CE830008AD738 /* DWEdgeInsetTableViewCell.m */; };
 		7479A3D81F5CE830008AD738 /* DWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3D21F5CE830008AD738 /* DWTableViewCell.m */; };
-		7479A3DF1F5CF7C4008AD738 /* DWLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479A3DE1F5CF7C4008AD738 /* DWLoginButton.m */; };
 		747FAB351E78D41E00AD3CFE /* NSObject+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB341E78D41E00AD3CFE /* NSObject+DWKit.m */; };
 		747FAB381E78EC9A00AD3CFE /* UILabel+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB371E78EC9A00AD3CFE /* UILabel+DWKit.m */; };
 		747FAB3B1E791AB100AD3CFE /* CALayer+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 747FAB3A1E791AB100AD3CFE /* CALayer+DWKit.m */; };
@@ -50,9 +49,6 @@
 		748B72781F20AB0C00BE1029 /* DWAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B72771F20AB0C00BE1029 /* DWAnimationViewController.m */; };
 		748B72791F20B45F00BE1029 /* DWDelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B72701F20AAD700BE1029 /* DWDelegateViewController.m */; };
 		748B727A1F20B46400BE1029 /* DWGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B726F1F20AAD700BE1029 /* DWGCDViewController.m */; };
-		748B727B1F20B46700BE1029 /* DWPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B726B1F20AAD700BE1029 /* DWPathViewController.m */; };
-		748B727C1F20B46A00BE1029 /* DWProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B726A1F20AAD700BE1029 /* DWProgressViewController.m */; };
-		748B727D1F20B46D00BE1029 /* DWRoundedCornersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B726E1F20AAD700BE1029 /* DWRoundedCornersViewController.m */; };
 		748B727E1F20B46F00BE1029 /* DWSendSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B72681F20AAD700BE1029 /* DWSendSMSViewController.m */; };
 		748B727F1F20B47200BE1029 /* DWSkillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B72691F20AAD700BE1029 /* DWSkillViewController.m */; };
 		74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B616501E7FCCD4004D350B /* UITextView+DWKit.m */; };
@@ -160,8 +156,6 @@
 		7479A3D01F5CE830008AD738 /* DWEdgeInsetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWEdgeInsetTableViewCell.m; sourceTree = "<group>"; };
 		7479A3D11F5CE830008AD738 /* DWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWTableViewCell.h; sourceTree = "<group>"; };
 		7479A3D21F5CE830008AD738 /* DWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWTableViewCell.m; sourceTree = "<group>"; };
-		7479A3DD1F5CF7C4008AD738 /* DWLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWLoginButton.h; sourceTree = "<group>"; };
-		7479A3DE1F5CF7C4008AD738 /* DWLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWLoginButton.m; sourceTree = "<group>"; };
 		747FAB331E78D41E00AD3CFE /* NSObject+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DWKit.h"; sourceTree = "<group>"; };
 		747FAB341E78D41E00AD3CFE /* NSObject+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DWKit.m"; sourceTree = "<group>"; };
 		747FAB361E78EC9A00AD3CFE /* UILabel+DWKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DWKit.h"; sourceTree = "<group>"; };
@@ -174,17 +168,11 @@
 		747FAB401E7926C900AD3CFE /* NSNumber+DWKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+DWKit.m"; sourceTree = "<group>"; };
 		748B72681F20AAD700BE1029 /* DWSendSMSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWSendSMSViewController.m; sourceTree = "<group>"; };
 		748B72691F20AAD700BE1029 /* DWSkillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWSkillViewController.m; sourceTree = "<group>"; };
-		748B726A1F20AAD700BE1029 /* DWProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWProgressViewController.m; sourceTree = "<group>"; };
-		748B726B1F20AAD700BE1029 /* DWPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWPathViewController.m; sourceTree = "<group>"; };
 		748B726C1F20AAD700BE1029 /* DWSkillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWSkillViewController.h; sourceTree = "<group>"; };
 		748B726D1F20AAD700BE1029 /* DWSendSMSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWSendSMSViewController.h; sourceTree = "<group>"; };
-		748B726E1F20AAD700BE1029 /* DWRoundedCornersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWRoundedCornersViewController.m; sourceTree = "<group>"; };
 		748B726F1F20AAD700BE1029 /* DWGCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWGCDViewController.m; sourceTree = "<group>"; };
 		748B72701F20AAD700BE1029 /* DWDelegateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWDelegateViewController.m; sourceTree = "<group>"; };
 		748B72711F20AAD700BE1029 /* DWGCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWGCDViewController.h; sourceTree = "<group>"; };
-		748B72721F20AAD700BE1029 /* DWProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWProgressViewController.h; sourceTree = "<group>"; };
-		748B72731F20AAD700BE1029 /* DWPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWPathViewController.h; sourceTree = "<group>"; };
-		748B72741F20AAD700BE1029 /* DWRoundedCornersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWRoundedCornersViewController.h; sourceTree = "<group>"; };
 		748B72751F20AAD700BE1029 /* DWDelegateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWDelegateViewController.h; sourceTree = "<group>"; };
 		748B72761F20AB0C00BE1029 /* DWAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWAnimationViewController.h; sourceTree = "<group>"; };
 		748B72771F20AB0C00BE1029 /* DWAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWAnimationViewController.m; sourceTree = "<group>"; };
@@ -273,7 +261,6 @@
 				74E359FD1E7189C600AEDE10 /* ObjcViewController.m */,
 				74F7234C1F5B913700714DA0 /* Runtime */,
 				742CF54820561DE2000BD92B /* KVO */,
-				7479A3C31F5CE830008AD738 /* LoginButton */,
 				7479A3C71F5CE830008AD738 /* TableViewCell */,
 				745D27071ED94A0D003BE00F /* Debug */,
 				74EA7FE61ECA99CE002C63E5 /* Other */,
@@ -347,39 +334,6 @@
 				745D270A1ED94A19003BE00F /* DWDebugViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		7479A3C31F5CE830008AD738 /* LoginButton */ = {
-			isa = PBXGroup;
-			children = (
-				7479A3C41F5CE830008AD738 /* Controller */,
-				7479A3C51F5CE830008AD738 /* Model */,
-				7479A3C61F5CE830008AD738 /* View */,
-			);
-			path = LoginButton;
-			sourceTree = "<group>";
-		};
-		7479A3C41F5CE830008AD738 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		7479A3C51F5CE830008AD738 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7479A3C61F5CE830008AD738 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7479A3DD1F5CF7C4008AD738 /* DWLoginButton.h */,
-				7479A3DE1F5CF7C4008AD738 /* DWLoginButton.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		7479A3C71F5CE830008AD738 /* TableViewCell */ = {
@@ -558,18 +512,12 @@
 			children = (
 				74544A24206555CB001E3FAD /* DWSingletonViewController.h */,
 				74544A25206555CB001E3FAD /* DWSingletonViewController.m */,
+				748B72711F20AAD700BE1029 /* DWGCDViewController.h */,
+				748B726F1F20AAD700BE1029 /* DWGCDViewController.m */,
 				748B72751F20AAD700BE1029 /* DWDelegateViewController.h */,
 				748B72701F20AAD700BE1029 /* DWDelegateViewController.m */,
 				7412C0581FBD6F4B00256898 /* DWWebViewController.h */,
 				7412C0591FBD6F4B00256898 /* DWWebViewController.m */,
-				748B72711F20AAD700BE1029 /* DWGCDViewController.h */,
-				748B726F1F20AAD700BE1029 /* DWGCDViewController.m */,
-				748B72731F20AAD700BE1029 /* DWPathViewController.h */,
-				748B726B1F20AAD700BE1029 /* DWPathViewController.m */,
-				748B72721F20AAD700BE1029 /* DWProgressViewController.h */,
-				748B726A1F20AAD700BE1029 /* DWProgressViewController.m */,
-				748B72741F20AAD700BE1029 /* DWRoundedCornersViewController.h */,
-				748B726E1F20AAD700BE1029 /* DWRoundedCornersViewController.m */,
 				748B726D1F20AAD700BE1029 /* DWSendSMSViewController.h */,
 				748B72681F20AAD700BE1029 /* DWSendSMSViewController.m */,
 				748B726C1F20AAD700BE1029 /* DWSkillViewController.h */,
@@ -814,7 +762,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7479A3DF1F5CF7C4008AD738 /* DWLoginButton.m in Sources */,
 				743577AE1E756DBD004BC1E1 /* UIViewController+DWKit.m in Sources */,
 				7479A3D51F5CE830008AD738 /* DWEdgeInsetViewController.m in Sources */,
 				7479A3D81F5CE830008AD738 /* DWTableViewCell.m in Sources */,
@@ -836,7 +783,6 @@
 				74BC7A431E95DA1A00DAD94E /* UIDevice+DWKit.m in Sources */,
 				74E35A1A1E718E0E00AEDE10 /* DWLinearGradientView.m in Sources */,
 				745D270B1ED94A19003BE00F /* DWDebugViewController.m in Sources */,
-				748B727D1F20B46D00BE1029 /* DWRoundedCornersViewController.m in Sources */,
 				743577AB1E755FD8004BC1E1 /* UITextField+DWKit.m in Sources */,
 				74513A7D1F9CEF4C007DD4E9 /* DWUtilAppInfo.m in Sources */,
 				74B616511E7FCCD4004D350B /* UITextView+DWKit.m in Sources */,
@@ -847,7 +793,6 @@
 				741B34EF1ED31AD3007D4278 /* NSAttributedString+DWUtil.m in Sources */,
 				7479A3D61F5CE830008AD738 /* DWSectionCellViewController.m in Sources */,
 				74EC502E1ED6A50E000A9E3C /* NSArray+DWCrash.m in Sources */,
-				748B727B1F20B46700BE1029 /* DWPathViewController.m in Sources */,
 				740C9EB31F55A1F400A0A228 /* DWDramImageViewController.m in Sources */,
 				743DBAEA1EB613DF002009A9 /* DWRichTextEditSelectColorView.m in Sources */,
 				747FAB411E7926C900AD3CFE /* NSNumber+DWKit.m in Sources */,
@@ -855,7 +800,6 @@
 				748B727E1F20B46F00BE1029 /* DWSendSMSViewController.m in Sources */,
 				7417AAD21F95EEEE00ADCF2C /* UIScrollView+DWAdapterIOS11.m in Sources */,
 				7435779C1E7544EA004BC1E1 /* UIButton+DWKit.m in Sources */,
-				748B727C1F20B46A00BE1029 /* DWProgressViewController.m in Sources */,
 				74E35A131E718A5400AEDE10 /* DWWeakProxy.m in Sources */,
 				747886121FD8E65F00040D36 /* DWViewController.m in Sources */,
 				74E35A171E718C6E00AEDE10 /* DWFPSLabel.m in Sources */,

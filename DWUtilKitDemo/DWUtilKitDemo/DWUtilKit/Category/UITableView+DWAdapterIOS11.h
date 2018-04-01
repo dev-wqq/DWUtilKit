@@ -20,7 +20,6 @@
  
  并且设置 contentInsetAdjustmentBehavior 为 UIScrollViewContentInsetAdjustmentNever。
  */
-
 - (void)dw_adapterIOS11;
 
 @end

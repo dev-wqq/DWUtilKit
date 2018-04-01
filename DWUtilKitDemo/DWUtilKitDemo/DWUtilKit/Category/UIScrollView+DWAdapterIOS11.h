@@ -10,6 +10,12 @@
 
 @interface UIScrollView (DWAdapterIOS11)
 
+/**
+ Configure the behavior of adjustedContentInset.
+ Default is UIScrollViewContentInsetAdjustmentAutomatic.
+ 
+ For adjust setup  self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+ */
 - (void)dw_insetAdjustNeverForIOS11;
 
 @end

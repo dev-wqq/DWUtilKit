@@ -10,6 +10,9 @@
 
 @interface CALayer (DWKit)
 
+/**
+ CALayer shake.
+ */
 - (void)dw_shake;
 
 @end

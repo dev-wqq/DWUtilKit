@@ -8,7 +8,6 @@
 
 #import "UITableView+DWAdapterIOS11.h"
 #import "NSObject+DWKit.h"
-#import "UIScrollView+DWAdapterIOS11.h"
 
 @implementation UITableView (DWAdapterIOS11)
 
@@ -29,10 +28,12 @@
 
 // 针对现状做简单调整
 - (void)dw_adapterIOS11 {
-    [self dw_insetAdjustNeverForIOS11];
     self.estimatedRowHeight = 0.0;
     self.estimatedSectionHeaderHeight = 0.0;
     self.estimatedSectionFooterHeight = 0.0;
+    if(@available(iOS 11, *)) {
+        self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
 }
 
 @end
