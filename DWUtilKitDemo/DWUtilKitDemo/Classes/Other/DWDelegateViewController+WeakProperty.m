@@ -48,8 +48,8 @@ typedef void(^DWWeakDeallocBlock)();
     DWWeakPropertyBlock *obj = [[DWWeakPropertyBlock alloc] initWithBlock:^{
         objc_setAssociatedObject(self, @selector(weakObject), nil, OBJC_ASSOCIATION_ASSIGN);
     }];
-    // 
-    objc_setAssociatedObject(weakObject, (__bridge const void *)(obj.weakBlock), weakObject, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    //
+    objc_setAssociatedObject(weakObject, (__bridge const void *)(obj.weakBlock), obj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     objc_setAssociatedObject(self, @selector(weakObject), weakObject, OBJC_ASSOCIATION_ASSIGN);
 }
 
