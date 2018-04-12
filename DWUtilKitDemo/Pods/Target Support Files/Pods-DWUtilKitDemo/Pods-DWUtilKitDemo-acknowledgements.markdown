@@ -214,16 +214,6 @@ THE SOFTWARE.
 
 
 
-## UMCCommon
-
-Copyright 2011 - 2018 umeng.com. All rights reserved.
-
-
-## UMCShare
-
-Copyright 2011 - 2018 umeng.com. All rights reserved.
-
-
 ## YTKNetwork
 
 Copyright (c) 2012-2016 YTKNetwork https://github.com/yuantiku

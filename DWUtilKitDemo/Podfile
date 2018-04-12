@@ -21,7 +21,9 @@ target 'DWUtilKitDemo' do
   pod 'YYModel'
   
 #  pod 'WechatOpenSDK'
-  pod 'UMCShare/Social/WeChat'
+#  pod 'UMCShare/Social/WeChat'
+
+
 
 
   # Pods for DWUtilKitDemo
