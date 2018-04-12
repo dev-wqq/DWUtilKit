@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3773B8A39B0A52978381D8737FBF6430'
-               BlueprintName = 'AutoCoding'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'AutoCoding.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3773B8A39B0A52978381D8737FBF6430"
+               BlueprintName = "AutoCoding"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "AutoCoding.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

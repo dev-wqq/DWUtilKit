@@ -124,22 +124,22 @@ __weak id reference = nil;
                des:@"图像的性能优化"];
     [self addClass:NSStringFromClass([DWDelegateViewController class])
                des:@"weak和assign的区别"];
-    [self addClass:NSStringFromClass([DWSendSMSViewController class])
-               des:@"短信发送"];
-    [self addClass:NSStringFromClass([DWDebugViewController class])
-               des:@"debug"];
-    [self addClass:NSStringFromClass([DWAnimationViewController class])
-               des:@"dotzoon"];
-    [self addClass:NSStringFromClass([DWSkillViewController class])
-               des:@"开发技巧"];
-    [self addClass:NSStringFromClass([DWCollectionViewController class])
-               des:@"collection View"];
-    [self addClass:NSStringFromClass([DWWebViewController class])
-               des:@"web"];
-     [self addClass:NSStringFromClass([DWTestViewController class])
-                des:@"test string"];
-    [self addClass:NSStringFromClass([DWRichTextEditViewController class])
-               des:@"富文本编辑器"];
+//    [self addClass:NSStringFromClass([DWSendSMSViewController class])
+//               des:@"短信发送"];
+//    [self addClass:NSStringFromClass([DWDebugViewController class])
+//               des:@"debug"];
+//    [self addClass:NSStringFromClass([DWAnimationViewController class])
+//               des:@"dotzoon"];
+//    [self addClass:NSStringFromClass([DWSkillViewController class])
+//               des:@"开发技巧"];
+//    [self addClass:NSStringFromClass([DWCollectionViewController class])
+//               des:@"collection View"];
+//    [self addClass:NSStringFromClass([DWWebViewController class])
+//               des:@"web"];
+//    [self addClass:NSStringFromClass([DWTestViewController class])
+//                des:@"test string"];
+//    [self addClass:NSStringFromClass([DWRichTextEditViewController class])
+//               des:@"富文本编辑器"];
 }
 
 - (void)addClass:(NSString *)className des:(NSString *)des {

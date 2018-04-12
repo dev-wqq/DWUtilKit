@@ -7,6 +7,7 @@
 //
 
 #import "DWDelegateViewController.h"
+#import "DWDelegateViewController+WeakProperty.h"
 
 @protocol DWDelegateTemp <NSObject>
 
@@ -16,8 +17,6 @@
 @end
 
 @interface DWDelegeModel : NSObject <DWDelegateTemp>
-
-
 
 @end
 
@@ -38,7 +37,6 @@
 @property (nonatomic, weak) id<DWDelegateTemp> delegate;
 @property (nonatomic, assign) id<DWDelegateTemp> delegateAssign;
 
-
 @end
 
 @implementation DWDelegateViewController
@@ -47,12 +45,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // [self testDelegate];
-    [self testDelegateMost];
+    [self testCategoryWeakProperty];
 }
 
-- (void)testDelegateMost {
 
+- (void)testCategoryWeakProperty {
+    DWDelegeModel *model = [[DWDelegeModel alloc] init];
+    self.weakObject = model;
+    NSLog(@"%@",self.weakObject);
+    model = nil;
+    NSLog(@"%@",self.weakObject);
 }
+
 
 /**
  使用weak和assign 修改delegate的区别：
@@ -72,8 +76,6 @@
     [self.delegateAssign dw_testAssign];
     model = nil;
     [self.delegate dw_test];
-    
-    NSLog(@"到 assign");
     [self.delegateAssign dw_testAssign];
 }
 

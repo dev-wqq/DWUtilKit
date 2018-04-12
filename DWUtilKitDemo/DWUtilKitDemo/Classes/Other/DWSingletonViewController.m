@@ -91,7 +91,7 @@ static dispatch_once_t _onceToken;
     NSMutableString *mtest2 = mtest.mutableCopy;
     NSLog(@"%@ mtest：%p, mtest1：%p, mtest2：%p",NSStringFromClass([mtest class]), mtest, mtest1, mtest2);
     NSLog(@"mutableString->copy: %@",NSStringFromClass([mtest1 class]));
-//    [mtest1 appendString:@"123"];
+//  [mtest1 appendString:@"123"];
 }
 
 - (void)stringManager {
